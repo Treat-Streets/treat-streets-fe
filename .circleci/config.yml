@@ -15,8 +15,12 @@ jobs:
           pkg-manager: npm
       - run:
           name: Run tests
-          command: npm test 
-          command: npm run cy:run
+          command: npm test
+
+      - run:
+        name: Run tests
+        command: npm run cy:run
+
       - run : 
           name : Run build
           command: npm run build #If you are using Yarn change this to Yarn
