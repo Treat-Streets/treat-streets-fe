@@ -3,10 +3,12 @@ version: 2.1
 orbs:
   node: circleci/node@4.7
   cypress: cypress-io/cypress@2.1.0
+  
 workflows:
   build:
     jobs:
       - cypress/run
+
 jobs:
   build_and_test:
     executor: node/default
