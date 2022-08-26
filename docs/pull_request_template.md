@@ -1,5 +1,3 @@
-**[Project Ticket](Project ticket link goes here)**
-
 **Changes made to the codebase:**
 
 - 
