@@ -23,12 +23,23 @@ const RegisterForm = () => {
 					<option value="apartment">Apartment</option>
 					<option value="business">Business</option>
 				</select>
-				<select name="startTime">
+				<select name="startTime" id="startTime">
 					<option value="default" disabled>Choose a Start Time</option>
 					<option value="4:00 pm">4:00 pm</option>
 					<option value="5:00 pm">5:00 pm</option>
 					<option value="6:00 pm">6:00 pm</option>
 				</select>
+				<select name="endTime" id="endTime">
+					<option value="default" disabled>Choose an End Time</option>
+					<option value="6:00 pm">6:00 pm</option>
+					<option value="7:00 pm">7:00 pm</option>
+					<option value="8:00 pm">8:00 pm</option>
+				</select>
+				<input
+					name="scareLevel"
+					placeholder="Scare Level scale 1-10"
+					type="number"
+					/>
 			</form>
 		</div>
 	)
