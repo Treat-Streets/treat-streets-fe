@@ -35,16 +35,21 @@ const RegisterForm = () => {
 					<option value="7:00 pm">7:00 pm</option>
 					<option value="8:00 pm">8:00 pm</option>
 				</select>
+				<input 
+					name="image"
+					placeholder="Image placeholder"
+				/>
 				<input
 					name="scareLevel"
 					placeholder="Scare Level scale 1-10"
 					type="number"
-					/>
+				/>
 				<input
 					name="description"
 					placeholder="Tell us about your house!"
 					type="text"
-					/>
+				/>
+				<button className="register">Register House!</button>
 			</form>
 		</div>
 	)
