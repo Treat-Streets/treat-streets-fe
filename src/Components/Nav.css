@@ -1,0 +1,17 @@
+.nav-bar {
+  display: flex;
+  justify-content: flex-end;  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+}
+
+.active {
+  color: orange;
+}
+

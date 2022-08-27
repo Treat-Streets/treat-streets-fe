@@ -1,6 +1,6 @@
 import './App.css'
 import React from 'react'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Header from '../Components/Header.js'
 import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
@@ -8,8 +8,11 @@ import RegisterForm from '../Components/RegisterForm.js'
 import ThankYouPage from '../Components/ThankYouPage.js'
 import ZipCodeForm from '../Components/ZipCodeForm.js'
 import LandingPage from '../Components/LandingPage.js'
+import { useQuery, gql } from '@apollo/client'
 
 const App = () => {
+
+
   return (
     <div className="App">
 			<Nav />
