@@ -43,6 +43,24 @@ const RegisterForm = () => {
 	const [scarinessLevel, setScarinessLevel] = useState(0)
 	const [description, setDescription] = useState('')
 
+	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
+		variables: {
+			email: email,
+			address: address,
+			propertyType: propertyType,
+			startTime: startTime,
+			endTime: endTime,
+			image: image,
+			scarinessLevel: scarinessLevel,
+			description: description
+		}
+	})
+
+	const handleClick = (event) => {
+		event.preventDefault();
+		createLocation()
+	}
+
 	return (
 		<div className="register-form-container">
 			<form>
@@ -100,7 +118,7 @@ const RegisterForm = () => {
 					value={description}
 					onChange={event => setDescription(event.target.value)}
 				/>
-				<button className="register">Register House!</button>
+				<button className="register" onClick={event => handleClick(event)}>Register House!</button>
 			</form>
 		</div>
 	)

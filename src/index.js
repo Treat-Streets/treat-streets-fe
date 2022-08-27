@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client'
 
 const client = new ApolloClient({
-  uri: 'https://treat-streets-be.herokuapp.com/',
+  uri: 'https://treat-streets-be.herokuapp.com/graphql',
   cache: new InMemoryCache(),
 });
 
