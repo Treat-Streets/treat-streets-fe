@@ -3,7 +3,7 @@ import '../Components/RegisterForm.css'
 
 const RegisterForm = () => {
 	return (
-		<div>
+		<div className="register-form-container">
 			<form>
 				<input 
 					name="email"
