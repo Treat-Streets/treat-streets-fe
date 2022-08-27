@@ -4,7 +4,13 @@ import '../Components/RegisterForm.css'
 const RegisterForm = () => {
 	return (
 		<div>
-			<h2>Im the Register Form!</h2>
+			<form>
+				<input 
+					name="email"
+					placeholder="Enter email here"
+					type="text"
+				/>
+			</form>
 		</div>
 	)
 }
