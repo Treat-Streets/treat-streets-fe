@@ -50,13 +50,17 @@ const RegisterForm = () => {
 					name="email"
 					placeholder="Enter email here"
 					type="text"
+					value={email}
+					onChange={event => setEmail(event.target.value)}
 				/>
 				<input
 					name="address"
 					placeholder="Enter address"
+					value={address}
 					type="text"
+					onChange={event => setAddress(event.target.value)}
 				/>
-				<select name="propertyType">
+				<select name="propertyType" id="propertyType" onChange={event => setPropertyType(event.target.value)} value={propertyType}>
 					<option value="default" disabled> Select Property Type </option>
 					<option value="house">House</option>
 					<option value="condo">Condo</option>
@@ -64,13 +68,13 @@ const RegisterForm = () => {
 					<option value="apartment">Apartment</option>
 					<option value="business">Business</option>
 				</select>
-				<select name="startTime" id="startTime">
+				<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
 					<option value="default" disabled>Choose a Start Time</option>
 					<option value="4:00 pm">4:00 pm</option>
 					<option value="5:00 pm">5:00 pm</option>
 					<option value="6:00 pm">6:00 pm</option>
 				</select>
-				<select name="endTime" id="endTime">
+				<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
 					<option value="default" disabled>Choose an End Time</option>
 					<option value="6:00 pm">6:00 pm</option>
 					<option value="7:00 pm">7:00 pm</option>
@@ -78,17 +82,23 @@ const RegisterForm = () => {
 				</select>
 				<input 
 					name="image"
+					value={image}
 					placeholder="Image placeholder"
+					onChange={event => setImage(event.target.value)}
 				/>
 				<input
 					name="scarinessLevel"
 					placeholder="Scare Level scale 1-10"
 					type="number"
+					value={scarinessLevel}
+					onChange={event => setScarinessLevel(event.target.value)}
 				/>
 				<input
 					name="description"
 					placeholder="Tell us about your house!"
 					type="text"
+					value={description}
+					onChange={event => setDescription(event.target.value)}
 				/>
 				<button className="register">Register House!</button>
 			</form>
