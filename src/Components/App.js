@@ -1,6 +1,6 @@
 import './App.css'
 import React from 'react'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Header from '../Components/Header.js'
 import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
