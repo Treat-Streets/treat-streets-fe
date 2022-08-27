@@ -1,7 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Components/RegisterForm.css'
+import { gql, useMutation } from '@apollo/client'
+
+const CREATE_LOCATION = gql`
+	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: Int!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
+		createLocation(input: {
+			email: $email,
+			streetAddress: $streetAddress,
+			city: $city,
+			state: $state,
+			zipcode: $zipcode,
+			locationType: $locationType,
+			scarinessLevel: $scarinessLevel,
+			description: $description,
+			startTime: $startTime,
+			endTime: $endTime,
+			image: $image
+		}) {
+			location {
+				streetAddress
+        city
+        state
+        zipcode
+        locationType
+        scarinessLevel
+        description
+        startTime
+        endTime
+        image
+			}
+		}
+	}	
+`;
 
 const RegisterForm = () => {
+	const [email, setEmail] = useState('')
+	const [address, setAddress] = useState('')
+	const [propertyType, setPropertyType] = useState('')
+	const [startTime, setStartTime] = useState('')
+	const [endTime, setEndTime] = useState('')
+	const [image, setImage] = useState('')
+	const [scarinessLevel, setScarinessLevel] = useState(0)
+	const [description, setDescription] = useState('')
+
 	return (
 		<div className="register-form-container">
 			<form>
@@ -40,7 +81,7 @@ const RegisterForm = () => {
 					placeholder="Image placeholder"
 				/>
 				<input
-					name="scareLevel"
+					name="scarinessLevel"
 					placeholder="Scare Level scale 1-10"
 					type="number"
 				/>
