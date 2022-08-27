@@ -23,6 +23,12 @@ const RegisterForm = () => {
 					<option value="apartment">Apartment</option>
 					<option value="business">Business</option>
 				</select>
+				<select name="startTime">
+					<option value="default" disabled>Choose a Start Time</option>
+					<option value="4:00 pm">4:00 pm</option>
+					<option value="5:00 pm">5:00 pm</option>
+					<option value="6:00 pm">6:00 pm</option>
+				</select>
 			</form>
 		</div>
 	)
