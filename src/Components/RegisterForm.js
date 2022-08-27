@@ -40,6 +40,11 @@ const RegisterForm = () => {
 					placeholder="Scare Level scale 1-10"
 					type="number"
 					/>
+				<input
+					name="description"
+					placeholder="Tell us about your house!"
+					type="text"
+					/>
 			</form>
 		</div>
 	)
