@@ -35,8 +35,11 @@ const CREATE_LOCATION = gql`
 
 const RegisterForm = () => {
 	const [email, setEmail] = useState('')
-	const [address, setAddress] = useState('')
-	const [propertyType, setPropertyType] = useState('')
+	const [streetAddress, setStreetAddress] = useState('')
+	const [city, setCity] = useState('')
+	const [state, setState] = useState('')
+	const [zipcode, setZipcode] = useState('')
+	const [locationType, setLocationType] = useState('')
 	const [startTime, setStartTime] = useState('')
 	const [endTime, setEndTime] = useState('')
 	const [image, setImage] = useState('')
@@ -46,8 +49,11 @@ const RegisterForm = () => {
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
 		variables: {
 			email: email,
-			address: address,
-			propertyType: propertyType,
+			streetAddress: streetAddress,
+			city: city,
+			state: state,
+			zipcode: zipcode,
+			locationType: locationType,
 			startTime: startTime,
 			endTime: endTime,
 			image: image,
@@ -72,14 +78,35 @@ const RegisterForm = () => {
 					onChange={event => setEmail(event.target.value)}
 				/>
 				<input
-					name="address"
+					name="streetAddress"
 					placeholder="Enter address"
-					value={address}
+					value={streetAddress}
 					type="text"
-					onChange={event => setAddress(event.target.value)}
+					onChange={event => setStreetAddress(event.target.value)}
 				/>
-				<select name="propertyType" id="propertyType" onChange={event => setPropertyType(event.target.value)} value={propertyType}>
-					<option value="default" disabled> Select Property Type </option>
+				<input
+					name="city"
+					placeholder="Enter city"
+					value={city}
+					type="text"
+					onChange={event => setCity(event.target.value)}
+				/>
+				<input
+					name="state"
+					placeholder="Enter state"
+					value={state}
+					type="text"
+					onChange={event => setState(event.target.value)}
+				/>
+				<input
+					name="zipcode"
+					placeholder="Enter zipcode"
+					value={zipcode}
+					type="text"
+					onChange={event => setZipcode(event.target.value)}
+				/>
+				<select name="locationType" id="locationType" onChange={event => setLocationType(event.target.value)} value={locationType}>
+					<option value="default"> Select Property Type </option>
 					<option value="house">House</option>
 					<option value="condo">Condo</option>
 					<option value="townhome">Townhome</option>
@@ -87,13 +114,13 @@ const RegisterForm = () => {
 					<option value="business">Business</option>
 				</select>
 				<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
-					<option value="default" disabled>Choose a Start Time</option>
+					<option value="default">Choose a Start Time</option>
 					<option value="4:00 pm">4:00 pm</option>
 					<option value="5:00 pm">5:00 pm</option>
 					<option value="6:00 pm">6:00 pm</option>
 				</select>
 				<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
-					<option value="default" disabled>Choose an End Time</option>
+					<option value="default">Choose an End Time</option>
 					<option value="6:00 pm">6:00 pm</option>
 					<option value="7:00 pm">7:00 pm</option>
 					<option value="8:00 pm">8:00 pm</option>
