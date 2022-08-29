@@ -30,10 +30,7 @@ const App = () => {
 	`
 
 	const {error, data, loading} = useQuery(GET_LOCATION)
-	
-	// console.log("loading", loading)
-	// console.log("error", error)
-	console.log("stuff here", data)
+
 
   return (
     <div className="App">
@@ -54,7 +51,7 @@ const App = () => {
 			
 			<Route exact path="/Map">
 				<ZipCodeForm />
-				<MapPage locationData={data} />
+				{data && <MapPage locationData={data.locations} />}
 			</Route>
 
     </div>
