@@ -3,7 +3,7 @@ import '../Components/RegisterForm.css'
 import { gql, useMutation } from '@apollo/client'
 
 const CREATE_LOCATION = gql`
-	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: Int!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
+	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: String!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
 		createLocation(input: {
 			email: $email,
 			streetAddress: $streetAddress,
