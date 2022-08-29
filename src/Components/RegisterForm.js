@@ -136,7 +136,7 @@ const RegisterForm = () => {
 					placeholder="Scare Level scale 1-10"
 					type="number"
 					value={scarinessLevel}
-					onChange={event => setScarinessLevel(event.target.value)}
+					onChange={event => setScarinessLevel(event.target.valueAsNumber)}
 				/>
 				<input
 					name="description"
