@@ -1,5 +1,5 @@
 import './App.css'
-import React from 'react'
+import React, {useState} from 'react'
 import { Route } from 'react-router-dom'
 import Header from '../Components/Header.js'
 import MapPage from '../Components/MapPage.js'
@@ -31,8 +31,9 @@ const App = () => {
 	}
 	`
 
+	const [stateError, setStateError] = useState('')
+	const [stateData, setStateData] = useState('')
 	const {error, data, loading} = useQuery(GET_LOCATION)
-
 
   return (
     <div className="App">
