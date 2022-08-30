@@ -12,6 +12,25 @@ import { useQuery, gql } from '@apollo/client'
 
 const App = () => {
 
+	const GET_LOCATION = gql`
+	query {
+		locations {
+			streetAddress
+			city
+			state
+			zipcode
+			locationType
+			scarinessLevel
+			description
+			startTime
+			endTime
+			image
+		}
+	}
+	`
+
+	const {error, data, loading} = useQuery(GET_LOCATION)
+
 
   return (
     <div className="App">
@@ -32,7 +51,7 @@ const App = () => {
 			
 			<Route exact path="/Map">
 				<ZipCodeForm />
-				<MapPage />
+				{data && <MapPage locationData={data.locations} />}
 			</Route>
 
     </div>
