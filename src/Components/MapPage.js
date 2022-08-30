@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -15,10 +15,6 @@ const MapPage = ({locationData}) => {
 
 	// const [selectedHouse, setSelectedHouse] = useState(null)
 
-	// const mappedLocations = locationData.map(location => {
-	// 	return location.streetAddress
-	// })
-
 // 	useEffect(() => {
 //     if (map.current) return; // initialize map only once
 //     map.current = new mapboxgl.Map({
@@ -28,7 +24,20 @@ const MapPage = ({locationData}) => {
 //         zoom: zoom
 //     });
 // });
-	
+const properties = locationData.map(location => {
+	console.log(location)
+	return (
+		<Marker
+			key={Date.now()}
+			latitude={location.latitude}
+			longitude={location.longitude}
+		>
+		<button className="haunted-house-icon">
+			<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+		</button>
+		</Marker>
+	) 
+})
 	return (
 
 		<div className="map-container">
@@ -40,15 +49,7 @@ const MapPage = ({locationData}) => {
 					setViewport(viewport)
 				}}
 			>
-			<Marker 
-				latitude={"39.671240"}
-				longitude={"-105.016810"}
-			>
-				<button className="haunted-house-icon">
-					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
-				</button>
-			</Marker>
-
+				{properties}
 			</ReactMapGL>
 		</div>
 	)

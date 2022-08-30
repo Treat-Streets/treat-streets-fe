@@ -25,6 +25,8 @@ const App = () => {
 			startTime
 			endTime
 			image
+			latitude
+			longitude
 		}
 	}
 	`

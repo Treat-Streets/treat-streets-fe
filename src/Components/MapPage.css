@@ -1,13 +1,8 @@
 .map-container {
-	border: 2px solid black;
-	height: 1000px;
-}
-
-.map {
-	position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+	/* border: 2px solid black; */
+	height: 700px;
+	padding-left: 80px;
+	padding-right: 80px;
 }
 
 .haunted-house-icon {
