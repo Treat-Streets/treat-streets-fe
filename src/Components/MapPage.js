@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
-import ReactMapGL, { Mapper, Popup } from 'react-map-gl'
+import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import '../Components/MapPage.css'
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MapPage = ({locationData}) => {
 
-	const [viewport, setViewPort] = useState({
+	const [viewport, setViewport] = useState({
 		latitude: 39.7392,
 		longitude: -104.9903, 
 		width: "100vw", 
@@ -34,11 +35,19 @@ const MapPage = ({locationData}) => {
 			<ReactMapGL className="map"
 				{...viewport}
 				mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-				mapStyle="mapbox://styles/mapbox/light-v10"
+				mapStyle="mapbox://styles/mapbox/dark-v10"
 				onViewportChange={viewport => {
-					setViewPort(viewport)
+					setViewport(viewport)
 				}}
 			>
+			<Marker 
+				latitude={"39.671240"}
+				longitude={"-105.016810"}
+			>
+				<button className="haunted-house-icon">
+					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+				</button>
+			</Marker>
 
 			</ReactMapGL>
 		</div>
