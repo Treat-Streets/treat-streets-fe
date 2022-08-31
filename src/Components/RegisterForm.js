@@ -65,6 +65,21 @@ const RegisterForm = () => {
 	const handleClick = (event) => {
 		event.preventDefault();
 		createLocation()
+		clearForm()
+	}
+
+	const clearForm = () => {
+		setEmail('')
+		setStreetAddress('')
+		setCity('')
+		setState('')
+		setZipcode('')
+		setLocationType('')
+		setStartTime('')
+		setEndTime('')
+		setImage('')
+		setScarinessLevel(0)
+		setDescription('')
 	}
 
 	return (
