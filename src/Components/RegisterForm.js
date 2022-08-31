@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../Components/RegisterForm.css'
 import { gql, useMutation } from '@apollo/client'
+// import { Link, Link as RouterLink  } from 'react-router-dom'
+import { Link, BrowserRouter, useHistory } from 'react-router-dom'
 
 const CREATE_LOCATION = gql`
 	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: String!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
@@ -65,6 +67,34 @@ const RegisterForm = () => {
 	const handleClick = (event) => {
 		event.preventDefault();
 		createLocation()
+		clearForm()
+		history.push('/ThankYou');
+	}
+
+	const history = useHistory()
+
+	// const onLinkClick = (e) => {
+	// 	e.preventDefault();
+	// 	---do your stuff---
+	// 	history.push('/your-route');
+	// };
+	
+	// <a href='/your-route' onClick={onLinkClick}> Navigate </a>
+	// 				   or
+	// <Link to='/your-route' onClick={onLinkClick}> Navigate </Link>
+
+	const clearForm = () => {
+		setEmail('')
+		setStreetAddress('')
+		setCity('')
+		setState('')
+		setZipcode('')
+		setLocationType('')
+		setStartTime('')
+		setEndTime('')
+		setImage('')
+		setScarinessLevel(0)
+		setDescription('')
 	}
 
 	return (
@@ -151,7 +181,7 @@ const RegisterForm = () => {
 						value={description}
 						onChange={event => setDescription(event.target.value)}
 					/>
-					<button className="register" onClick={event => handleClick(event)}>Register House!</button>
+					<button className="register" onClick={event => handleClick(event)}> Register House! </button>
 				</form>
 			</section>
 		</div>
