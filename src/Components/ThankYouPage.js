@@ -2,24 +2,14 @@ import React, { useState } from 'react'
 import '../Components/ThankYouPage.css'
 import ReactMapGL, { Marker } from 'react-map-gl'
 
-const ThankYouPage = ({locationData}) => {
-
-	const [viewport, setViewport] = useState({
+const ThankYouPage = ({ locationData }) => {
+	const [viewport] = useState({
 		latitude: locationData[locationData.length -1].latitude,
 		longitude: locationData[locationData.length -1].longitude,
 		width: "100vw", 
 		height: "100vh",
 		zoom: 15
 	})
-
-	// setViewport({
-	// 	latitude: locationData[locationData.length -1].latitude,
-	// 	longitude: locationData[locationData.length -1].longitude,
-	// 	width: "100vw", 
-	// 	height: "100vh",
-	// 	zoom: 10
-	// })
-
 
 	return (
 		<div className="map-container">
@@ -29,7 +19,6 @@ const ThankYouPage = ({locationData}) => {
 				mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
 				mapStyle="mapbox://styles/mapbox/dark-v10"
 			>
-
 				<Marker
 					key={Date.now()}
 					latitude={locationData[locationData.length -1].latitude}
@@ -40,7 +29,6 @@ const ThankYouPage = ({locationData}) => {
 					</button>
 				</Marker>
 			</ReactMapGL>
-
 		</div>
 	)
 }

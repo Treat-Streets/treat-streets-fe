@@ -13,8 +13,6 @@ const MapPage = ({locationData}) => {
 		zoom: 10
 	})
 
-	// const [selectedHouse, setSelectedHouse] = useState(null)
-
 const properties = locationData.map(location => {
 	console.log(location)
 	return (
