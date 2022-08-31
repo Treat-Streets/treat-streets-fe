@@ -1,7 +1,6 @@
 .landing-page-container {
 	/* border: 2px solid black; */
 	display: flex;
-	height: 700px;
 }
 
 .landing-page-left {
@@ -25,7 +24,6 @@
 	0 0 102px #043451,
 	0 0 151px #043451;
 }
-
 
 .landing-page-right {
 	/* border: 2px solid black; */
