@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../Components/LandingPage.css'
-import landingImage from '../assets/haunted-house.gif'
+import landingImage from '../assets/loadingGif.gif'
 
 const LandingPage = () => {
 	return (

@@ -32,7 +32,6 @@
 	justify-content: center;
 	margin-right: 10px;
 	padding-left: 10px;
-
 }
 
 .landing-page-buttons-container {
@@ -45,7 +44,7 @@
 
 .landing-button {
 	padding: 50px;
-	margin-top: 30px;
+	margin-top: 50px;
 	border-radius: 10px;
 	font-family: 'Ranchers', cursive;
 	letter-spacing: .25rem;
