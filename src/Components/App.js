@@ -38,7 +38,6 @@ const App = () => {
 
   return (
     <div className="App">
-			<Nav />
 			<Header />
 
 			<Route exact path="/">
@@ -46,14 +45,17 @@ const App = () => {
 			</Route>
 
 			<Route exact path="/Register">
+				<Nav />
 				<RegisterForm />
 			</Route>
 
 			<Route exact path="/ThankYou">
+				<Nav />
 				<ThankYouPage />
 			</Route>
 			
 			<Route exact path="/Map">
+				<Nav />
 				<ZipCodeForm />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}

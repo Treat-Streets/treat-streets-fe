@@ -69,84 +69,91 @@ const RegisterForm = () => {
 
 	return (
 		<div className="register-form-container">
-			<form>
-				<input 
-					name="email"
-					placeholder="Enter email here"
-					type="text"
-					value={email}
-					onChange={event => setEmail(event.target.value)}
-				/>
-				<input
-					name="streetAddress"
-					placeholder="Enter address"
-					value={streetAddress}
-					type="text"
-					onChange={event => setStreetAddress(event.target.value)}
-				/>
-				<input
-					name="city"
-					placeholder="Enter city"
-					value={city}
-					type="text"
-					onChange={event => setCity(event.target.value)}
-				/>
-				<input
-					name="state"
-					placeholder="Enter state"
-					value={state}
-					type="text"
-					onChange={event => setState(event.target.value)}
-				/>
-				<input
-					name="zipcode"
-					placeholder="Enter zipcode"
-					value={zipcode}
-					type="text"
-					onChange={event => setZipcode(event.target.value)}
-				/>
-				<select name="locationType" id="locationType" onChange={event => setLocationType(event.target.value)} value={locationType}>
-					<option value="default"> Select Property Type </option>
-					<option value="house">House</option>
-					<option value="condo">Condo</option>
-					<option value="townhome">Townhome</option>
-					<option value="apartment">Apartment</option>
-					<option value="business">Business</option>
-				</select>
-				<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
-					<option value="default">Choose a Start Time</option>
-					<option value="4:00 pm">4:00 pm</option>
-					<option value="5:00 pm">5:00 pm</option>
-					<option value="6:00 pm">6:00 pm</option>
-				</select>
-				<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
-					<option value="default">Choose an End Time</option>
-					<option value="6:00 pm">6:00 pm</option>
-					<option value="7:00 pm">7:00 pm</option>
-					<option value="8:00 pm">8:00 pm</option>
-				</select>
-				<input 
-					name="image"
-					value={image}
-					placeholder="Image placeholder"
-					onChange={event => setImage(event.target.value)}
-				/>
-				<input
-					name="scarinessLevel"
-					placeholder="Scare Level scale 1-10"
-					type="number"
-					value={scarinessLevel}
-					onChange={event => setScarinessLevel(event.target.valueAsNumber)}
-				/>
-				<input
-					name="description"
-					placeholder="Tell us about your house!"
-					type="text"
-					value={description}
-					onChange={event => setDescription(event.target.value)}
-				/>
-				<button className="register" onClick={event => handleClick(event)}>Register House!</button>
-			</form>
+			<section className="message-section">
+				<h2>WE LOVE HALLOWEEN</h2>
+				<p>Fill out this form to let your Denver area neighbors know you are passing out candy for Halloween!</p>	
+			</section>
+
+			<section className="form-section">
+				<form>
+					<input 
+						name="email"
+						placeholder="Enter email here"
+						type="text"
+						value={email}
+						onChange={event => setEmail(event.target.value)}
+					/>
+					<input
+						name="streetAddress"
+						placeholder="Enter address"
+						value={streetAddress}
+						type="text"
+						onChange={event => setStreetAddress(event.target.value)}
+					/>
+					<input
+						name="city"
+						placeholder="Enter city"
+						value={city}
+						type="text"
+						onChange={event => setCity(event.target.value)}
+					/>
+					<input
+						name="state"
+						placeholder="Enter state"
+						value={state}
+						type="text"
+						onChange={event => setState(event.target.value)}
+					/>
+					<input
+						name="zipcode"
+						placeholder="Enter zipcode"
+						value={zipcode}
+						type="text"
+						onChange={event => setZipcode(event.target.value)}
+					/>
+					<select name="locationType" id="locationType" onChange={event => setLocationType(event.target.value)} value={locationType}>
+						<option value="default"> Select Property Type </option>
+						<option value="house">House</option>
+						<option value="condo">Condo</option>
+						<option value="townhome">Townhome</option>
+						<option value="apartment">Apartment</option>
+						<option value="business">Business</option>
+					</select>
+					<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
+						<option value="default">Choose a Start Time</option>
+						<option value="4:00 pm">4:00 pm</option>
+						<option value="5:00 pm">5:00 pm</option>
+						<option value="6:00 pm">6:00 pm</option>
+					</select>
+					<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
+						<option value="default">Choose an End Time</option>
+						<option value="6:00 pm">6:00 pm</option>
+						<option value="7:00 pm">7:00 pm</option>
+						<option value="8:00 pm">8:00 pm</option>
+					</select>
+					<input 
+						name="image"
+						value={image}
+						placeholder="Image placeholder"
+						onChange={event => setImage(event.target.value)}
+					/>
+					<input
+						name="scarinessLevel"
+						placeholder="Scare Level scale 1-10"
+						type="number"
+						value={scarinessLevel}
+						onChange={event => setScarinessLevel(event.target.valueAsNumber)}
+					/>
+					<input
+						name="description"
+						placeholder="Tell us about your house!"
+						type="text"
+						value={description}
+						onChange={event => setDescription(event.target.value)}
+					/>
+					<button className="register" onClick={event => handleClick(event)}>Register House!</button>
+				</form>
+			</section>
 		</div>
 	)
 }

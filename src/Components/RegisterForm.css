@@ -1,10 +1,21 @@
 .register-form-container {
   display: flex;
-  justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: 700px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	border: 2px solid pink;
+	width: 50%;
+	padding-top: 20px;
 }
 
 form {
-  display: flex;
+	display: flex;
   flex-direction: column;
-  width: 30%;
+	justify-content: center;
 }
