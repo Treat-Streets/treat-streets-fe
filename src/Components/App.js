@@ -51,7 +51,7 @@ const App = () => {
 
 			<Route exact path="/ThankYou">
 				<Nav />
-				<ThankYouPage />
+				{data && <ThankYouPage locationData={data.locations}/>}
 			</Route>
 			
 			<Route exact path="/Map">
