@@ -1,5 +1,5 @@
 import './App.css'
-import React from 'react'
+import React, {useState} from 'react'
 import { Route } from 'react-router-dom'
 import Header from '../Components/Header.js'
 import MapPage from '../Components/MapPage.js'
@@ -8,6 +8,7 @@ import RegisterForm from '../Components/RegisterForm.js'
 import ThankYouPage from '../Components/ThankYouPage.js'
 import ZipCodeForm from '../Components/ZipCodeForm.js'
 import LandingPage from '../Components/LandingPage.js'
+import Loading from '../Components/Loading.js'
 import { useQuery, gql } from '@apollo/client'
 
 const App = () => {
@@ -25,12 +26,15 @@ const App = () => {
 			startTime
 			endTime
 			image
+			latitude
+			longitude
 		}
 	}
 	`
 
+	const [stateError, setStateError] = useState('')
+	const [stateData, setStateData] = useState('')
 	const {error, data, loading} = useQuery(GET_LOCATION)
-
 
   return (
     <div className="App">
@@ -51,6 +55,7 @@ const App = () => {
 			
 			<Route exact path="/Map">
 				<ZipCodeForm />
+				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
 			</Route>
 
