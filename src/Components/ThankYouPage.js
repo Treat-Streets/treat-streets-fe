@@ -5,12 +5,20 @@ import ReactMapGL, { Marker } from 'react-map-gl'
 const ThankYouPage = ({locationData}) => {
 
 	const [viewport, setViewport] = useState({
-		latitude: 39.7392,
-		longitude: -104.9903, 
+		latitude: locationData[locationData.length -1].latitude,
+		longitude: locationData[locationData.length -1].longitude,
 		width: "100vw", 
 		height: "100vh",
-		zoom: 10
+		zoom: 15
 	})
+
+	// setViewport({
+	// 	latitude: locationData[locationData.length -1].latitude,
+	// 	longitude: locationData[locationData.length -1].longitude,
+	// 	width: "100vw", 
+	// 	height: "100vh",
+	// 	zoom: 10
+	// })
 
 
 	return (
