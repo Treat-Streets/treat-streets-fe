@@ -15,15 +15,6 @@ const MapPage = ({locationData}) => {
 
 	// const [selectedHouse, setSelectedHouse] = useState(null)
 
-// 	useEffect(() => {
-//     if (map.current) return; // initialize map only once
-//     map.current = new mapboxgl.Map({
-//         container: mapContainer.current,
-//         style: 'mapbox://styles/mapbox/streets-v11',
-//         center: [lng, lat],
-//         zoom: zoom
-//     });
-// });
 const properties = locationData.map(location => {
 	console.log(location)
 	return (
@@ -38,16 +29,14 @@ const properties = locationData.map(location => {
 		</Marker>
 	) 
 })
-	return (
 
+	return (
 		<div className="map-container">
 			<ReactMapGL className="map"
 				{...viewport}
 				mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
 				mapStyle="mapbox://styles/mapbox/dark-v10"
-				onViewportChange={viewport => {
-					setViewport(viewport)
-				}}
+				onMove={evt => setViewport(evt.viewport)}
 			>
 				{properties}
 			</ReactMapGL>
