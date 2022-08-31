@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import ReactMapGL, { Marker, Popup } from 'react-map-gl'
+import ReactMapGL, { Marker, Popup, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -38,6 +38,9 @@ const properties = locationData.map(location => {
 				mapStyle="mapbox://styles/mapbox/dark-v10"
 				onMove={evt => setViewport(evt.viewport)}
 			>
+			<GeolocateControl/>
+			<FullscreenControl />
+			<NavigationControl showCompass={false}/>
 				{properties}
 			</ReactMapGL>
 		</div>
