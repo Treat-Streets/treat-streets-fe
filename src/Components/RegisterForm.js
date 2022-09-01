@@ -47,6 +47,7 @@ const RegisterForm = () => {
 	const [image, setImage] = useState('')
 	const [scarinessLevel, setScarinessLevel] = useState(0)
 	const [description, setDescription] = useState('')
+	const [url, setUrl ] = useState("");
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
 		variables: {
@@ -66,6 +67,7 @@ const RegisterForm = () => {
 
 	const handleClick = (event) => {
 		event.preventDefault();
+		uploadImage()
 		createLocation()
 		clearForm()
 		history.push('/ThankYou');
@@ -95,6 +97,22 @@ const RegisterForm = () => {
 		setImage('')
 		setScarinessLevel(0)
 		setDescription('')
+	}
+
+	const uploadImage = () => {
+		const data = new FormData()
+		data.append("file", image)
+		data.append("upload_preset", "treat_street")
+		data.append("cloud_name","drexo2l5j")
+		fetch("  https://api.cloudinary.com/v1_1/drexo2l5j/image/upload",{
+		method:"post",
+		body: data
+		})
+		.then(resp => resp.json())
+		.then(data => {
+		setUrl(data.url)
+		})
+		.catch(err => console.log(err))
 	}
 
 	return (
@@ -164,6 +182,7 @@ const RegisterForm = () => {
 						</select>
 						<input 
 							name="image"
+							type="file"
 							value={image}
 							placeholder="Image placeholder"
 							onChange={event => setImage(event.target.value)}
