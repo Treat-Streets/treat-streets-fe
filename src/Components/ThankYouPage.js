@@ -12,23 +12,27 @@ const ThankYouPage = ({ locationData }) => {
 	})
 
 	return (
-		<div className="map-container">
-			<h2> Thank you for registering your house! </h2>
-			<ReactMapGL className="map"
-				{...viewport}
-				mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-				mapStyle="mapbox://styles/mapbox/dark-v10"
-			>
-				<Marker
-					key={Date.now()}
-					latitude={locationData[locationData.length -1].latitude}
-					longitude={locationData[locationData.length -1].longitude}
-				>
-					<button className="haunted-house-icon">
-						<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
-					</button>
-				</Marker>
-			</ReactMapGL>
+		<div className="map-wrapper">
+			<div className="small-map-container">
+				<h2 className='thank-you-msg'> Thank you for registering your house! </h2>
+				<div className="small-map" >
+					<ReactMapGL 
+						{...viewport}
+						mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+						mapStyle="mapbox://styles/mapbox/dark-v10"
+					>
+						<Marker
+							key={Date.now()}
+							latitude={locationData[locationData.length -1].latitude}
+							longitude={locationData[locationData.length -1].longitude}
+						>
+							<button className="haunted-house-icon">
+								<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+							</button>
+						</Marker>
+					</ReactMapGL>
+				</div>
+			</div>
 		</div>
 	)
 }

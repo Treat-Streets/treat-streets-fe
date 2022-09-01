@@ -1,8 +1,32 @@
-.map-container {
-	height: 30em;
-    width: 50em;
+.map-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.thank-you-msg {
+	font-family: 'Ranchers', cursive;
+	letter-spacing: .25rem;
+	font-size: 2.5rem;
+	margin-top: 35px;
+}
+
+
+.small-map-container {
+	margin-top: 20px;
+	height: 84vh;
+  width: 70vw;
 	padding-left: 80px;
 	padding-right: 80px;
+	background-color: #6652BD;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.small-map {
+	margin-top: 40px;
+	height: 60vh;
+  width: 70vw;
 }
 
 .haunted-house-icon {
