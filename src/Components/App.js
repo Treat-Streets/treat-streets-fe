@@ -33,6 +33,24 @@ query {
 const App = () => {
 
 	const {error, data, loading} = useQuery(GET_LOCATION)
+	const [image, setImage ] = useState("");
+	const [ url, setUrl ] = useState("");
+
+	const uploadImage = () => {
+		const data = new FormData()
+		data.append("file", image)
+		data.append("upload_preset", "treat_street")
+		data.append("cloud_name","drexo2l5j")
+		fetch("  https://api.cloudinary.com/v1_1/drexo2l5j/image/upload",{
+		method:"post",
+		body: data
+		})
+		.then(resp => resp.json())
+		.then(data => {
+		setUrl(data.url)
+		})
+		.catch(err => console.log(err))
+	}
 
   return (
     <div className="App">
