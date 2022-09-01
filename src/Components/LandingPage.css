@@ -1,3 +1,10 @@
+.landing-page-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
 .landing-page-container {
 	/* border: 2px solid black; */
 	display: flex;
