@@ -11,29 +11,27 @@ import LandingPage from '../Components/LandingPage.js'
 import Loading from '../Components/Loading.js'
 import { useQuery, gql } from '@apollo/client'
 
+const GET_LOCATION = gql`
+query {
+	locations {
+		streetAddress
+		city
+		state
+		zipcode
+		locationType
+		scarinessLevel
+		description
+		startTime
+		endTime
+		image
+		latitude
+		longitude
+	}
+}
+`;
+
 const App = () => {
 
-	const GET_LOCATION = gql`
-	query {
-		locations {
-			streetAddress
-			city
-			state
-			zipcode
-			locationType
-			scarinessLevel
-			description
-			startTime
-			endTime
-			image
-			latitude
-			longitude
-		}
-	}
-	`
-
-	const [stateError, setStateError] = useState('')
-	const [stateData, setStateData] = useState('')
 	const {error, data, loading} = useQuery(GET_LOCATION)
 
   return (
