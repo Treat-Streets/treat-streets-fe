@@ -10,9 +10,9 @@
 	display: flex;
 }
 
-.landing-page-left {
-	/* border: 2px solid yellow; */
-}
+/* .landing-page-left {
+	border: 2px solid yellow; 
+} */
 
 .welcome-header {
 	padding-top: 10px;
@@ -42,9 +42,9 @@
 	padding-left: 10px;
 }
 
-.landing-page-buttons-container {
-	/* border: 2px solid orange; */
-}
+/* .landing-page-buttons-container {
+	border: 2px solid orange;
+} */
 
 .landing-image {
 	padding-top: 20px;
