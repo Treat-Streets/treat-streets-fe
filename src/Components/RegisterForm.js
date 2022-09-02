@@ -45,7 +45,7 @@ const RegisterForm = () => {
 	const [startTime, setStartTime] = useState('')
 	const [endTime, setEndTime] = useState('')
 	const [image, setImage] = useState('')
-	const [scarinessLevel, setScarinessLevel] = useState(0)
+	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
@@ -84,7 +84,7 @@ const RegisterForm = () => {
 		setStartTime('')
 		setEndTime('')
 		setImage('')
-		setScarinessLevel(0)
+		setScarinessLevel(1)
 		setDescription('')
 	}
 
@@ -159,13 +159,25 @@ const RegisterForm = () => {
 							placeholder="Image placeholder"
 							onChange={event => setImage(event.target.value)}
 						/>
-						<input
+						{/* <input
 							name="scarinessLevel"
 							placeholder="Scare Level scale 1-10"
 							type="number"
 							value={scarinessLevel}
 							onChange={event => setScarinessLevel(event.target.valueAsNumber)}
-						/>
+						/> */}
+						<div class="slidecontainer">
+  						<input 
+							type="range"
+							min="1" 
+							max="10" 
+							class="slider" 
+							id="myRange"
+							value={scarinessLevel}
+							onChange={event => setScarinessLevel(event.target.valueAsNumber)}
+							/>
+						</div>
+						<p>Scariness Level: {scarinessLevel}</p>
 						<input
 							name="description"
 							placeholder="Tell us about your house!"

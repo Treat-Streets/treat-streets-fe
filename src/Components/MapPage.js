@@ -28,23 +28,24 @@ const MapPage = ({ locationData }) => {
 	// }
 
 	const properties = locationData.map(location => {
+		console.log(location.locationType)
 		return (
 			<Marker
 				key={location.id}
 				latitude={location.latitude}
 				longitude={location.longitude}
 			>
-			<Link to='/PopUp'><button className="haunted-house-icon">
+			<button className="haunted-house-icon" value={location.id} onClick={() => setPopupOpen({...popupOpen, [location.description]: true})}>
 				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
-			</button></Link>
+			</button>
 			
-      {/* {popupOpen && (<Popup longitude={location.longitude} latitude={location.latitude}
+      {popupOpen[location.id] && (<Popup longitude={location.longitude} latitude={location.latitude}
         anchor="bottom"
         onClose={() => setPopupOpen(false)}>
         <div>
 					<h2>{location.latitude}</h2>
 				</div>
-      </Popup>)} */}
+      </Popup>)}
 			</Marker>
 		) 
 	})
