@@ -14,38 +14,38 @@ const MapPage = ({locationData}) => {
 	})
 
 	const [selectedHouse, setSelectedHouse] = useState({})
+	
 	console.log(selectedHouse)
-const properties = locationData.map(location => {
-	// console.log(location)
-	return (
-		<Marker
-			key={location.id}
-			latitude={location.latitude}
-			longitude={location.longitude}
-		>
-		<button 
-			className="haunted-house-icon"
-			onClick={e => {
-				e.preventDefault()
-				setSelectedHouse(location)
-			}}>
+	const properties = locationData.map(location => {
+		// console.log(location)
+		return (
+			<Marker
+				key={location.id}
+				latitude={location.latitude}
+				longitude={location.longitude}
+			>
+			<button 
+				className="haunted-house-icon"
+				onClick={e => {
+					e.preventDefault()
+					setSelectedHouse(location)
+				}}>
+					{selectedHouse.id === location.id ? (
+						<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
+							anchor='bottom'
+							onClose={() => setSelectedHouse(false) }
+						>
+							<div>
+								TEST
+							</div>
+						</Popup>
+					) : null}
 
-				{selectedHouse.id === location.id ? (
-					<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
-						anchor='bottom'
-						onClose={() => setSelectedHouse(false) }
-					>
-						<div>
-							TEST
-						</div>
-					</Popup>
-				) : null}
-
-			<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
-		</button>
-		</Marker>
-	) 
-})
+				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+			</button>
+			</Marker>
+		) 
+	})
 
 	return (
 		<div className="map-container">
