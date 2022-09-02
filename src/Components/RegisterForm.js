@@ -73,15 +73,6 @@ const RegisterForm = () => {
 
 	const history = useHistory()
 
-	// const onLinkClick = (e) => {
-	// 	e.preventDefault();
-	// 	---do your stuff---
-	// 	history.push('/your-route');
-	// };
-	
-	// <a href='/your-route' onClick={onLinkClick}> Navigate </a>
-	// 				   or
-	// <Link to='/your-route' onClick={onLinkClick}> Navigate </Link>
 
 	const clearForm = () => {
 		setEmail('')

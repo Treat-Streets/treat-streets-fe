@@ -10,10 +10,12 @@ import ZipCodeForm from '../Components/ZipCodeForm.js'
 import LandingPage from '../Components/LandingPage.js'
 import Loading from '../Components/Loading.js'
 import { useQuery, gql } from '@apollo/client'
+import PopupPage from './PopupPage'
 
 const GET_LOCATION = gql`
 query {
 	locations {
+		id
 		streetAddress
 		city
 		state
@@ -57,6 +59,10 @@ const App = () => {
 				<ZipCodeForm />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
+			</Route>
+
+			<Route exact path='/PopUp'>
+				<PopupPage />
 			</Route>
 
     </div>
