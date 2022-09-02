@@ -54,7 +54,6 @@ const RegisterForm = () => {
 
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
-		// fetchPolicy: 'network-only', // Doesn't check cache before making a network request
 		variables: {
 			email: email,
 			streetAddress: streetAddress,
@@ -74,7 +73,6 @@ const RegisterForm = () => {
 	const handleClick = (event) => {
 		event.preventDefault();
 		createLocation().then((res) => {
-			// console.log(res);
 			clearForm();
 			history.push({
 				pathname: '/ThankYou',
@@ -85,8 +83,6 @@ const RegisterForm = () => {
 			})
 		})
 		clearForm()
-		//setTimeout(() => {history.push('/ThankYou')}, 500)
-		// history.push('/ThankYou');
 	}
 
 	const history = useHistory()
