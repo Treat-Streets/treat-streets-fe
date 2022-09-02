@@ -1,7 +1,6 @@
 import './App.css'
 import React, {useState} from 'react'
 import { Route } from 'react-router-dom'
-import Header from '../Components/Header.js'
 import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
 import RegisterForm from '../Components/RegisterForm.js'
@@ -38,31 +37,29 @@ const App = () => {
 
   return (
     <div className="App">
-			<Header />
-
+		
 			<Route exact path="/">
 				<LandingPage />
 			</Route>
 
+			<Nav />
+
 			<Route exact path="/Register">
-				<Nav />
 				<RegisterForm />
 			</Route>
 
 			<Route exact path="/ThankYou">
-				<Nav />
 				{data && <ThankYouPage locationData={data.locations}/>}
 			</Route>
 			
 			<Route exact path="/Map">
-				<Nav />
 				<ZipCodeForm />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
 			</Route>
 
-			<Route exact path='/PopUp'>
-				<PopupPage />
+			<Route path='/PopUp/:id' render={({ match }) => 
+				<PopupPage id={match.params['id']}/>}>
 			</Route>
 
     </div>

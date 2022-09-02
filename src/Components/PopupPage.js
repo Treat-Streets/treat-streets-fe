@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PopupPage = () => {
+const PopupPage = ({ id }) => {
   return (
     <div>
-      <h2>Pop UP Page</h2>
+      <h2>Pop UP Page Id is: {id}</h2>
     </div>
   )
 }

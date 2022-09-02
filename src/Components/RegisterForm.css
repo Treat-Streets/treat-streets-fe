@@ -50,6 +50,10 @@ form * {
 	padding-left: 12px;
 }
 
+option:disabled {
+  color: grey;
+}
+
 .register {
 	background-color: #FD7D11;
 	height: 40px;
