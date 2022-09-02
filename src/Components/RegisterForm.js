@@ -84,6 +84,7 @@ const RegisterForm = () => {
 
 	const handleClick = (event) => {
 		event.preventDefault();
+		uploadImage();
 		createLocation()
 		clearForm()
 		history.push('/ThankYou');
@@ -184,8 +185,9 @@ const RegisterForm = () => {
 						<input 
 							name="image"
 							type="file"
+							title="Choose file"
+							style={{color: "#6652BD"}}
 							value={image}
-							placeholder="Image placeholder"
 							// onChange={event=> setImage(event.target.files[0])}
 							// onChange={event => setImage(event.target.value)}
 							onChange={event => uploadImage(event)}
