@@ -55,6 +55,11 @@ form * {
 	height: 40px;
 }
 
+.scarylevel {
+	align-self: flex-start;
+	font-size: smaller;
+}
+
 .slidecontainer {
   width: 97%; /* Width of the outside container */
 	margin: 0px;
@@ -70,7 +75,7 @@ form * {
   border-radius: 5px;  
   background: white;
   outline: none;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
