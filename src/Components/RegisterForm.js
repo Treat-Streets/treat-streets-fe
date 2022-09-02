@@ -49,8 +49,9 @@ const RegisterForm = () => {
 	const [startTime, setStartTime] = useState('')
 	const [endTime, setEndTime] = useState('')
 	const [image, setImage] = useState('')
-	const [scarinessLevel, setScarinessLevel] = useState(0)
+	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
+	const [url, setUrl ] = useState("");
 
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
@@ -63,12 +64,29 @@ const RegisterForm = () => {
 			locationType: locationType,
 			startTime: startTime,
 			endTime: endTime,
-			image: image,
+			image: url,
 			scarinessLevel: scarinessLevel,
 			description: description
 		},
 		refetchQueries: [{query: GET_LOCATION}]
 	})
+
+	const uploadImage = (event) => {
+		const data = new FormData()
+		let file = event.target.files[0];
+		data.append("file", file)
+		data.append("upload_preset", "treat_streets")
+		data.append("cloud_name","drexo2l5j")
+		fetch("https://api.cloudinary.com/v1_1/drexo2l5j/image/upload",{
+			method:"POST",
+			body: data
+		})
+		.then(resp => resp.json())
+		.then(data => {
+			setUrl(data.url)
+		})
+		.catch(err => console.log(err))
+	}
 
 	const handleClick = (event) => {
 		event.preventDefault();
@@ -82,14 +100,17 @@ const RegisterForm = () => {
 				}
 			})
 		})
-		clearForm()
+
+		uploadImage();
 	}
 
 	const history = useHistory()
 
+
 	//The useHistory hook allows us to access React Router's history object.
 	// Through the history object, we can access and manipulate the current state of the browser history.
 	//basically sets the values of the object associated with the URL endpoint and push that into the history array
+
 
 	const clearForm = () => {
 		setEmail('')
@@ -101,9 +122,10 @@ const RegisterForm = () => {
 		setStartTime('')
 		setEndTime('')
 		setImage('')
-		setScarinessLevel(0)
+		setScarinessLevel(1)
 		setDescription('')
 	}
+
 
 	return (
 		<div className='form-wrapper'>
@@ -151,7 +173,7 @@ const RegisterForm = () => {
 							onChange={event => setZipcode(event.target.value)}
 						/>
 						<select name="locationType" id="locationType" onChange={event => setLocationType(event.target.value)} value={locationType}>
-							<option value="default"> Select Property Type </option>
+							<option value="" disabled selected> Select Property Type </option>
 							<option value="house">House</option>
 							<option value="condo">Condo</option>
 							<option value="townhome">Townhome</option>
@@ -159,30 +181,39 @@ const RegisterForm = () => {
 							<option value="business">Business</option>
 						</select>
 						<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
-							<option value="default">Choose a Start Time</option>
+							<option value="" disabled selected>Choose a Start Time</option>
 							<option value="4:00 pm">4:00 pm</option>
 							<option value="5:00 pm">5:00 pm</option>
 							<option value="6:00 pm">6:00 pm</option>
 						</select>
 						<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
-							<option value="default">Choose an End Time</option>
+							<option value="" disabled selected>Choose an End Time</option>
 							<option value="6:00 pm">6:00 pm</option>
 							<option value="7:00 pm">7:00 pm</option>
 							<option value="8:00 pm">8:00 pm</option>
 						</select>
 						<input 
 							name="image"
+							type="file"
+							title="Choose file"
+							style={{color: "#6652BD"}}
 							value={image}
-							placeholder="Image placeholder"
-							onChange={event => setImage(event.target.value)}
+							// onChange={event=> setImage(event.target.files[0])}
+							// onChange={event => setImage(event.target.value)}
+							onChange={event => uploadImage(event)}
 						/>
-						<input
-							name="scarinessLevel"
-							placeholder="Scare Level scale 1-10"
-							type="number"
+						<div class="slidecontainer">
+  						<input 
+							type="range"
+							min="1" 
+							max="10" 
+							class="slider" 
+							id="myRange"
 							value={scarinessLevel}
 							onChange={event => setScarinessLevel(event.target.valueAsNumber)}
-						/>
+							/>
+						</div>
+						<p className="scarylevel">Scariness Level: {scarinessLevel}</p>
 						<input
 							name="description"
 							placeholder="Tell us about your house!"

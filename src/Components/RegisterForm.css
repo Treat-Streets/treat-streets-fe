@@ -50,8 +50,67 @@ form * {
 	padding-left: 12px;
 }
 
+option:disabled {
+  color: grey;
+}
+
 .register {
 	background-color: #FD7D11;
 	height: 40px;
+}
+
+.scarylevel {
+	align-self: flex-start;
+	font-size: smaller;
+}
+
+.slidecontainer {
+  width: 97%; /* Width of the outside container */
+	margin: 0px;
+	margin-top: 10px;
+	padding: 0px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 13px;
+  border-radius: 5px;  
+  background: white;
+  outline: none;
+  /* opacity: 0.8; */
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%; 
+  background-image:url('https://cdn-icons-png.flaticon.com/512/1234/1234843.png');
+	background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1234/1234843.png');
+	background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 

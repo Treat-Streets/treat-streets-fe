@@ -13,6 +13,7 @@ const defaultOptions = {
 
 const client = new ApolloClient({
   uri: 'https://treat-streets-be.herokuapp.com/graphql',
+  // uri: 'https://treat-streets-be.herokuapp.com/graphql',
   cache: new InMemoryCache(),
   defaultOptions: defaultOptions
 });
