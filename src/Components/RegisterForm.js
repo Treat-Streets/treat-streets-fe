@@ -65,6 +65,24 @@ const RegisterForm = () => {
 		}
 	})
 
+
+	const uploadImage = (event) => {
+		const data = new FormData()
+		let file = event.target.files[0];
+		data.append("file", file)
+		data.append("upload_preset", "treat_streets")
+		data.append("cloud_name","drexo2l5j")
+		fetch("https://api.cloudinary.com/v1_1/drexo2l5j/image/upload",{
+			method:"POST",
+			body: data
+		})
+		.then(resp => resp.json())
+		.then(data => {
+			setUrl(data.url)
+		})
+		.catch(err => console.log(err))
+	}
+
 	const handleClick = (event) => {
 		event.preventDefault();
 		uploadImage()
@@ -99,21 +117,6 @@ const RegisterForm = () => {
 		setDescription('')
 	}
 
-	const uploadImage = () => {
-		const data = new FormData()
-		data.append("file", image)
-		data.append("upload_preset", "treat_street")
-		data.append("cloud_name","drexo2l5j")
-		fetch("  https://api.cloudinary.com/v1_1/drexo2l5j/image/upload",{
-		method:"post",
-		body: data
-		})
-		.then(resp => resp.json())
-		.then(data => {
-		setUrl(data.url)
-		})
-		.catch(err => console.log(err))
-	}
 
 	return (
 		<div className='form-wrapper'>
@@ -185,7 +188,9 @@ const RegisterForm = () => {
 							type="file"
 							value={image}
 							placeholder="Image placeholder"
-							onChange={event => setImage(event.target.value)}
+							// onChange={event=> setImage(event.target.files[0])}
+							// onChange={event => setImage(event.target.value)}
+							onChange={event => uploadImage(event)}
 						/>
 						<input
 							name="scarinessLevel"
