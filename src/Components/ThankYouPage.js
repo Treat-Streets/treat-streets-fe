@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
 import '../Components/ThankYouPage.css'
 import ReactMapGL, { Marker } from 'react-map-gl'
+import { useLocation } from 'react-router-dom'
 
 const ThankYouPage = ({ locationData }) => {
+
+	const location = useLocation();
+
+	//returns object from the current URL so we can access its state
+
+	const lat = location.state.latitude;
+	const long = location.state.longitude;
 	const [viewport] = useState({
-		latitude: locationData[locationData.length -1].latitude,
-		longitude: locationData[locationData.length -1].longitude,
+		latitude: lat,
+		longitude: long,
 		width: "100vw", 
 		height: "100vh",
 		zoom: 15
@@ -23,8 +31,8 @@ const ThankYouPage = ({ locationData }) => {
 					>
 						<Marker
 							key={Date.now()}
-							latitude={locationData[locationData.length -1].latitude}
-							longitude={locationData[locationData.length -1].longitude}
+							latitude={lat}
+							longitude={long}
 						>
 							<button className="haunted-house-icon">
 								<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>

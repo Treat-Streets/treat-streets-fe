@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../Components/RegisterForm.css'
 import { gql, useMutation } from '@apollo/client'
-// import { Link, Link as RouterLink  } from 'react-router-dom'
 import { Link, BrowserRouter, useHistory } from 'react-router-dom'
+import {GET_LOCATION} from './App.js'
+import App from './App'
+
 
 const CREATE_LOCATION = gql`
 	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: String!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
@@ -30,6 +32,8 @@ const CREATE_LOCATION = gql`
         startTime
         endTime
         image
+		latitude
+		longitude
 			}
 		}
 	}	
@@ -48,7 +52,9 @@ const RegisterForm = () => {
 	const [scarinessLevel, setScarinessLevel] = useState(0)
 	const [description, setDescription] = useState('')
 
+
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
+		// fetchPolicy: 'network-only', // Doesn't check cache before making a network request
 		variables: {
 			email: email,
 			streetAddress: streetAddress,
@@ -61,27 +67,33 @@ const RegisterForm = () => {
 			image: image,
 			scarinessLevel: scarinessLevel,
 			description: description
-		}
+		},
+		refetchQueries: [{query: GET_LOCATION}]
 	})
 
 	const handleClick = (event) => {
 		event.preventDefault();
-		createLocation()
+		createLocation().then((res) => {
+			// console.log(res);
+			clearForm();
+			history.push({
+				pathname: '/ThankYou',
+				state: {
+					longitude: res.data.createLocation.location.longitude,
+					latitude: res.data.createLocation.location.latitude
+				}
+			})
+		})
 		clearForm()
-		history.push('/ThankYou');
+		//setTimeout(() => {history.push('/ThankYou')}, 500)
+		// history.push('/ThankYou');
 	}
 
 	const history = useHistory()
 
-	// const onLinkClick = (e) => {
-	// 	e.preventDefault();
-	// 	---do your stuff---
-	// 	history.push('/your-route');
-	// };
-	
-	// <a href='/your-route' onClick={onLinkClick}> Navigate </a>
-	// 				   or
-	// <Link to='/your-route' onClick={onLinkClick}> Navigate </Link>
+	//The useHistory hook allows us to access React Router's history object.
+	// Through the history object, we can access and manipulate the current state of the browser history.
+	//basically sets the values of the object associated with the URL endpoint and push that into the history array
 
 	const clearForm = () => {
 		setEmail('')
