@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import ReactMapGL, { Marker, Popup, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -13,15 +13,34 @@ const MapPage = ({locationData}) => {
 		zoom: 10
 	})
 
+	const [selectedHouse, setSelectedHouse] = useState({})
+	console.log(selectedHouse)
 const properties = locationData.map(location => {
-	console.log(location)
+	// console.log(location)
 	return (
 		<Marker
-			key={Date.now()}
+			key={location.id}
 			latitude={location.latitude}
 			longitude={location.longitude}
 		>
-		<button className="haunted-house-icon">
+		<button 
+			className="haunted-house-icon"
+			onClick={e => {
+				e.preventDefault()
+				setSelectedHouse(location)
+			}}>
+
+				{selectedHouse.id === location.id ? (
+					<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
+						anchor='bottom'
+						onClose={() => setSelectedHouse(false) }
+					>
+						<div>
+							TEST
+						</div>
+					</Popup>
+				) : null}
+
 			<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 		</button>
 		</Marker>
@@ -36,10 +55,10 @@ const properties = locationData.map(location => {
 				mapStyle="mapbox://styles/mapbox/dark-v10"
 				onMove={evt => setViewport(evt.viewport)}
 			>
+				{properties}
 			<GeolocateControl/>
 			<FullscreenControl />
 			<NavigationControl showCompass={false}/>
-				{properties}
 			</ReactMapGL>
 		</div>
 	)

@@ -14,6 +14,7 @@ import { useQuery, gql } from '@apollo/client'
 const GET_LOCATION = gql`
 query {
 	locations {
+		id
 		streetAddress
 		city
 		state
