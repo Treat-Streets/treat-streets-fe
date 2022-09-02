@@ -59,12 +59,11 @@ const RegisterForm = () => {
 			locationType: locationType,
 			startTime: startTime,
 			endTime: endTime,
-			image: image,
+			image: url,
 			scarinessLevel: scarinessLevel,
 			description: description
 		}
 	})
-
 
 	const uploadImage = (event) => {
 		const data = new FormData()
@@ -85,7 +84,6 @@ const RegisterForm = () => {
 
 	const handleClick = (event) => {
 		event.preventDefault();
-		uploadImage()
 		createLocation()
 		clearForm()
 		history.push('/ThankYou');
