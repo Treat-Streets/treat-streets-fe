@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../Components/RegisterForm.css'
 import { gql, useMutation } from '@apollo/client'
-// import { Link, Link as RouterLink  } from 'react-router-dom'
 import { Link, BrowserRouter, useHistory } from 'react-router-dom'
+import {GET_LOCATION} from './App.js'
+import App from './App'
+
 
 const CREATE_LOCATION = gql`
 	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: String!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
@@ -30,6 +32,8 @@ const CREATE_LOCATION = gql`
         startTime
         endTime
         image
+		latitude
+		longitude
 			}
 		}
 	}	
@@ -49,6 +53,7 @@ const RegisterForm = () => {
 	const [description, setDescription] = useState('')
 	const [url, setUrl ] = useState("");
 
+
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
 		variables: {
 			email: email,
@@ -62,7 +67,8 @@ const RegisterForm = () => {
 			image: url,
 			scarinessLevel: scarinessLevel,
 			description: description
-		}
+		},
+		refetchQueries: [{query: GET_LOCATION}]
 	})
 
 	const uploadImage = (event) => {
@@ -84,13 +90,26 @@ const RegisterForm = () => {
 
 	const handleClick = (event) => {
 		event.preventDefault();
+		createLocation().then((res) => {
+			clearForm();
+			history.push({
+				pathname: '/ThankYou',
+				state: {
+					longitude: res.data.createLocation.location.longitude,
+					latitude: res.data.createLocation.location.latitude
+				}
+			})
+		})
+
 		uploadImage();
-		createLocation()
-		clearForm()
-		history.push('/ThankYou');
 	}
 
 	const history = useHistory()
+
+
+	//The useHistory hook allows us to access React Router's history object.
+	// Through the history object, we can access and manipulate the current state of the browser history.
+	//basically sets the values of the object associated with the URL endpoint and push that into the history array
 
 
 	const clearForm = () => {

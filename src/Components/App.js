@@ -1,5 +1,5 @@
 import './App.css'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Route } from 'react-router-dom'
 import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
@@ -11,7 +11,12 @@ import Loading from '../Components/Loading.js'
 import { useQuery, gql } from '@apollo/client'
 import PopupPage from './PopupPage'
 
-const GET_LOCATION = gql`
+const defaultOptions = {
+	query: {
+	fetchPolicy: 'no-cache' ,
+}};
+
+export const GET_LOCATION = gql`
 query {
 	locations {
 		id
