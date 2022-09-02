@@ -1,9 +1,17 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import ReactMapGL, { Marker, Popup, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
+import PopupPage from './PopupPage';
 
-const MapPage = ({locationData}) => {
+const MapPage = ({ locationData }) => {
+
+	// const [showPopup, setShowPopup] = useState(false);
+	// const [lat, setLat] = useState('')
+	// const [long, setLong] = useState('')
+	// const [selectedHouse, setSelectedHouse] = useState(false)
+	const [popupOpen, setPopupOpen] = useState({});
 
 	const [viewport, setViewport] = useState({
 		latitude: 39.7392,
@@ -13,20 +21,27 @@ const MapPage = ({locationData}) => {
 		zoom: 10
 	})
 
-const properties = locationData.map(location => {
-	console.log(location)
-	return (
-		<Marker
-			key={Date.now()}
-			latitude={location.latitude}
-			longitude={location.longitude}
-		>
-		<button className="haunted-house-icon">
-			<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
-		</button>
-		</Marker>
-	) 
-})
+	// const handlePopUp = (lat, long) => {
+	// 		setLat(Number(lat))
+	// 		setLong(Number(long))
+	// 		setShowPopup(true)
+	// }
+
+	const properties = locationData.map(location => {
+		return (
+			<Marker
+				key={location.id}
+				latitude={location.latitude}
+				longitude={location.longitude}
+			>
+			<Link to={`/PopUp/${location.id}`}>
+				<button className="haunted-house-icon">
+					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+				</button>
+			</Link>
+			</Marker>
+		) 
+	})
 
 	return (
 		<div className="map-container">

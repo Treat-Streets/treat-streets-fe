@@ -1,7 +1,6 @@
 import './App.css'
 import React, {useState} from 'react'
 import { Route } from 'react-router-dom'
-import Header from '../Components/Header.js'
 import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
 import RegisterForm from '../Components/RegisterForm.js'
@@ -10,10 +9,12 @@ import ZipCodeForm from '../Components/ZipCodeForm.js'
 import LandingPage from '../Components/LandingPage.js'
 import Loading from '../Components/Loading.js'
 import { useQuery, gql } from '@apollo/client'
+import PopupPage from './PopupPage'
 
 const GET_LOCATION = gql`
 query {
 	locations {
+		id
 		streetAddress
 		city
 		state
@@ -37,27 +38,29 @@ const App = () => {
 
   return (
     <div className="App">
-			<Header />
-
+		
 			<Route exact path="/">
 				<LandingPage />
 			</Route>
 
+			<Nav />
+
 			<Route exact path="/Register">
-				<Nav />
 				<RegisterForm />
 			</Route>
 
 			<Route exact path="/ThankYou">
-				<Nav />
 				{data && <ThankYouPage locationData={data.locations}/>}
 			</Route>
 			
 			<Route exact path="/Map">
-				<Nav />
 				<ZipCodeForm />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
+			</Route>
+
+			<Route path='/PopUp/:id' render={({ match }) => 
+				<PopupPage id={match.params['id']}/>}>
 			</Route>
 
     </div>
