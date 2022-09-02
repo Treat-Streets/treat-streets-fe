@@ -34,6 +34,7 @@ const App = () => {
 
 	const {error, data, loading} = useQuery(GET_LOCATION)
 
+
   return (
     <div className="App">
 			<Header />

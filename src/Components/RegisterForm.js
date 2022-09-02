@@ -47,6 +47,7 @@ const RegisterForm = () => {
 	const [image, setImage] = useState('')
 	const [scarinessLevel, setScarinessLevel] = useState(0)
 	const [description, setDescription] = useState('')
+	const [url, setUrl ] = useState("");
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
 		variables: {
@@ -58,14 +59,32 @@ const RegisterForm = () => {
 			locationType: locationType,
 			startTime: startTime,
 			endTime: endTime,
-			image: image,
+			image: url,
 			scarinessLevel: scarinessLevel,
 			description: description
 		}
 	})
 
+	const uploadImage = (event) => {
+		const data = new FormData()
+		let file = event.target.files[0];
+		data.append("file", file)
+		data.append("upload_preset", "treat_streets")
+		data.append("cloud_name","drexo2l5j")
+		fetch("https://api.cloudinary.com/v1_1/drexo2l5j/image/upload",{
+			method:"POST",
+			body: data
+		})
+		.then(resp => resp.json())
+		.then(data => {
+			setUrl(data.url)
+		})
+		.catch(err => console.log(err))
+	}
+
 	const handleClick = (event) => {
 		event.preventDefault();
+		uploadImage();
 		createLocation()
 		clearForm()
 		history.push('/ThankYou');
@@ -96,6 +115,7 @@ const RegisterForm = () => {
 		setScarinessLevel(0)
 		setDescription('')
 	}
+
 
 	return (
 		<div className='form-wrapper'>
@@ -164,9 +184,13 @@ const RegisterForm = () => {
 						</select>
 						<input 
 							name="image"
+							type="file"
+							title="Choose file"
+							style={{color: "#6652BD"}}
 							value={image}
-							placeholder="Image placeholder"
-							onChange={event => setImage(event.target.value)}
+							// onChange={event=> setImage(event.target.files[0])}
+							// onChange={event => setImage(event.target.value)}
+							onChange={event => uploadImage(event)}
 						/>
 						<input
 							name="scarinessLevel"
