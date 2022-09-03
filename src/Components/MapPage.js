@@ -7,12 +7,6 @@ import PopupPage from './PopupPage';
 
 const MapPage = ({ locationData }) => {
 
-	// const [showPopup, setShowPopup] = useState(false);
-	// const [lat, setLat] = useState('')
-	// const [long, setLong] = useState('')
-	// const [selectedHouse, setSelectedHouse] = useState(false)
-	const [popupOpen, setPopupOpen] = useState({});
-
 	const [viewport, setViewport] = useState({
 		latitude: 39.7392,
 		longitude: -104.9903, 
@@ -20,12 +14,6 @@ const MapPage = ({ locationData }) => {
 		height: "100vh",
 		zoom: 10
 	})
-
-	// const handlePopUp = (lat, long) => {
-	// 		setLat(Number(lat))
-	// 		setLong(Number(long))
-	// 		setShowPopup(true)
-	// }
 
 	const properties = locationData.map(location => {
 		return (

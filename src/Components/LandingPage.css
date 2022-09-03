@@ -10,9 +10,9 @@
 	display: flex;
 }
 
-/* .landing-page-left {
-	border: 2px solid yellow; 
-} */
+.landing-page-left {
+	/* border: 2px solid yellow; */
+}
 
 .welcome-header {
 	padding-top: 10px;
@@ -20,7 +20,6 @@
 	font-family: 'Ranchers', cursive;
 	font-size: 3rem;
 	letter-spacing: .50rem;
-	/* color: #043451; */
 	color: #FD7D11;
 	text-shadow:
 	0 0 7px #fff,
@@ -28,7 +27,7 @@
 	0 0 21px #fff,
 	0 0 42px #FFC12F,
 	0 0 82px #FFC12F,
-	0 0 92px #FD7D11,
+	0 0 92px #043451,
 	0 0 102px #043451,
 	0 0 151px #043451;
 }
@@ -42,9 +41,9 @@
 	padding-left: 10px;
 }
 
-/* .landing-page-buttons-container {
-	border: 2px solid orange;
-} */
+.landing-page-buttons-container {
+	/* border: 2px solid orange; */
+}
 
 .landing-image {
 	padding-top: 20px;
