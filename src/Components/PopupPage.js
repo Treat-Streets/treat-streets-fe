@@ -6,7 +6,10 @@ const PopupPage = ({ id, streetAddress, description, startTime, endTime, scarine
       <h2>Pop UP Page Id is: {id}</h2>
 			<p>{streetAddress}</p>
 			<p>{description}</p>
-			
+			<p>{startTime}</p>
+			<p>{endTime}</p>
+			<p>{scarinessLevel}</p>
+			<img src={image} alt='house decor image'/>
     </div>
   )
 }

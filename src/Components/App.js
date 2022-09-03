@@ -57,18 +57,19 @@ const App = () => {
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
 			</Route>
-{/* 
+
 			<Route exact path='/PopUp/:id'
 				render={({ match }) => {
+					console.log('data.locations', data.locations)
 					const locationToRender = data.locations.find(location => 
-						location.id === parseInt(match.params.id)
+						location.id === match.params.id
 					)
 				return <div> 
 				<Nav />
 				{data && <PopupPage {...locationToRender}/>}
 				</div>
 			}}
-			/> */}
+			/>
     </div>
   )
 }
