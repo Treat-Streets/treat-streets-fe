@@ -28,4 +28,10 @@ describe('Treat Streets', () => {
 
     cy.url().should('include', '/Register')
   })
+
+  it('should be able to click on View Treat Streets button and be brought to the Map page', () => {
+    cy.contains('View Treat Streets').click()
+
+    cy.url().should('include', '/Map')
+  })
 })
