@@ -1,0 +1,45 @@
+.popup-wrapper {
+	/* border: 2px solid green; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 20px;
+	height: 84vh;
+	width: 70vw;
+	padding-left: 80px;
+	padding-right: 80px;
+	background-color: #6652BD;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.popup-street-address {
+	font-family: 'Ranchers', cursive;
+	letter-spacing: .25rem;
+	font-size: 2.5rem;
+	margin-top: 35px;
+}
+
+.popup-start-time, 
+.popup-end-time {
+	font-size: 20px;
+}
+
+.popup-scariness-level {
+	font-weight: bold;
+}
+
+.popup-image {
+	height: 400px;
+	width: 500px;
+	object-fit: contain;
+}
+
