@@ -9,7 +9,7 @@ describe('Treat Streets', () => {
     cy.visit('http://localhost:3000/')
   })
 
-  it('should render all landing page contents, including welcome message, gif and buttons', () => {
+  it('should render all Landing Page contents, including welcome message, gif and buttons', () => {
     cy.url().should('eq', 'http://localhost:3000/')
 
     cy.get('.welcome-header').contains('h2', 'TREAT STREETS')
