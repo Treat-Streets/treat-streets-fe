@@ -82,9 +82,10 @@ const MapPage = ({ locationData }) => {
 	})
 
 	return (
-		<div>
+		<div className="view-full-map">
 			<form className='zip-form'>
-				<input 
+				<input
+					className="zipcode" 
 					name="zipcode"
 					placeholder="Zipcode"
 					value={zipcode}

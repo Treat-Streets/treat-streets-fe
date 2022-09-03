@@ -1,5 +1,36 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.view-full-map {
+	background-color: #6652BD;
+	border-radius: 15px;
+	height: 89vh;
+  width: 80vw;
+}
+
+.search {
+	background-color: #FD7D11;
+	width: 85px;
+	height: 30px;
+	padding-left: 0px;
+	margin-left: 5px;
+}
+
+.zipcode {
+	height: 30px;
+}
+
+.zip-form {
+	position: relative;
+  float: left;
+	margin: 20px;
+	margin-left: 80px;
+}
+
 .map-container {
-	/* border: 2px solid black; */
 	height: 700px;
 	padding-left: 80px;
 	padding-right: 80px;
