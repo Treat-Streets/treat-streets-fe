@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import ReactMapGL, { Marker, Popup, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
+import ReactMapGL, { Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useQuery, useMutation, gql } from '@apollo/client'
@@ -53,12 +53,14 @@ const MapPage = ({ locationData }) => {
 
 	const handleClick = (event) => {
 		event.preventDefault();
+		console.log('zip', zipcode)
 		createLatLong().then((res) => {
 			clearForm();
 			setLat(res.data.createLocation[-1].location.latitude)
 			setLong(res.data.createLocation[-1].location.longitude)
 			})
 		console.log(long)
+		console.log(data)
 	}
 
 	const clearForm = () => {
@@ -89,7 +91,10 @@ const MapPage = ({ locationData }) => {
 					name="zipcode"
 					placeholder="Zipcode"
 					value={zipcode}
-					onChange={event => setZipcode(event.target.value)}
+					onChange={event => {
+						setZipcode(event.target.value)
+						console.log('here')
+					}}
 					/>
 				<button className="search" onClick={event => handleClick(event)}>Search</button>
 			</form>

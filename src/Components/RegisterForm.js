@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import '../Components/RegisterForm.css'
 import { gql, useMutation } from '@apollo/client'
-import { Link, BrowserRouter, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import {GET_LOCATION} from './App.js'
-import App from './App'
 
 
 const CREATE_LOCATION = gql`
@@ -52,8 +51,6 @@ const RegisterForm = () => {
 	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
 	const [url, setUrl ] = useState("");
-	const [buttonClick, setButtonClick] = useState(false)
-
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
 		variables: {
