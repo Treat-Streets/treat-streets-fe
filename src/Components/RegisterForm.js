@@ -32,8 +32,8 @@ const CREATE_LOCATION = gql`
         startTime
         endTime
         image
-		latitude
-		longitude
+				latitude
+				longitude
 			}
 		}
 	}	
@@ -135,8 +135,8 @@ const RegisterForm = () => {
 					<p className='form-description'>Fill out this form to let your Denver area neighbors know you are passing out candy for Halloween!</p>	
 				</section>
 
-				<section className="form-section">
-					<form>
+				<section className="house-form-section">
+					<form className='house-form'>
 						<input 
 							name="email"
 							placeholder="Enter email here"

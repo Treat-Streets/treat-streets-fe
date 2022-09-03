@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../Components/ThankYouPage.css'
 import ReactMapGL, { Marker } from 'react-map-gl'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 const ThankYouPage = ({ locationData }) => {
 
@@ -39,6 +39,7 @@ const ThankYouPage = ({ locationData }) => {
 							</button>
 						</Marker>
 					</ReactMapGL>
+					<Link to="/Map"><button className="view-map">View Full Map</button></Link>
 				</div>
 			</div>
 		</div>
