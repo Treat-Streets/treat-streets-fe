@@ -52,6 +52,7 @@ const RegisterForm = () => {
 	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
 	const [url, setUrl ] = useState("");
+	const [buttonClick, setButtonClick] = useState(false)
 
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
@@ -70,6 +71,14 @@ const RegisterForm = () => {
 		},
 		refetchQueries: [{query: GET_LOCATION}]
 	})
+
+	const RegisterButton = () => {
+		if(email && streetAddress && city && state && zipcode && locationType && startTime && endTime && scarinessLevel && description && url) {
+			return <button className="register" onClick={event => handleClick(event)}> Register House! </button>
+		} else {
+			return <button className="register" onClick={event => handleClick(event)} disabled> Register House! </button>
+		}
+	}
 
 	const uploadImage = (event) => {
 		const data = new FormData()
@@ -211,16 +220,19 @@ const RegisterForm = () => {
 							/>
 						</div>
 						<p className="scarylevel">Scariness Level: {scarinessLevel}</p>
-						<input 
-							name="image"
-							type="file"
-							title="Choose file"
-							style={{color: "#6652BD"}}
-							value={image}
-							onChange={event => uploadImage(event)}
-						/>
-						{url && <p> 👻 Upload Complete 👻</p>}
-						<button className="register" onClick={event => handleClick(event)}> Register House! </button>
+						<div className="img-upload-container">
+							<input 
+								className="upload"
+								name="image"
+								type="file"
+								title="Choose file"
+								style={{color: "#6652BD"}}
+								value={image}
+								onChange={event => uploadImage(event)}
+							/>
+							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete"> ...Waiting 👻 </p>}
+						</div>
+						<RegisterButton/>
 					</form>
 				</section>
 			</div>
