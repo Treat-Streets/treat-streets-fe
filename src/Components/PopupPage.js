@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './PopupPage.css'
+import { Link } from 'react-router-dom'
 
 const PopupPage = ({ id, streetAddress, description, startTime, endTime, scarinessLevel, image }) => {
-  return (
+  
+	// const [currentLocation, setCurrentLocation] = useState({
+	// 	id: {id},
+	// 	streetAddress: {streetAddress},
+	// 	description: {description},
+	// 	startTime: {startTime},
+	// 	endTime: {endTime}, 
+	// 	scarinessLevel: {scarinessLevel},
+	// 	image: {image}
+	// })
+
+	// useEffect(() => {
+	// 	window.localStorage.setItem('location information', JSON.stringify({...currentLocation}))
+	// })
+
+	
+	return (
     <div className="popup-wrapper">
 			<div className="popup-container">
 			<p className="popup-street-address" >{streetAddress}</p>
@@ -11,6 +28,9 @@ const PopupPage = ({ id, streetAddress, description, startTime, endTime, scarine
 			{/* <p className="popup-end-time">End Time: {endTime}</p> */}
 			<p className="popup-scariness-level">Scariness Level: {scarinessLevel} 👻</p>
 			<img className="popup-image" src={image} alt='house decor image'/>
+			<Link to='/Map'>
+					<button className="back-button">Back to<br></br>Treat Streets Map</button>
+			</Link>
     </div>
 	</div>
   )
