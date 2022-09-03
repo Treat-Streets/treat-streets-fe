@@ -16,5 +16,8 @@ describe('App', () => {
     cy.get('p').should('have.text', 'You can find houses passing out candy for Halloween in your area or add your home to the treat streets map.')
 
     cy.get('.landing-page-buttons-container').find('button').should('have.length', '2')
+
+    cy.get('button').first().contains('Register Your House')
+    cy.get('button').last().contains('View Treat Streets')
   })
 })
