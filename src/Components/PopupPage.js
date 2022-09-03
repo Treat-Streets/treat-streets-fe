@@ -1,9 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './PopupPage.css'
 import { Link } from 'react-router-dom'
 
 const PopupPage = ({ id, streetAddress, description, startTime, endTime, scarinessLevel, image }) => {
-  return (
+  
+	// const [currentLocation, setCurrentLocation] = useState({
+	// 	id: {id},
+	// 	streetAddress: {streetAddress},
+	// 	description: {description},
+	// 	startTime: {startTime},
+	// 	endTime: {endTime}, 
+	// 	scarinessLevel: {scarinessLevel},
+	// 	image: {image}
+	// })
+
+	// useEffect(() => {
+	// 	window.localStorage.setItem('location information', JSON.stringify({...currentLocation}))
+	// })
+
+	
+	return (
     <div className="popup-wrapper">
 			<div className="popup-container">
 			<p className="popup-street-address" >{streetAddress}</p>
