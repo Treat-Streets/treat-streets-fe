@@ -192,17 +192,14 @@ const RegisterForm = () => {
 							<option value="7:00 pm">7:00 pm</option>
 							<option value="8:00 pm">8:00 pm</option>
 						</select>
-						<input 
-							name="image"
-							type="file"
-							title="Choose file"
-							style={{color: "#6652BD"}}
-							value={image}
-							// onChange={event=> setImage(event.target.files[0])}
-							// onChange={event => setImage(event.target.value)}
-							onChange={event => uploadImage(event)}
+						<input
+							name="description"
+							placeholder="Tell us about your house!"
+							type="text"
+							value={description}
+							onChange={event => setDescription(event.target.value)}
 						/>
-						<div class="slidecontainer">
+						<div className="slidecontainer">
   						<input 
 							type="range"
 							min="1" 
@@ -214,12 +211,13 @@ const RegisterForm = () => {
 							/>
 						</div>
 						<p className="scarylevel">Scariness Level: {scarinessLevel}</p>
-						<input
-							name="description"
-							placeholder="Tell us about your house!"
-							type="text"
-							value={description}
-							onChange={event => setDescription(event.target.value)}
+						<input 
+							name="image"
+							type="file"
+							title="Choose file"
+							style={{color: "#6652BD"}}
+							value={image}
+							onChange={event => uploadImage(event)}
 						/>
 						<button className="register" onClick={event => handleClick(event)}> Register House! </button>
 					</form>
