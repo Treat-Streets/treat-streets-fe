@@ -8,6 +8,8 @@ workflows:
   build:
     jobs:
       - cypress/run
+        start: npm start
+        wait-on: 'http://localhost:3000'
 
 jobs:
   build_and_test:
