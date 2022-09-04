@@ -34,4 +34,9 @@ describe('Treat Streets', () => {
 
     cy.url().should('include', '/Map')
   })
+
+  // it('should display Loading message and image while content is loading', () => {
+  //   cy.get('.loading-container').contains('p', 'Loading...')
+  //   cy.get('.loading-gif').should('have.attr', 'src').should('include', '../assets/pumpkin.gif')
+  // })
 })
