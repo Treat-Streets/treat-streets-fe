@@ -18,10 +18,15 @@ describe('Map Page', () => {
     cy.url().should('include', '/Map')
   })
 
-    it('should display Loading message and gif while content is loading', () => {
+  it('should display Loading message and gif while content is loading', () => {
     cy.get('.loading-container').contains('p', 'Loading...')
     cy.get('.loading-gif').should('have.attr', 'src').should('include', '/static/media/pumpkin.d74dc1ee5efafdfa23e5.gif')
   })
 
+  it('should be able to view the map and zoom in and out', () => {
+    cy.get('.mapboxgl-canvas').should('exist')
+    cy.get('.mapboxgl-ctrl-zoom-in > .mapboxgl-ctrl-icon').click()
+    cy.get('.mapboxgl-ctrl-zoom-out > .mapboxgl-ctrl-icon').click()
+  })
 
 })
