@@ -25,7 +25,6 @@ const PopupPage = ({ id, streetAddress, description, startTime, endTime, scarine
 			<p className="popup-street-address" >{streetAddress}</p>
 			<p className="popup-start-time">🍬 Passing out candy from {startTime} to {endTime} 🍬</p>
 			<p className="popup-description" >{description}</p>
-			{/* <p className="popup-end-time">End Time: {endTime}</p> */}
 			<p className="popup-scariness-level">Scariness Level: {scarinessLevel} 👻</p>
 			<img className="popup-image" src={image} alt='house decor image'/>
 			<Link to='/Map'>

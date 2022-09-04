@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import ReactMapGL, { Marker, Popup, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
+import ReactMapGL, { Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
-import PopupPage from './PopupPage';
 
 const MapPage = ({ locationData }) => {
 

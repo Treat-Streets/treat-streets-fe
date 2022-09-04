@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import '../Components/RegisterForm.css'
 import { gql, useMutation } from '@apollo/client'
-import { Link, BrowserRouter, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import {GET_LOCATION} from './App.js'
-import App from './App'
-
 
 const CREATE_LOCATION = gql`
 	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: String!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
