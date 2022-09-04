@@ -5,6 +5,13 @@ import { Link, BrowserRouter, useHistory } from 'react-router-dom'
 import {GET_LOCATION} from './App.js'
 import App from './App'
 
+// snackbar imports
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+
+
 
 const CREATE_LOCATION = gql`
 	mutation CreateLocation($email: String!, $streetAddress: String!, $city: String!, $state: String!, $zipcode: String!, $locationType: String!, $scarinessLevel: Int!, $description: String, $startTime: String!, $endTime: String!, $image: String) {
@@ -35,6 +42,7 @@ const CREATE_LOCATION = gql`
 		latitude
 		longitude
 			}
+			errors
 		}
 	}	
 `;
@@ -52,7 +60,12 @@ const RegisterForm = () => {
 	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
 	const [url, setUrl ] = useState("");
-
+	const history = useHistory()
+	const [snackbar, setSnackBar] = useState({
+		open: false,
+		vertical: 'bottom',
+		horizontal: 'center',
+	});
 
 	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
 		variables: {
@@ -70,6 +83,9 @@ const RegisterForm = () => {
 		},
 		refetchQueries: [{query: GET_LOCATION}]
 	})
+	const { vertical, horizontal, open } = snackbar;
+
+	
 
 	const uploadImage = (event) => {
 		const data = new FormData()
@@ -89,8 +105,16 @@ const RegisterForm = () => {
 	}
 
 	const handleClick = (event) => {
+		if(error) {
+			handleSnacKBarClick({
+				vertical: 'bottom',
+				horizontal: 'center',
+			  })
+			return;
+		}
 		event.preventDefault();
 		createLocation().then((res) => {
+			// console.log("errors", res.data.errors[0])
 			clearForm();
 			history.push({
 				pathname: '/ThankYou',
@@ -100,11 +124,13 @@ const RegisterForm = () => {
 				}
 			})
 		})
-
-		uploadImage();
+		uploadImage()
+		// console.log("errors", data.errors[0])
 	}
 
-	const history = useHistory()
+
+
+	// const history = useHistory()
 
 
 	//The useHistory hook allows us to access React Router's history object.
@@ -126,6 +152,34 @@ const RegisterForm = () => {
 		setDescription('')
 	}
 
+	const handleSnacKBarClick = (newState) => {
+		setSnackBar({ open: true, ...newState });
+	  };
+	
+	  const handleClose = (event, reason) => {
+		if (reason === 'clickaway') {
+		  return;
+		}
+	
+		setSnackBar({ ...snackbar, open: false });
+	  };
+
+	  const action = (
+		<React.Fragment>
+		  <Button color="secondary" size="small" onClick={handleClose}>
+			UNDO
+		  </Button>
+		  <IconButton
+			size="small"
+			aria-label="close"
+			color="inherit"
+			onClick={handleClose}
+		  >
+			<CloseIcon fontSize="small" />
+		  </IconButton>
+		</React.Fragment>
+	  );
+	  
 
 	return (
 		<div className='form-wrapper'>
@@ -223,8 +277,21 @@ const RegisterForm = () => {
 					</form>
 				</section>
 			</div>
+			<Button onClick={handleClick}>Open simple snackbar</Button>
+			
+			<Snackbar
+				anchorOrigin={{ vertical, horizontal }}
+				open={open}
+				autoHideDuration={6000}
+				onClose={handleSnacKBarClick}
+				message={data?.errors[0]}
+				action={action}
+			>
+			</Snackbar>
 		</div>
+		
 	)
 }
+
 
 export default RegisterForm;
