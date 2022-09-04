@@ -1,6 +1,6 @@
 import { aliasQuery, aliasMutation, hasOperationName } from '../utils/graphql-test-utils'
 
-describe('Treat Streets', () => {
+describe('Treat Streets Landing Page user flows', () => {
   beforeEach(() => {
     cy.intercept('POST', 'https://treat-streets-be.herokuapp.com/graphql', (req) => {
       aliasQuery(req, 'locations')
@@ -9,7 +9,7 @@ describe('Treat Streets', () => {
     cy.visit('http://localhost:3000/')
   })
 
-  it('should render all landing page contents, including welcome message, gif and buttons', () => {
+  it('should render all Landing Page contents, including welcome message, gif and buttons', () => {
     cy.url().should('eq', 'http://localhost:3000/')
 
     cy.get('.welcome-header').contains('h2', 'TREAT STREETS')
@@ -28,4 +28,15 @@ describe('Treat Streets', () => {
 
     cy.url().should('include', '/Register')
   })
+
+  it('should be able to click on View Treat Streets button and be brought to the Map page', () => {
+    cy.contains('View Treat Streets').click()
+
+    cy.url().should('include', '/Map')
+  })
+
+  // it('should display Loading message and image while content is loading', () => {
+  //   cy.get('.loading-container').contains('p', 'Loading...')
+  //   cy.get('.loading-gif').should('have.attr', 'src').should('include', '../assets/pumpkin.gif')
+  // })
 })

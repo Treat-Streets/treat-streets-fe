@@ -270,7 +270,7 @@ const RegisterForm = () => {
 							value={image}
 							onChange={event => uploadImage(event)}
 						/>
-						<button className="register" onClick={event => handleClick(event)}> Register House! </button>
+						<button className="register" onClick={event => handleClick(event)}>Register House!</button>
 					</form>
 				</section>
 			</div>
