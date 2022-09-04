@@ -1,7 +1,7 @@
 .form-wrapper {
 	display: flex;
 	justify-content: center;
-	padding-top: 7%;
+	padding-top: 30px;
 }
 
 .form-title {
@@ -23,22 +23,80 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 70vh;
+	height: 1000px;
 	width: 70%;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.form-section {
+input, label {
+	margin: 5px 5px;
+}
+
+/* .form-section {
 	width: 50%;
 	height: auto;
 	padding-top: 20px;
+} */
+
+.form-control {
+	float: left;
 }
 
+#inputEmail {
+	width: 96%;
+}
+
+#inputStreet {
+  width: 96%;
+}
+
+#inputCity {
+  width: 50%;
+}
+
+#inputState {
+  width: 13%;
+}
+
+#inputZip {
+  width: 22%;
+}
+
+#locationType {
+	width: 99%;
+	margin-left: 3px;
+}
+
+#startTime {
+	width: 49%;
+	margin-right: 5px;
+	margin-left: 3px;
+}
+
+#endTime {
+	width: 49%;
+}
+
+#inputDescription {
+	width: 96%;
+	height: 50px;
+}
+
+#inputImage {
+	width: 100%;
+}
+
+.register-button {
+	background-color: #FD7D11;
+	height: 40px;
+	width: 110px;
+	padding: 0px;
+}
+
+
 form {
-	display: flex;
-  flex-direction: column;
-	justify-content: center;
-	align-items: space-evenly;
+	margin: 30px auto;
+	width: 450px;
 	height: 400px;
 }
 
@@ -48,23 +106,26 @@ form * {
 	border-radius: 5px;
 	border: none;
 	padding-left: 12px;
-}
+} 
 
 option:disabled {
   color: grey;
 }
 
-.register {
-	background-color: #FD7D11;
-	height: 40px;
+.scarylevel {
+	border: 2px solid red;
+	/* align-self: flex-start; */
+	margin-top: 100px;
+	font-size: smaller;
+	font-weight: bold;
 }
 
-.scarylevel {
-	align-self: flex-start;
-	font-size: smaller;
+.scarylevel-text {
+	border: 2px solid purple;
 }
 
 .slidecontainer {
+	border: 2px solid blue;
   width: 97%; /* Width of the outside container */
 	margin: 0px;
 	margin-top: 10px;
@@ -73,10 +134,12 @@ option:disabled {
 
 /* The slider itself */
 .slider {
+	border: 2px solid red;
   -webkit-appearance: none;
   width: 100%;
   height: 13px;
-  border-radius: 5px;  
+  border-radius: 5px;
+	margin-top: 50px;  
   background: white;
   outline: none;
   /* opacity: 0.8; */
@@ -95,6 +158,7 @@ option:disabled {
   appearance: none;
   width: 35px;
   height: 35px;
+	border: 2px solid yellow;
   border-radius: 50%; 
   background-image:url('https://cdn-icons-png.flaticon.com/512/1234/1234843.png');
 	background-size: contain;

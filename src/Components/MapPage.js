@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ReactMapGL, { Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
+import halloweenGif from '../assets/halloween.gif'
 
 const MapPage = ({ locationData }) => {
 
@@ -32,6 +33,7 @@ const MapPage = ({ locationData }) => {
 
 	return (
 		<div className="map-container">
+			{/* <img className="halloween-image" src={halloweenGif} alt="halloween image" /> */}
 			<ReactMapGL className="map"
 				{...viewport}
 				mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../Components/RegisterForm.css'
+import halloweenGif from '../assets/halloween.gif'
 import { gql, useMutation } from '@apollo/client'
 import { useHistory } from 'react-router-dom'
 import {GET_LOCATION} from './App.js'
@@ -135,42 +136,58 @@ const RegisterForm = () => {
 
 				<section className="form-section">
 					<form>
+						
 						<input 
 							name="email"
 							placeholder="Enter email here"
 							type="text"
 							value={email}
 							onChange={event => setEmail(event.target.value)}
+							className="form-control"
+							id="inputEmail"
 						/>
+						
 						<input
 							name="streetAddress"
-							placeholder="Enter address"
+							placeholder="Street"
 							value={streetAddress}
 							type="text"
 							onChange={event => setStreetAddress(event.target.value)}
+							className="form-control"
+							id="inputStreet"
 						/>
+						
 						<input
 							name="city"
-							placeholder="Enter city"
+							placeholder="City"
 							value={city}
 							type="text"
 							onChange={event => setCity(event.target.value)}
+							className="form-control"
+							id="inputCity"
 						/>
+						
 						<input
 							name="state"
-							placeholder="Enter state"
+							placeholder="State"
 							value={state}
 							type="text"
 							onChange={event => setState(event.target.value)}
+							className="form-control"
+							id="inputState"
 						/>
+						
 						<input
 							name="zipcode"
-							placeholder="Enter zipcode"
+							placeholder="Zipcode"
 							value={zipcode}
 							type="text"
 							onChange={event => setZipcode(event.target.value)}
+							className="form-control"
+							id="inputZip"
 						/>
-						<select name="locationType" id="locationType" onChange={event => setLocationType(event.target.value)} value={locationType}>
+						
+						<select name="locationType" id="locationType" className="form-control" onChange={event => setLocationType(event.target.value)} value={locationType}>
 							<option value="" disabled selected> Select Property Type </option>
 							<option value="house">House</option>
 							<option value="condo">Condo</option>
@@ -178,37 +195,45 @@ const RegisterForm = () => {
 							<option value="apartment">Apartment</option>
 							<option value="business">Business</option>
 						</select>
-						<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
+						
+						<select name="startTime" id="startTime" className="form-control" onChange={event => setStartTime(event.target.value)} value={startTime}>
 							<option value="" disabled selected>Choose a Start Time</option>
 							<option value="4:00 pm">4:00 pm</option>
 							<option value="5:00 pm">5:00 pm</option>
 							<option value="6:00 pm">6:00 pm</option>
-						</select>
-						<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
+						</select> 
+						
+						<select name="endTime" id="endTime" className="form-control" onChange={event => setEndTime(event.target.value)} value={endTime}>
 							<option value="" disabled selected>Choose an End Time</option>
 							<option value="6:00 pm">6:00 pm</option>
 							<option value="7:00 pm">7:00 pm</option>
 							<option value="8:00 pm">8:00 pm</option>
-						</select>
+						</select> 
+						
 						<input
 							name="description"
 							placeholder="Tell us about your house!"
 							type="text"
 							value={description}
 							onChange={event => setDescription(event.target.value)}
+							className="form-control"
+							id="inputDescription"
 						/>
+						
 						<div className="slidecontainer">
   						<input 
-							type="range"
-							min="1" 
-							max="10" 
-							class="slider" 
-							id="myRange"
-							value={scarinessLevel}
-							onChange={event => setScarinessLevel(event.target.valueAsNumber)}
+								type="range"
+								min="1" 
+								max="10" 
+								class="slider" 
+								id="myRange"
+								value={scarinessLevel}
+								onChange={event => setScarinessLevel(event.target.valueAsNumber)}
 							/>
 						</div>
-						<p className="scarylevel">Scariness Level: {scarinessLevel}</p>
+						
+						<p className="scaryLevel">Scariness Level: {scarinessLevel}</p>
+						
 						<input 
 							name="image"
 							type="file"
@@ -216,9 +241,14 @@ const RegisterForm = () => {
 							style={{color: "#6652BD"}}
 							value={image}
 							onChange={event => uploadImage(event)}
+							className="form-control"
+							id="inputImage"
 						/>
-						<button className="register" onClick={event => handleClick(event)}> Register House! </button>
+
+						<button className="register-button" onClick={event => handleClick(event)}>Register House!</button>
+					
 					</form>
+					<img className="halloween-image" src={halloweenGif} alt="halloween image" />
 				</section>
 			</div>
 		</div>
