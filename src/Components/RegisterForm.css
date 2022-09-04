@@ -1,7 +1,8 @@
 .form-wrapper {
 	display: flex;
 	justify-content: center;
-	padding-top: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .form-title {
@@ -23,7 +24,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 1000px;
+	height: 800px;
 	width: 70%;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -63,18 +64,18 @@ input, label {
 }
 
 #locationType {
-	width: 99%;
+	width: 45%;
 	margin-left: 3px;
 }
 
 #startTime {
-	width: 49%;
+	width: 25%;
 	margin-right: 5px;
 	margin-left: 3px;
 }
 
 #endTime {
-	width: 49%;
+	width: 25%;
 }
 
 #inputDescription {
@@ -95,7 +96,7 @@ input, label {
 
 
 form {
-	margin: 30px auto;
+	/* margin: 30px auto; */
 	width: 450px;
 	height: 400px;
 }
@@ -113,19 +114,15 @@ option:disabled {
 }
 
 .scarylevel {
-	border: 2px solid red;
+	/* border: 2px solid red; */
 	/* align-self: flex-start; */
 	margin-top: 100px;
 	font-size: smaller;
 	font-weight: bold;
 }
 
-.scarylevel-text {
-	border: 2px solid purple;
-}
-
 .slidecontainer {
-	border: 2px solid blue;
+	/* border: 2px solid blue; */
   width: 97%; /* Width of the outside container */
 	margin: 0px;
 	margin-top: 10px;

@@ -139,7 +139,7 @@ const RegisterForm = () => {
 						
 						<input 
 							name="email"
-							placeholder="Enter email here"
+							placeholder="E-mail"
 							type="text"
 							value={email}
 							onChange={event => setEmail(event.target.value)}
@@ -188,7 +188,7 @@ const RegisterForm = () => {
 						/>
 						
 						<select name="locationType" id="locationType" className="form-control" onChange={event => setLocationType(event.target.value)} value={locationType}>
-							<option value="" disabled selected> Select Property Type </option>
+							<option value="" disabled selected> Property Type </option>
 							<option value="house">House</option>
 							<option value="condo">Condo</option>
 							<option value="townhome">Townhome</option>
@@ -197,14 +197,14 @@ const RegisterForm = () => {
 						</select>
 						
 						<select name="startTime" id="startTime" className="form-control" onChange={event => setStartTime(event.target.value)} value={startTime}>
-							<option value="" disabled selected>Choose a Start Time</option>
+							<option value="" disabled selected>Start Time</option>
 							<option value="4:00 pm">4:00 pm</option>
 							<option value="5:00 pm">5:00 pm</option>
 							<option value="6:00 pm">6:00 pm</option>
 						</select> 
 						
 						<select name="endTime" id="endTime" className="form-control" onChange={event => setEndTime(event.target.value)} value={endTime}>
-							<option value="" disabled selected>Choose an End Time</option>
+							<option value="" disabled selected>End Time</option>
 							<option value="6:00 pm">6:00 pm</option>
 							<option value="7:00 pm">7:00 pm</option>
 							<option value="8:00 pm">8:00 pm</option>
