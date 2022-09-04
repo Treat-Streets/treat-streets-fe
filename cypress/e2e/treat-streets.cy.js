@@ -1,6 +1,6 @@
 import { aliasQuery, aliasMutation, hasOperationName } from '../utils/graphql-test-utils'
 
-describe('Treat Streets', () => {
+describe('Treat Streets Landing Page user flows', () => {
   beforeEach(() => {
     cy.intercept('POST', 'https://treat-streets-be.herokuapp.com/graphql', (req) => {
       aliasQuery(req, 'locations')

@@ -1,6 +1,6 @@
 import { aliasQuery, aliasMutation, hasOperationName } from '../utils/graphql-test-utils'
 
-describe('Map Page', () => {
+describe('Map Page and Pop Up Page user flows', () => {
   beforeEach(() => {
     cy.intercept('POST', 'https://treat-streets-be.herokuapp.com/graphql', (req) => {
       const { body } = req
@@ -27,6 +27,11 @@ describe('Map Page', () => {
     cy.get('.mapboxgl-canvas').should('exist')
     cy.get('.mapboxgl-ctrl-zoom-in > .mapboxgl-ctrl-icon').click()
     cy.get('.mapboxgl-ctrl-zoom-out > .mapboxgl-ctrl-icon').click()
+  })
+
+  it('should be able to click geolocate button on map to show houses in current location', () => {
+    cy.get('.mapboxgl-ctrl-geolocate > .mapboxgl-ctrl-icon').click()
+
   })
 
 })
