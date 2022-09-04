@@ -255,7 +255,7 @@ const RegisterForm = () => {
 							type="range"
 							min="1" 
 							max="10" 
-							class="slider" 
+							className="slider" 
 							id="myRange"
 							value={scarinessLevel}
 							onChange={event => setScarinessLevel(event.target.valueAsNumber)}
