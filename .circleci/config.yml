@@ -7,7 +7,8 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run
+      - cypress/run:
+          start: npm start
 
 jobs:
   build_and_test:
