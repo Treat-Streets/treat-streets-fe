@@ -24,4 +24,20 @@ describe('Register Page', () => {
 
     cy.get('button').should('have.text', 'Register House!')
   })
+
+  it('should be able to fill out the form with house information', () => {
+    cy.get('input[name="email"]').type('test@gmail.com')
+    cy.get('input[name="streetAddress"]').type('4071 S Skyline Drive')
+    cy.get('input[name="city"]').type('Evergreen')
+    cy.get('input[name="state"]').type('CO')
+    cy.get('input[name="zipcode"]').type('80439')
+
+    cy.get('select[name="locationType"]').select('house')
+    cy.get('select[name="startTime"]').select('5:00 pm')
+    cy.get('select[name="endTime"]').select('8:00 pm')
+    cy.get('input[name="description"]').type('Spooky and fun decor!')
+    cy.get('input[type="range"]').as('range').invoke('val', 3).trigger('onChange')
+
+    cy.contains('Register House!').click()
+  })
 })
