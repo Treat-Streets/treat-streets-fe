@@ -30,17 +30,6 @@ const MapPage = ({locationData}) => {
 					e.preventDefault()
 					setSelectedHouse(location)
 				}}>
-					{selectedHouse.id === location.id ? (
-						<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
-							anchor='bottom'
-							onClose={() => setSelectedHouse(false) }
-						>
-							<div>
-								TEST
-							</div>
-						</Popup>
-					) : null}
-
 				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 			</button>
 			</Marker>
@@ -59,6 +48,16 @@ const MapPage = ({locationData}) => {
 			<GeolocateControl/>
 			<FullscreenControl />
 			<NavigationControl showCompass={false}/>
+
+			{selectedHouse.id ? (
+				<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
+					anchor='bottom'
+					onClose={() => setSelectedHouse(false) }
+				>
+					<div>TEST</div>
+				</Popup>
+				) : null}
+
 			</ReactMapGL>
 		</div>
 	)
