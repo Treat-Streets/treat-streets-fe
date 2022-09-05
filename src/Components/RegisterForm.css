@@ -64,13 +64,12 @@ option:disabled {
 }
 
 .slidecontainer {
-  width: 97%; /* Width of the outside container */
+  width: 97%;
 	margin: 0px;
 	margin-top: 10px;
 	padding: 0px;
 }
 
-/* The slider itself */
 .slider {
   -webkit-appearance: none;
   width: 100%;
@@ -83,7 +82,7 @@ option:disabled {
 }
 
 .slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {

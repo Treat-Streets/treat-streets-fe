@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import ReactMapGL, { Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { useQuery, useMutation, gql } from '@apollo/client'
+import { useQuery, gql } from '@apollo/client'
 
 const GET_LATLONG = gql`
 	query Coordinates($zipcode: String!) {
@@ -12,15 +12,12 @@ const GET_LATLONG = gql`
 			longitude
 			errors
 	}
-}
-`;
+}`;
 
 
 const MapPage = ({ locationData }) => {
 	
 	const [zipcode, setZipcode] = useState('')
-	const [lat, setLat] = useState('')
-	const [long, setLong] = useState('')
 	const [viewport, setViewport] = useState({
 		latitude: 39.7392,
 		longitude: -104.9903, 
@@ -76,7 +73,6 @@ const MapPage = ({ locationData }) => {
 					value={zipcode}
 					onChange={event => {
 						setZipcode(event.target.value)
-						console.log('here')
 					}}
 					/>
 				<button className="search" disabled={!zipcode} onClick={event => handleClick(event)}>Search</button>
