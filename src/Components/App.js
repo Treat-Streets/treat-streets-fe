@@ -12,7 +12,7 @@ import { useQuery, gql } from '@apollo/client'
 import PopupPage from './PopupPage'
 
 export const GET_LOCATION = gql`
-query {
+query Locations {
 	locations {
 		id
 		streetAddress

@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom'
 const ThankYouPage = ({ locationData }) => {
 
 	const location = useLocation();
+	console.log(useLocation())
 
 	//returns object from the current URL so we can access its state
 
@@ -30,6 +31,9 @@ const ThankYouPage = ({ locationData }) => {
 						mapStyle="mapbox://styles/mapbox/dark-v10"
 					>
 						<Marker
+							//?
+							data-cy="house-marker"
+							//?
 							key={Date.now()}
 							latitude={lat}
 							longitude={long}
