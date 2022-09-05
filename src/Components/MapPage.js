@@ -15,6 +15,8 @@ const MapPage = ({ locationData }) => {
 		zoom: 10
 	})
 
+	const [selectedHouse, setSelectedHouse] = useState({})
+
 	const properties = locationData.map(location => {
 		return (
 			<Marker
@@ -22,11 +24,15 @@ const MapPage = ({ locationData }) => {
 				latitude={location.latitude}
 				longitude={location.longitude}
 			>
-			<Link to={`/PopUp/${location.id}`}>
-				<button className="haunted-house-icon">
+				<button 
+					className="haunted-house-icon"
+					onClick={e => {
+						e.preventDefault()
+						e.stopPropagation()
+						setSelectedHouse(location)
+					}}>
 					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 				</button>
-			</Link>
 			</Marker>
 		) 
 	})
@@ -42,6 +48,27 @@ const MapPage = ({ locationData }) => {
 			<GeolocateControl/>
 			<FullscreenControl />
 			<NavigationControl showCompass={false}/>
+
+			{selectedHouse.id ? (
+				<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
+					anchor='bottom'
+					onClose={() => setSelectedHouse(false) }
+				>
+					<div>{selectedHouse.streetAddress}</div>
+					<div>{selectedHouse.city}</div>
+					<div>{selectedHouse.state}</div>
+					<div>{selectedHouse.zipcode}</div>
+					<div>{selectedHouse.description}</div>
+					<div>{selectedHouse.startTime}</div>
+					<div>{selectedHouse.endTime}</div>
+					<div>{selectedHouse.scarinessLevel}</div>
+					<div>{selectedHouse.image}</div>
+					<Link to={`/PopUp/${selectedHouse.id}`}>
+						<button className="location-profile">View Full Profile</button>
+					</Link>
+				</Popup>
+				) : null}
+
 				{properties}
 			</ReactMapGL>
 		</div>
