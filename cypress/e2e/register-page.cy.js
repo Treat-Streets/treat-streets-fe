@@ -52,9 +52,9 @@ describe('Register Page user flows', () => {
         cy.get('.mapboxgl-canvas').should('be.visible')
     })
 
-    it('should go see the new map', () => {
+    it('should be able to see updated map with new location added', () => {
         cy.contains('Map').click()
         cy.url().should('include', '/Map')
-        
+        cy.get('.map-container').find('[data-cy="map-image"]').should('have.length', 5)
     })
 })
