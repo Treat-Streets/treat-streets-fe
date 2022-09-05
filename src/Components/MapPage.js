@@ -28,6 +28,7 @@ const MapPage = ({locationData}) => {
 				className="haunted-house-icon"
 				onClick={e => {
 					e.preventDefault()
+					e.stopPropagation()
 					setSelectedHouse(location)
 				}}>
 				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
@@ -54,7 +55,16 @@ const MapPage = ({locationData}) => {
 					anchor='bottom'
 					onClose={() => setSelectedHouse(false) }
 				>
-					<div>TEST</div>
+					<div>{selectedHouse.streetAddress}</div>
+					<div>{selectedHouse.city}</div>
+					<div>{selectedHouse.state}</div>
+					<div>{selectedHouse.zipcode}</div>
+					<div>{selectedHouse.description}</div>
+					<div>{selectedHouse.startTime}</div>
+					<div>{selectedHouse.endTime}</div>
+					<div>{selectedHouse.scarinessLevel}</div>
+					<div>{selectedHouse.image}</div>
+					<button>test</button>
 				</Popup>
 				) : null}
 
