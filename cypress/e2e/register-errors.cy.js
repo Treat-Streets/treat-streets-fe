@@ -38,7 +38,7 @@ describe('Register Page user flows', () => {
     it('should recieve an error if an address has been entered incorrectly', () => {
         cy.get('input[name="email"]').type('test@gmail.com')
         cy.get('input[name="streetAddress"]').type('4071 S Skyline Drive')
-        cy.get('input[name="city"]').type('Evergrennnnnn')
+        cy.get('input[name="city"]').type('Evergrennn')
         cy.get('input[name="state"]').type('CO')
         cy.get('input[name="zipcode"]').type('80439')
         cy.get('input[type=file]').selectFile('cypress/fixtures/scary_house.jpeg')
@@ -54,7 +54,7 @@ describe('Register Page user flows', () => {
 
     it('should recieve an error if a required field is empty', () => {
         cy.get('input[name="email"]').type('test@gmail.com')
-        cy.get('input[name="city"]').type('Evergrennnnnn')
+        cy.get('input[name="city"]').type('Evergrennn')
         cy.get('input[name="state"]').type('CO')
         cy.get('input[name="zipcode"]').type('80439')
         cy.get('input[type=file]').selectFile('cypress/fixtures/scary_house.jpeg')

@@ -25,10 +25,6 @@ describe('Treat Streets Map user flows', () => {
             cy.get('.mapboxgl-ctrl-zoom-out > .mapboxgl-ctrl-icon').click()
     })
         
-    it('should be able to click geolocate button on map to show houses in current location', () => {
-            cy.get('.mapboxgl-ctrl-geolocate > .mapboxgl-ctrl-icon').click()
-    })
-
     it('should be able to click Home button and return to homepage', () => {
         cy.contains('Home').click()
         cy.url().should('eq', 'http://localhost:3000/')

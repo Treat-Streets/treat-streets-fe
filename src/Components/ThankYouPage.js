@@ -31,9 +31,6 @@ const ThankYouPage = ({ locationData }) => {
 						mapStyle="mapbox://styles/mapbox/dark-v10"
 					>
 						<Marker
-							//?
-							data-cy="house-marker"
-							//?
 							key={Date.now()}
 							latitude={lat}
 							longitude={long}
