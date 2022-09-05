@@ -56,10 +56,9 @@ const MapPage = ({ locationData }) => {
 				>
 					<div className="">
 						<h2>{selectedHouse.streetAddress} {selectedHouse.city}, {selectedHouse.state} {selectedHouse.zipcode}</h2>
-						<div>{selectedHouse.description}</div>
-						<div>{selectedHouse.startTime}</div>
-						<div>{selectedHouse.endTime}</div>
-						<div>{selectedHouse.scarinessLevel}</div>
+						<p>{selectedHouse.description}</p>
+						<p>{selectedHouse.startTime}pm - {selectedHouse.endTime}pm</p>
+						<div>Scariness Level: {selectedHouse.scarinessLevel}</div>
 						<div>{selectedHouse.image}</div>
 						<Link to={`/PopUp/${selectedHouse.id}`}>
 							<button className="location-profile">View Full Profile</button>
