@@ -49,17 +49,11 @@ describe('Register Page user flows', () => {
 
         cy.contains('Register House!').click()
         cy.url().should('include', '/ThankYou')
-        cy.get('.mapboxgl-canvas').should('be.visible')
+        cy.get('.small-map').should('be.visible').find('[data-cy="single-house"]').should('have.length', 1)
         cy.get('.thank-you-msg').should('be.visible').and('contain', 'Thank you for registering your house!')
     })
 
-    it('should be able to see a Thank You message', () => {
-        cy.contains('Map').click()
-        cy.url().should('include', '/Map')
-        cy.get('.map-container').find('[data-cy="map-image"]').should('have.length', 5)
-    })
-
-    it('should be able to see updated map with new location added', () => {
+    it('should be able to see updated Treat Streets map with new location added', () => {
         cy.contains('Map').click()
         cy.url().should('include', '/Map')
         cy.get('.map-container').find('[data-cy="map-image"]').should('have.length', 5)

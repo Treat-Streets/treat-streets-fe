@@ -36,7 +36,7 @@ const ThankYouPage = ({ locationData }) => {
 							longitude={long}
 						>
 							<button className="haunted-house-icon">
-								<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+								<img data-cy="single-house" className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 							</button>
 						</Marker>
 					</ReactMapGL>
