@@ -232,15 +232,15 @@ const RegisterForm = () => {
 						</select>
 						<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
 							<option value="" disabled selected>Choose a Start Time</option>
-							<option value="4:00 pm">4:00 pm</option>
-							<option value="5:00 pm">5:00 pm</option>
-							<option value="6:00 pm">6:00 pm</option>
+							<option value="4:00 pm">4:00</option>
+							<option value="5:00 pm">5:00</option>
+							<option value="6:00 pm">6:00</option>
 						</select>
 						<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
 							<option value="" disabled selected>Choose an End Time</option>
-							<option value="6:00 pm">6:00 pm</option>
-							<option value="7:00 pm">7:00 pm</option>
-							<option value="8:00 pm">8:00 pm</option>
+							<option value="6:00 pm">6:00</option>
+							<option value="7:00 pm">7:00</option>
+							<option value="8:00 pm">8:00</option>
 						</select>
 						<input
 							name="description"
