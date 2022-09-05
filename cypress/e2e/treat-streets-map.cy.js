@@ -16,5 +16,21 @@ describe('Treat Streets Map user flows', () => {
 
     it('should show map with all current locations', () => {
         cy.url().should('eq', 'http://localhost:3000/Map')
+        cy.get('.map-container').find('[data-cy="map-image"]').should('have.length', 4)
+    })
+
+    it('should be able to view the map and zoom in and out', () => {
+            cy.get('.mapboxgl-canvas').should('exist')
+            cy.get('.mapboxgl-ctrl-zoom-in > .mapboxgl-ctrl-icon').click()
+            cy.get('.mapboxgl-ctrl-zoom-out > .mapboxgl-ctrl-icon').click()
+    })
+        
+    it('should be able to click geolocate button on map to show houses in current location', () => {
+            cy.get('.mapboxgl-ctrl-geolocate > .mapboxgl-ctrl-icon').click()
+    })
+
+    it('should be able to click Home button and return to homepage', () => {
+        cy.contains('Home').click()
+        cy.url().should('eq', 'http://localhost:3000/')
     })
 })

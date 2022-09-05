@@ -3,8 +3,6 @@ import { aliasQuery, hasOperationName } from '../utils/graphql-test-utils'
 describe('Treat Streets Landing Page user flows', () => {
     beforeEach(() => {
         cy.intercept('POST', 'https://treat-streets-be.herokuapp.com/graphql', (req) => {
-        //! Example shows that alias mutation is capitalized so I followed that format.
-        //! plus, CreateLocation is capitalized on register form page.
         aliasQuery(req, 'Locations')
         if (hasOperationName(req, 'Locations')) {
             req.reply({
