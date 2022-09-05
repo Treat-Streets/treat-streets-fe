@@ -88,11 +88,11 @@ const RegisterForm = () => {
 
 	const uploadImage = (event) => {
 		const data = new FormData()
-		let file = event.target.files[0];
+		let file = event.target.files[0]; 
 		data.append("file", file)
 		data.append("upload_preset", "treat_streets")
 		data.append("cloud_name","drexo2l5j")
-		fetch("https://api.cloudinary.com/v1_1/drexo2l5j/image/upload",{
+		fetch("https://api.cloudinary.com/v1_1/drexo2l5j/image/upload", {
 			method:"POST",
 			body: data
 		})
@@ -137,7 +137,6 @@ const RegisterForm = () => {
 			})
 			return;
 		}
-		uploadImage()
 	}
 
 	const clearForm = () => {
