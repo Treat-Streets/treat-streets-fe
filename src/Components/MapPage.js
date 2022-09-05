@@ -6,30 +6,17 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { useQuery, useMutation, gql } from '@apollo/client'
 
 const GET_LATLONG = gql`
-	query {
-		locations {
-			id
+	query Coordinates($zipcode: String!) {
+		coordinates(zipcode: $zipcode) {
 			latitude
 			longitude
+			errors
 	}
 }
 `;
 
-const CREATE_LATLONG = gql`
-	mutation CreateLatLong($zipcode: String!) {
-		createLatLong(input: {
-			zipcode: $zipcode
-		}) {
-			location {
-				latitude
-				longitude
-			}
-		}
-	}	
-`;
 
 const MapPage = ({ locationData }) => {
-
 	
 	const [zipcode, setZipcode] = useState('')
 	const [lat, setLat] = useState('')
@@ -42,25 +29,21 @@ const MapPage = ({ locationData }) => {
 		zoom: 10
 	})
 
-	const {error, data, loading} = useQuery(GET_LATLONG)
-
-	const [createLatLong] = useMutation(CREATE_LATLONG, {
+	const {data} = useQuery(GET_LATLONG, {
 		variables: {
-			zipcode: zipcode
-		},
-		refetchQueries: [{query: GET_LATLONG}]
+			zipcode: zipcode,
+		}
 	})
+
 
 	const handleClick = (event) => {
 		event.preventDefault();
-		console.log('zip', zipcode)
-		createLatLong().then((res) => {
-			clearForm();
-			setLat(res.data.createLocation[-1].location.latitude)
-			setLong(res.data.createLocation[-1].location.longitude)
-			})
-		console.log(long)
-		console.log(data)
+		setViewport({
+			latitude: data.coordinates.latitude,
+			longitude: data.coordinates.longitude,
+			zoom: 11
+		})
+		clearForm()
 	}
 
 	const clearForm = () => {
@@ -96,7 +79,7 @@ const MapPage = ({ locationData }) => {
 						console.log('here')
 					}}
 					/>
-				<button className="search" onClick={event => handleClick(event)}>Search</button>
+				<button className="search" disabled={!zipcode} onClick={event => handleClick(event)}>Search</button>
 			</form>
 			<div className="map-container">
 				<ReactMapGL className="map"
