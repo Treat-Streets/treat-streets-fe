@@ -1,0 +1,82 @@
+{
+    "data": {
+        "locations": [
+              {
+                  "id": "1",
+                  "streetAddress": "2485 W Hillside Ave",
+                  "city": "Denver",
+                  "state": "CO",
+                  "zipcode": "80219",
+                  "locationType": "house",
+                  "scarinessLevel": 4,
+                  "description": "IT'S THE COOLEST EVER. ",
+                  "startTime": "4:00 pm",
+                  "endTime": "8:00 pm",
+                  "image": "n/a",
+                  "latitude": 39.670988,
+                  "longitude": -105.016814
+              },
+              {
+                  "id": "2",
+                  "streetAddress": "1816 S Newton St",
+                  "city": "Denver",
+                  "state": "CO",
+                  "zipcode": "80219",
+                  "locationType": "house",
+                  "scarinessLevel": 1,
+                  "description": "We don't like to scare kids!",
+                  "startTime": "4:00 pm",
+                  "endTime": "7:00 pm",
+                  "image": "n/a",
+                  "latitude": 39.684066,
+                  "longitude": -105.038085
+              },
+              {
+                  "id": "3",
+                  "streetAddress": "13446 W 22nd Place",
+                  "city": "Golden",
+                  "state": "CO",
+                  "zipcode": "80401",
+                  "locationType": "house",
+                  "scarinessLevel": 2,
+                  "description": "Megs Spoooky House!!",
+                  "startTime": "4:00 pm",
+                  "endTime": "8:00 pm",
+                  "image": "Nope",
+                  "latitude": 39.752514,
+                  "longitude": -105.150996
+              },
+              {
+                  "id": "4",
+                  "streetAddress": "7790 Carr Ct",
+                  "city": "Arvada",
+                  "state": "CO",
+                  "zipcode": "80005",
+                  "locationType": "house",
+                  "scarinessLevel": 8,
+                  "description": "I love Halloween!!",
+                  "startTime": "4:00 pm",
+                  "endTime": "8:00 pm",
+                  "image": "n/a",
+                  "latitude": 39.83643,
+                  "longitude": -105.093894
+              },
+              {
+                "id": "5",
+                "streetAddress": "4071 S Skyline Drive",
+                "city": "Evergreen",
+                "state": "CO",
+                "zipcode": "80439",
+                "locationType": "house",
+                "scarinessLevel": 3,
+                "description": "Spooky and fun decor!",
+                "startTime": "5:00 pm",
+                "endTime": "8:00 pm",
+                "image": "www.stubbedURL.com",
+                "latitude": 39.64124,
+                "longitude": -105.379275
+            }
+          ]
+      }
+  }
+
