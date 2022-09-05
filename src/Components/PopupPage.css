@@ -1,4 +1,4 @@
-.popup-wrapper {
+.popup-page-wrapper {
 	/* border: 2px solid green; */
 	display: flex;
 	flex-direction: column;
@@ -6,7 +6,7 @@
 	justify-content: center;
 }
 
-.popup-container {
+.popup-page-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -21,23 +21,26 @@
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.popup-street-address {
+.popup-page-address {
 	font-family: 'Ranchers', cursive;
 	letter-spacing: .25rem;
 	font-size: 2.5rem;
 	margin-top: 35px;
 }
 
-.popup-start-time, 
-.popup-end-time {
+.popup-page-times {
 	font-size: 20px;
 }
 
-.popup-scariness-level {
+.popup-page-description {
 	font-weight: bold;
 }
 
-.popup-image {
+.popup-page-scariness-level {
+	font-weight: bold;
+}
+
+.popup-page-image {
 	height: 400px;
 	width: 500px;
 	object-fit: contain;
