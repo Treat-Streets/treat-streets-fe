@@ -25,7 +25,7 @@ describe('Register Page and Thank You Page user flows', () => {
     cy.get('button').should('have.text', 'Register House!')
   })
 
-  it('should be able to fill out the form with house information', () => {
+  it('should be able to fill out the form with house information, click Register button and be taken to Thank You page', () => {
     cy.get('input[name="email"]').type('test@gmail.com')
     cy.get('input[name="streetAddress"]').type('4071 S Skyline Drive')
     cy.get('input[name="city"]').type('Evergreen')
@@ -38,7 +38,8 @@ describe('Register Page and Thank You Page user flows', () => {
     cy.get('input[name="description"]').type('Spooky and fun decor!')
     cy.get('input[type="range"]').as('range').invoke('val', 3).trigger('onChange')
 
-    //currently failing due to 'cannot read properties of undefined, reading target' error
-    // cy.contains('Register House!').click()
+    cy.contains('Register House!').click()
+    cy.url().should('include', '/ThankYou')
+    cy.get('.mapboxgl-canvas').should('be.visible')
   })
 })
