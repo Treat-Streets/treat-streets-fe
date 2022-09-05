@@ -53,6 +53,8 @@ describe('Register Page user flows', () => {
     })
 
     it('should go see the new map', () => {
-
+        cy.contains('Map').click()
+        cy.url().should('include', '/Map')
+        
     })
 })
