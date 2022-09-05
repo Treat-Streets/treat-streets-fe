@@ -60,7 +60,6 @@ const App = () => {
 
 			<Route exact path='/PopUp/:id'
 				render={({ match }) => {
-					console.log('data.locations', data.locations)
 					const locationToRender = data.locations.find(location => 
 						location.id === match.params.id
 					)

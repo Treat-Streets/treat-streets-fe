@@ -21,7 +21,7 @@ const LandingPage = () => {
 							<button className="landing-button">Register<br></br> Your House</button>
 						</Link>
 						<Link to='/Map'>
-							<button className="landing-button">View<br></br>Treat Streets</button>
+							<button className="landing-button">View<br></br> Treat Streets</button>
 						</Link>
 					</section>
 				</section>
