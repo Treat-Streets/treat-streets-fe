@@ -54,18 +54,17 @@ const MapPage = ({ locationData }) => {
 					anchor='bottom'
 					onClose={() => setSelectedHouse(false) }
 				>
-					<div>{selectedHouse.streetAddress}</div>
-					<div>{selectedHouse.city}</div>
-					<div>{selectedHouse.state}</div>
-					<div>{selectedHouse.zipcode}</div>
-					<div>{selectedHouse.description}</div>
-					<div>{selectedHouse.startTime}</div>
-					<div>{selectedHouse.endTime}</div>
-					<div>{selectedHouse.scarinessLevel}</div>
-					<div>{selectedHouse.image}</div>
-					<Link to={`/PopUp/${selectedHouse.id}`}>
-						<button className="location-profile">View Full Profile</button>
-					</Link>
+					<div className="">
+						<h2>{selectedHouse.streetAddress} {selectedHouse.city}, {selectedHouse.state} {selectedHouse.zipcode}</h2>
+						<div>{selectedHouse.description}</div>
+						<div>{selectedHouse.startTime}</div>
+						<div>{selectedHouse.endTime}</div>
+						<div>{selectedHouse.scarinessLevel}</div>
+						<div>{selectedHouse.image}</div>
+						<Link to={`/PopUp/${selectedHouse.id}`}>
+							<button className="location-profile">View Full Profile</button>
+						</Link>
+					</div>
 				</Popup>
 				) : null}
 
