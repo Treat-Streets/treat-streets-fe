@@ -37,6 +37,7 @@ const App = () => {
 
   return (
     <div className="App">
+		<Switch>
 			<Route exact path="/">
 				<LandingPage />
 			</Route>
@@ -69,8 +70,7 @@ const App = () => {
 			}}
 			/>
 
-			<Switch>
-				<Route path="*">
+				<Route path="*" element={<NotFound />} > 
 					<NotFound />
 				</Route>
 			</Switch>
