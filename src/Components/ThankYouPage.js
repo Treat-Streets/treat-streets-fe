@@ -6,6 +6,7 @@ import { useLocation, Link } from 'react-router-dom'
 const ThankYouPage = ({ locationData }) => {
 
 	const location = useLocation();
+	console.log(useLocation())
 
 	//returns object from the current URL so we can access its state
 
@@ -35,7 +36,7 @@ const ThankYouPage = ({ locationData }) => {
 							longitude={long}
 						>
 							<button className="haunted-house-icon">
-								<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+								<img data-cy="single-house" className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 							</button>
 						</Marker>
 					</ReactMapGL>

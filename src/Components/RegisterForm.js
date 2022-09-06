@@ -286,6 +286,7 @@ const RegisterForm = () => {
 				</section>
 			</div>			
 			<Snackbar
+				className="snackbar"
 				anchorOrigin={{ vertical, horizontal }}
 				open={open}
 				autoHideDuration={6000}

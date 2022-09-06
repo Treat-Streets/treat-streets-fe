@@ -56,7 +56,7 @@ const MapPage = ({ locationData }) => {
 			>
 			<Link to={`/PopUp/${location.id}`}>
 				<button className="haunted-house-icon">
-					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+					<img data-cy="map-image" className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 				</button>
 			</Link>
 			</Marker>
