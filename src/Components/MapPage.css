@@ -18,10 +18,17 @@
 		height: 30px;
 		padding-left: 0px;
 		margin-left: 5px;
+		border: none;
+		border-radius: 11px;
+		/* font-weight: bold; */
+		cursor: pointer;
 	}
 
 	.zipcode {
 		height: 30px;
+		border: none;
+		border-radius: 11px;
+		padding-left: 10px;
 	}
 
 	.zip-form {
@@ -100,6 +107,8 @@
 	}
 
 	.search {
+		border: none;
+		border-radius: 11px;
 		background-color: #FD7D11;
 		width: 85px;
 		height: 30px;
