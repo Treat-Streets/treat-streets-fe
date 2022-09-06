@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import ReactMapGL, { Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
+import ReactMapGL, { Popup, Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useQuery, gql } from '@apollo/client'
@@ -57,14 +57,15 @@ const MapPage = ({ locationData }) => {
 				latitude={location.latitude}
 				longitude={location.longitude}
 			>
-				<button 
-					className="haunted-house-icon"
-					onClick={e => {
-						e.preventDefault()
-						e.stopPropagation()
-						setSelectedHouse(location)
-					}}>
-					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+			<button 
+				className="haunted-house-icon"
+				onClick={e => {
+					e.preventDefault()
+					e.stopPropagation()
+					setSelectedHouse(location)
+				}}>
+				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+			</button>
 			</Marker>
 		) 
 	})
