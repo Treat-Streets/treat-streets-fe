@@ -20,16 +20,26 @@
 	font-family: 'Ranchers', cursive;
 	font-size: 3rem;
 	letter-spacing: .50rem;
-	color: #FD7D11;
-	text-shadow:
-	0 0 7px #fff,
-	0 0 10px #fff,
-	0 0 21px #fff,
-	0 0 42px #FFC12F,
-	0 0 82px #FFC12F,
-	0 0 92px #043451,
-	0 0 102px #043451,
-	0 0 151px #043451;
+	color: #fff;
+	text-shadow: 1px 0px 4px #FFE9D7, 2px 0px 4px #FEC79A, 3px 0px 4px #FEB172, 2px 0px 3px #FDA55D, 2px 3px 15px #FD9A49, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #FD8F35,40px 0vw 200px #FD7D11;
+}
+
+.flicker-slow{
+	animation: flicker 3s linear infinite;
+}
+
+.flicker-fast{
+	animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+	opacity: .99;
+			
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+			opacity: 0.4;
+	}
 }
 
 .landing-page-right {

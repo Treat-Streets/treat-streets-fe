@@ -36,3 +36,12 @@
 	border: none;
 	cursor: pointer;
 }
+
+.view-map {
+	margin-top: 22px;
+	background-color: #FD7D11;
+	border: none;
+	height: 40px;
+	width: 200px;
+	border-radius: 15px;
+}

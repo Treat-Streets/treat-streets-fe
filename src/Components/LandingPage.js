@@ -13,8 +13,12 @@ const LandingPage = () => {
 				</section>
 
 				<section className="landing-page-right">
-					<h3>Welcome to</h3>
-					<h2 className="welcome-header">TREAT STREETS</h2>
+					<h2 className="welcome-header">TR
+						<span className='flicker-slow'>E</span>A
+						<span className='flicker-fast'>T</span> ST
+						<span className='flicker-slow'>R</span>EE
+						<span className='flicker-fast'>T</span>S
+					</h2>
 					<p>You can find houses passing out candy for Halloween in your area or add your home to the treat streets map.</p>
 					<section className="landing-page-buttons-container">
 						<Link to='/Register'>

@@ -1,0 +1,22 @@
+{
+    "data" : {
+        "createLocation": {
+            "location": {
+                "city": "Evergreen",
+                "description": "Spooky and fun decor!",
+                "endTime": "8:00 pm",
+                "image": "http://res.cloudinary.com/drexo2l5j/image/upload/v1662405729/zjkxmfhrdcqtaca7633n.jpg",
+                "latitude": 39.64124,
+                "locationType": "house",
+                "longitude": -105.379275,
+                "scarinessLevel": 3,
+                "startTime": "5:00 pm",
+                "state": "CO",
+                "streetAddress": "4071 S Skyline Drive",
+                "zipcode": "80439"
+            },
+            "errors": []
+        }
+    }
+}
+

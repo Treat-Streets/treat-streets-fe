@@ -1,6 +1,6 @@
 .nav-bar {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
 }
 
 a {
@@ -12,6 +12,7 @@ a {
 }
 
 .active {
-  color: orange;
+  color: #FD7D11;
 }
+
 

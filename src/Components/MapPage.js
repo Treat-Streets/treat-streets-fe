@@ -1,12 +1,23 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import ReactMapGL, { Marker, Popup, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
+import ReactMapGL, { Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
-import PopupPage from './PopupPage';
+import { useQuery, gql } from '@apollo/client'
+
+const GET_LATLONG = gql`
+	query Coordinates($zipcode: String!) {
+		coordinates(zipcode: $zipcode) {
+			latitude
+			longitude
+			errors
+	}
+}`;
+
 
 const MapPage = ({ locationData }) => {
-
+	
+	const [zipcode, setZipcode] = useState('')
 	const [viewport, setViewport] = useState({
 		latitude: 39.7392,
 		longitude: -104.9903, 
@@ -15,7 +26,29 @@ const MapPage = ({ locationData }) => {
 		zoom: 10
 	})
 
+
 	const [selectedHouse, setSelectedHouse] = useState({})
+
+	const {data} = useQuery(GET_LATLONG, {
+		variables: {
+			zipcode: zipcode,
+		}
+	})
+
+
+	const handleClick = (event) => {
+		event.preventDefault();
+		setViewport({
+			latitude: data.coordinates.latitude,
+			longitude: data.coordinates.longitude,
+			zoom: 11
+		})
+		clearForm()
+	}
+
+	const clearForm = () => {
+		setZipcode('')
+	}
 
 	const properties = locationData.map(location => {
 		return (
@@ -32,12 +65,26 @@ const MapPage = ({ locationData }) => {
 						setSelectedHouse(location)
 					}}>
 					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
-				</button>
 			</Marker>
 		) 
 	})
 
 	return (
+
+<div className="view-full-map">
+
+			<form className='zip-form'>
+				<input
+					className="zipcode" 
+					name="zipcode"
+					placeholder="Zipcode"
+					value={zipcode}
+					onChange={event => {
+						setZipcode(event.target.value)
+					}}
+					/>
+				<button className="search" disabled={!zipcode} onClick={event => handleClick(event)}>Search</button>
+			</form>
 		<div className="map-container">
 			<ReactMapGL className="map"
 				{...viewport}
@@ -70,6 +117,7 @@ const MapPage = ({ locationData }) => {
 
 				{properties}
 			</ReactMapGL>
+			</div>
 		</div>
 	)
 }

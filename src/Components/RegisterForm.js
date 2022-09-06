@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import '../Components/RegisterForm.css'
 import { gql, useMutation } from '@apollo/client'
-import { Link, BrowserRouter, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import {GET_LOCATION} from './App.js'
-import App from './App'
 
 //SnackBar imports
 import Snackbar from '@mui/material/Snackbar';
@@ -38,8 +37,8 @@ const CREATE_LOCATION = gql`
         startTime
         endTime
         image
-		latitude
-		longitude
+				latitude
+				longitude
 			}
 			errors
 		}
@@ -59,6 +58,7 @@ const RegisterForm = () => {
 	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
 	const [url, setUrl ] = useState("");
+  
 	const history = useHistory()
 	const [snackbar, setSnackBar] = useState({
 		open: false,
@@ -85,6 +85,14 @@ const RegisterForm = () => {
 	})
 	
 	const { vertical, horizontal, open } = snackbar;
+
+	const RegisterButton = () => {
+		if(email && streetAddress && city && state && zipcode && locationType && startTime && endTime && scarinessLevel && description && url) {
+			return <button className="register" onClick={event => handleClick(event)}> Register House! </button>
+		} else {
+			return <button className="register" onClick={event => handleClick(event)} disabled> Register House! </button>
+		}
+	}
 
 	const uploadImage = (event) => {
 		const data = new FormData()
@@ -185,8 +193,8 @@ const RegisterForm = () => {
 					<p className='form-description'>Fill out this form to let your Denver area neighbors know you are passing out candy for Halloween!</p>	
 				</section>
 
-				<section className="form-section">
-					<form>
+				<section className="house-form-section">
+					<form className='house-form'>
 						<input 
 							name="email"
 							placeholder="Enter email here"
@@ -261,20 +269,24 @@ const RegisterForm = () => {
 							/>
 						</div>
 						<p className="scarylevel">Scariness Level: {scarinessLevel}</p>
-						<input 
-							name="image"
-							type="file"
-							title="Choose file"
-							style={{color: "#6652BD"}}
-							value={image}
-							onChange={event => uploadImage(event)}
-						/>
-						<button className="register" onClick={event => handleClick(event)}>Register House!</button>
+						<div className="img-upload-container">
+							<input 
+								className="upload"
+								name="image"
+								type="file"
+								title="Choose file"
+								style={{color: "#6652BD"}}
+								value={image}
+								onChange={event => uploadImage(event)}
+							/>
+							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete"> ...Waiting 👻 </p>}
+						</div>
+						<RegisterButton/>
 					</form>
 				</section>
-			</div>
-			
+			</div>			
 			<Snackbar
+				className="snackbar"
 				anchorOrigin={{ vertical, horizontal }}
 				open={open}
 				autoHideDuration={6000}
