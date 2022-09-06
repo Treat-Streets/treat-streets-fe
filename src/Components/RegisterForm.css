@@ -229,7 +229,7 @@
 	}
 }
 
-@media screen and (max-width: 1340px){
+@media screen and (max-width: 1340px) {
 	.form-wrapper {
 		display: flex;
 		justify-content: center;
@@ -258,6 +258,7 @@
 		font-family: 'Ranchers', cursive;
 		letter-spacing: .25rem;
 		font-size: 2rem;
+		color: #F36518;
 	}
 
 	.form-description {
@@ -265,6 +266,7 @@
 		margin-right: 3px;
 		margin-left: 3px;
 		font-size: 15px;
+		color: white;
 	}
 
 	.house-form-section {
