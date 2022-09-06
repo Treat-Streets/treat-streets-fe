@@ -63,6 +63,10 @@ const MapPage = ({ locationData }) => {
 					e.preventDefault()
 					e.stopPropagation()
 					setSelectedHouse(location)
+					setViewport({
+						latitude: location.latitude,
+						longitude: location.longitude,
+					})
 				}}>
 				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 			</button>
