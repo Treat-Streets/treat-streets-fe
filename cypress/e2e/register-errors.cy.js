@@ -35,22 +35,22 @@ describe('Register Page user flows', () => {
     })
 
 
-    // it('should recieve an error if an address has been entered incorrectly', () => {
-    //     cy.get('input[name="email"]').type('test@gmail.com')
-    //     cy.get('input[name="streetAddress"]').type('4071 S Skyline Drive')
-    //     cy.get('input[name="city"]').type('Evergrennn')
-    //     cy.get('input[name="state"]').type('CO')
-    //     cy.get('input[name="zipcode"]').type('80439')
-    //     cy.get('input[type=file]').selectFile('cypress/fixtures/scary_house.jpeg')
-    //     cy.get('select[name="locationType"]').select('house')
-    //     cy.get('select[name="startTime"]').select('5:00 pm')
-    //     cy.get('select[name="endTime"]').select('8:00 pm')
-    //     cy.get('input[name="description"]').type('Spooky and fun decor!')
-    //     cy.get('input[type="range"]').as('range').invoke('val', 3).trigger('onChange')
+    it('should recieve an error if an address has been entered incorrectly', () => {
+        cy.get('input[name="email"]').type('test@gmail.com')
+        cy.get('input[name="streetAddress"]').type('4071 S Skyline Drive')
+        cy.get('input[name="city"]').type('Evergrennn')
+        cy.get('input[name="state"]').type('CO')
+        cy.get('input[name="zipcode"]').type('80439')
+        cy.get('input[type=file]').selectFile('cypress/fixtures/scary_house.jpeg')
+        cy.get('select[name="locationType"]').select('house')
+        cy.get('select[name="startTime"]').select('5:00 pm')
+        cy.get('select[name="endTime"]').select('8:00 pm')
+        cy.get('input[name="description"]').type('Spooky and fun decor!')
+        cy.get('input[type="range"]').as('range').invoke('val', 3).trigger('onChange')
 
-    //     cy.contains('Register House!').click()
-    //     cy.get('.snackbar').should('be.visible')
-    // })
+        cy.contains('Register House!').click()
+        cy.get('.snackbar').should('be.visible')
+    })
 
     it('should not be able to click the button when fields are missing', () => {
         cy.get('input[name="email"]').type('test@gmail.com')
