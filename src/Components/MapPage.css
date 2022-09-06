@@ -1,84 +1,196 @@
-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+@media screen and (min-width: 1341px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.view-full-map {
+		background-color: #6652BD;
+		border-radius: 15px;
+		height: 89vh;
+		width: 80vw;
+	}
+
+	.search {
+		background-color: #FD7D11;
+		width: 85px;
+		height: 30px;
+		padding-left: 0px;
+		margin-left: 5px;
+		border: none;
+		border-radius: 11px;
+		/* font-weight: bold; */
+		cursor: pointer;
+	}
+
+	.zipcode {
+		height: 30px;
+		border: none;
+		border-radius: 11px;
+		padding-left: 10px;
+	}
+
+	.zip-form {
+		position: relative;
+		float: left;
+		margin: 20px;
+		margin-left: 80px;
+	}
+
+	.map-container {
+		height: 80%;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
+	.popup-wrapper {
+		height: 300px;
+		width: 300px;
+	}
+
+	.popup-container {
+		/* background: #FD7D11;
+		border-radius: 20px; */
+		margin: 5px;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.haunted-house-icon {
+		width: 30px;
+		height: 30px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+	
+	.popup-address {
+		font-size: 18px;
+	}
+
+	.popup-times {
+		font-size: 13px;
+	}
+
+	.popup-image {
+		height: 150px;
+		width: 200px;
+		object-fit: contain;
+	}
+
+	.location-profile {
+		border-radius: 5px;
+		font-size: .75rem;
+		width: 120px;
+		height: 40px;
+		padding: 3px;
+		background-color: #F36518;
+		border: none;
+	}
+
+	.location-profile:hover {
+		transform: scale(1.1);
+		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+				16 0, auto;
+	}
 }
 
-.view-full-map {
-	background-color: #6652BD;
-	border-radius: 15px;
-	height: 89vh;
-  width: 80vw;
-}
+@media screen and (max-width: 1340px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-.search {
-	background-color: #FD7D11;
-	width: 85px;
-	height: 30px;
-	padding-left: 0px;
-	margin-left: 5px;
-}
+	.view-full-map {
+		display: flex;
+		flex-direction: column;
+		/* border: 2px solid white; */
+		background-color: #6652BD;
+		border-radius: 15px;
+		height: 89vh;
+		width: 80vw;
+	}
 
-.zipcode {
-	height: 30px;
-}
+	.search {
+		border: none;
+		border-radius: 11px;
+		background-color: #FD7D11;
+		width: 85px;
+		height: 30px;
+		padding-left: 0px;
+		margin-left: 5px;
+	}
 
-.zip-form {
-	position: relative;
-  float: left;
-	margin: 20px;
-	margin-left: 80px;
-}
+	.zipcode {
+		height: 30px;
+		border-radius: 11px;
+		border: none;
+	}
 
-.map-container {
-	height: 80%;
-	padding-left: 80px;
-	padding-right: 80px;
-}
+	.zip-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* border: 2px solid green; */
+		position: relative;
+		float: left;
+		margin: 20px;
+		width: 250px;
+		height: 50px;
+	}
 
-.popup-wrapper {
-	height: 300px;
-	width: 300px;
-}
+	.map-container {
+		height: 80%;
+		padding-left: 10px;
+		padding-right: 10px;
+		/* border: 2px solid white; */
+	}
 
-.popup-container {
-	background: #FD7D11;
-	border-radius: 20px;
-	margin: 5px;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	.popup-wrapper {
+		height: 100px;
+		/* width: 200px; */
+		/* border: 2px solid green; */
+	}
 
-.haunted-house-icon {
-	width: 30px;
-	height: 30px;
-	background: none;
-	border: none;
-	cursor: pointer;
-}
-/* 
-.popup-address {
-	font-family: 'Ranchers', cursive;
-} */
+	.popup-container {
+		margin: 5px;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.popup-image {
-	height: 150px;
-	width: 200px;
-	object-fit: contain;
-}
+	.haunted-house-icon {
+		width: 30px;
+		height: 30px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
 
-.location-profile {
-	border-radius: 5px;
-	font-size: .75rem;
-	width: 40;
-	height: 20px;
-	padding: 3px;
-}
+	.popup-image {
+		height: 100px;
+		width: 150px;
+		object-fit: contain;
+	}
 
-.location-profile:hover {
-	transform: scale(1.1);
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
-      16 0, auto;
+	.location-profile {
+		border-radius: 5px;
+		font-size: .75rem;
+		width: 100px;
+		height: 35px;
+		padding: 3px;
+		background-color: #F36518;
+		border: none;
+	}
+
+	.location-profile:hover {
+		transform: scale(1.1);
+		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+				16 0, auto;
+	}
 }
