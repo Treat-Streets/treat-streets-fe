@@ -66,10 +66,14 @@
 		border: none;
 		cursor: pointer;
 	}
-	/* 
+	
 	.popup-address {
-		font-family: 'Ranchers', cursive;
-	} */
+		font-size: 18px;
+	}
+
+	.popup-times {
+		font-size: 13px;
+	}
 
 	.popup-image {
 		height: 150px;
@@ -80,9 +84,11 @@
 	.location-profile {
 		border-radius: 5px;
 		font-size: .75rem;
-		width: 40;
-		height: 20px;
+		width: 120px;
+		height: 40px;
 		padding: 3px;
+		background-color: #F36518;
+		border: none;
 	}
 
 	.location-profile:hover {
@@ -155,10 +161,6 @@
 		border: none;
 		cursor: pointer;
 	}
-	/* 
-	.popup-address {
-		font-family: 'Ranchers', cursive;
-	} */
 
 	.popup-image {
 		height: 100px;
@@ -169,9 +171,11 @@
 	.location-profile {
 		border-radius: 5px;
 		font-size: .75rem;
-		width: 40;
-		height: 20px;
+		width: 100px;
+		height: 35px;
 		padding: 3px;
+		background-color: #F36518;
+		border: none;
 	}
 
 	.location-profile:hover {

@@ -107,7 +107,7 @@ const MapPage = ({ locationData }) => {
 				>
 					<div className="popup-container">
 						<h2 className="popup-address">{selectedHouse.streetAddress}</h2>
-						<p className="popup-times">{selectedHouse.startTime} - {selectedHouse.endTime}</p>
+						<p className="popup-times">🍬{selectedHouse.startTime} - {selectedHouse.endTime}🍬</p>
 						<img className="popup-image" src={selectedHouse.image} alt='house image'/>
 						<Link to={`/PopUp/${selectedHouse.id}`}>
 							<button className="location-profile">View Full Profile</button>
