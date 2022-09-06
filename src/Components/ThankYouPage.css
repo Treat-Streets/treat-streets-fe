@@ -1,49 +1,118 @@
-.map-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+@media screen and (min-width: 1341px) {
+	.map-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.thank-you-msg {
+		font-family: 'Ranchers', cursive;
+		letter-spacing: .25rem;
+		font-size: 2.5rem;
+		margin-top: 35px;
+	}
+
+
+	.small-map-container {
+		margin-top: 20px;
+		height: 84vh;
+		width: 70vw;
+		padding-left: 80px;
+		padding-right: 80px;
+		background-color: #6652BD;
+		border-radius: 15px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+
+	.small-map {
+		margin-top: 40px;
+		height: 60vh;
+		width: 70vw;
+	}
+
+	.haunted-house-icon {
+		width: 30px;
+		height: 30px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	.view-map-button {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		background-color: #FD7D11;
+		font-weight: bold;
+		border: none;
+		height: 40px;
+		width: 200px;
+		border-radius: 15px;
+	}
 }
 
-.thank-you-msg {
-	font-family: 'Ranchers', cursive;
-	letter-spacing: .25rem;
-	font-size: 2.5rem;
-	margin-top: 35px;
-}
+@media screen and (max-width: 1340px) {
+	.map-wrapper {
+		display: flex;
+		flex-direction: column;
 
+	}
 
-.small-map-container {
-	margin-top: 20px;
-	height: 84vh;
-  width: 70vw;
-	padding-left: 80px;
-	padding-right: 80px;
-	background-color: #6652BD;
-	border-radius: 15px;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+	.thank-you-msg {
+		margin: 0px;
+		padding-bottom: 5px;
+		font-family: 'Ranchers', cursive;
+		letter-spacing: .25rem;
+		font-size: 1.5rem;
+		color: #F36518;
+		width: 320px;
+	}
 
-.small-map {
-	margin-top: 40px;
-	height: 60vh;
-  width: 70vw;
-}
+	.small-map-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 80vh;
+		width: 40vw;
+		padding-left: 90px;
+		padding-right: 90px;
+		background-color: #6652BD;
+		border-radius: 15px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
 
-.haunted-house-icon {
-	width: 30px;
-	height: 30px;
-	background: none;
-	border: none;
-	cursor: pointer;
-}
+	.small-map {
+		padding-bottom: 5px;
+		height: 50vh;
+		width: 70vw;
+	}
 
-.view-map-button {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	background-color: #FD7D11;
-	font-weight: bold;
-	border: none;
-	height: 40px;
-	width: 200px;
-	border-radius: 15px;
+	.haunted-house-icon {
+		width: 30px;
+		height: 30px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	.view-map-button {
+		padding: 0px;
+		border-radius: 7px;
+		font-family: 'Ranchers', cursive;
+		letter-spacing: .25rem;
+		font-size: .75rem;
+		color: white;
+		cursor: pointer;
+		width: 200px;
+		height: 50px;
+		border-radius: 50px;
+		background-color: #F36518;
+		border: none;
+	}
+	
+	.view-map-button:hover {
+		transform: scale(1.1);
+		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+				16 0, auto;
+	}
 }

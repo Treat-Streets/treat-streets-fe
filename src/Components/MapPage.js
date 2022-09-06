@@ -68,7 +68,7 @@ const MapPage = ({ locationData }) => {
 						longitude: location.longitude,
 					})
 				}}>
-				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+				<img data-cy="location-pin" className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 			</button>
 			</Marker>
 		) 
@@ -106,10 +106,8 @@ const MapPage = ({ locationData }) => {
 					onClose={() => setSelectedHouse(false) }
 				>
 					<div className="popup-container">
-						<h2 className="popup-address">{selectedHouse.streetAddress} <br></br> {selectedHouse.city}, {selectedHouse.state} {selectedHouse.zipcode}</h2>
-						{/* <p className="popup-description">{selectedHouse.description}</p> */}
-						<p className="popup-times">{selectedHouse.startTime} - {selectedHouse.endTime}</p>
-						<p className="popup-scarinessLevel">Scariness Level: {selectedHouse.scarinessLevel}</p>
+						<h2 className="popup-address">{selectedHouse.streetAddress}</h2>
+						<p className="popup-times">🍬{selectedHouse.startTime} - {selectedHouse.endTime}🍬</p>
 						<img className="popup-image" src={selectedHouse.image} alt='house image'/>
 						<Link to={`/PopUp/${selectedHouse.id}`}>
 							<button className="location-profile">View Full Profile</button>
