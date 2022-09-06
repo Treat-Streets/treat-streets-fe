@@ -1,0 +1,10 @@
+{
+    "data" : {
+        "coordinates": {
+            "errors": [],
+            "latitude": 39.696096,
+            "longitude": -105.034969,
+            "__typename": "Coordinates"
+        }
+    }
+}
