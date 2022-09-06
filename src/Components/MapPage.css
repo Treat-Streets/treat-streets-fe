@@ -13,6 +13,8 @@ body {
 
 .search {
 	background-color: #FD7D11;
+	border: none;
+	border-radius: 11px;
 	width: 85px;
 	height: 30px;
 	padding-left: 0px;
@@ -21,6 +23,9 @@ body {
 
 .zipcode {
 	height: 30px;
+	border: none;
+	border-radius: 11px;
+	padding-left: 10px;
 }
 
 .zip-form {
