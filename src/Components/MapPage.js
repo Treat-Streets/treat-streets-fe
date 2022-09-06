@@ -106,10 +106,8 @@ const MapPage = ({ locationData }) => {
 					onClose={() => setSelectedHouse(false) }
 				>
 					<div className="popup-container">
-						<h2 className="popup-address">{selectedHouse.streetAddress} <br></br> {selectedHouse.city}, {selectedHouse.state} {selectedHouse.zipcode}</h2>
-						{/* <p className="popup-description">{selectedHouse.description}</p> */}
+						<h2 className="popup-address">{selectedHouse.streetAddress}</h2>
 						<p className="popup-times">{selectedHouse.startTime} - {selectedHouse.endTime}</p>
-						<p className="popup-scarinessLevel">Scariness Level: {selectedHouse.scarinessLevel}</p>
 						<img className="popup-image" src={selectedHouse.image} alt='house image'/>
 						<Link to={`/PopUp/${selectedHouse.id}`}>
 							<button className="location-profile">View Full Profile</button>

@@ -1,84 +1,173 @@
-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+@media screen and (min-width: 1341px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.view-full-map {
+		background-color: #6652BD;
+		border-radius: 15px;
+		height: 89vh;
+		width: 80vw;
+	}
+
+	.search {
+		background-color: #FD7D11;
+		width: 85px;
+		height: 30px;
+		padding-left: 0px;
+		margin-left: 5px;
+	}
+
+	.zipcode {
+		height: 30px;
+	}
+
+	.zip-form {
+		position: relative;
+		float: left;
+		margin: 20px;
+		margin-left: 80px;
+	}
+
+	.map-container {
+		height: 80%;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
+	.popup-wrapper {
+		height: 300px;
+		width: 300px;
+	}
+
+	.popup-container {
+		/* background: #FD7D11;
+		border-radius: 20px; */
+		margin: 5px;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.haunted-house-icon {
+		width: 30px;
+		height: 30px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+	/* 
+	.popup-address {
+		font-family: 'Ranchers', cursive;
+	} */
+
+	.popup-image {
+		height: 150px;
+		width: 200px;
+		object-fit: contain;
+	}
+
+	.location-profile {
+		border-radius: 5px;
+		font-size: .75rem;
+		width: 40;
+		height: 20px;
+		padding: 3px;
+	}
+
+	.location-profile:hover {
+		transform: scale(1.1);
+		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+				16 0, auto;
+	}
 }
 
-.view-full-map {
-	background-color: #6652BD;
-	border-radius: 15px;
-	height: 89vh;
-  width: 80vw;
-}
+@media screen and (max-width: 1340px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-.search {
-	background-color: #FD7D11;
-	width: 85px;
-	height: 30px;
-	padding-left: 0px;
-	margin-left: 5px;
-}
+	.view-full-map {
+		background-color: #6652BD;
+		border-radius: 15px;
+		height: 89vh;
+		width: 80vw;
+	}
 
-.zipcode {
-	height: 30px;
-}
+	.search {
+		background-color: #FD7D11;
+		width: 85px;
+		height: 30px;
+		padding-left: 0px;
+		margin-left: 5px;
+	}
 
-.zip-form {
-	position: relative;
-  float: left;
-	margin: 20px;
-	margin-left: 80px;
-}
+	.zipcode {
+		height: 30px;
+	}
 
-.map-container {
-	height: 80%;
-	padding-left: 80px;
-	padding-right: 80px;
-}
+	.zip-form {
+		position: relative;
+		float: left;
+		margin: 20px;
+		margin-left: 80px;
+	}
 
-.popup-wrapper {
-	height: 300px;
-	width: 300px;
-}
+	.map-container {
+		height: 80%;
+		/* padding-left: 80px;
+		padding-right: 80px; */
+		/* border: 2px solid white; */
+	}
 
-.popup-container {
-	background: #FD7D11;
-	border-radius: 20px;
-	margin: 5px;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	.popup-wrapper {
+		height: 100px;
+		/* width: 200px; */
+		/* border: 2px solid green; */
+	}
 
-.haunted-house-icon {
-	width: 30px;
-	height: 30px;
-	background: none;
-	border: none;
-	cursor: pointer;
-}
-/* 
-.popup-address {
-	font-family: 'Ranchers', cursive;
-} */
+	.popup-container {
+		margin: 5px;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.popup-image {
-	height: 150px;
-	width: 200px;
-	object-fit: contain;
-}
+	.haunted-house-icon {
+		width: 30px;
+		height: 30px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+	/* 
+	.popup-address {
+		font-family: 'Ranchers', cursive;
+	} */
 
-.location-profile {
-	border-radius: 5px;
-	font-size: .75rem;
-	width: 40;
-	height: 20px;
-	padding: 3px;
-}
+	.popup-image {
+		height: 100px;
+		width: 150px;
+		object-fit: contain;
+	}
 
-.location-profile:hover {
-	transform: scale(1.1);
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
-      16 0, auto;
+	.location-profile {
+		border-radius: 5px;
+		font-size: .75rem;
+		width: 40;
+		height: 20px;
+		padding: 3px;
+	}
+
+	.location-profile:hover {
+		transform: scale(1.1);
+		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+				16 0, auto;
+	}
 }
