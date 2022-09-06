@@ -14,6 +14,16 @@
 	/* border: 2px solid yellow; */
 }
 
+.welcome-to {
+	color:#FD7D11;
+}
+
+.welcome-message {
+	/* color:#FD7D11; */
+	font-weight: bold;
+	padding-top: 10px;
+}
+
 .welcome-header {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -68,6 +78,7 @@
 	font-size: 1.25rem;
 	width: 45%;
 	cursor: pointer;
+	background-color: #FD7D11;
 }
 
 .landing-button:hover {
