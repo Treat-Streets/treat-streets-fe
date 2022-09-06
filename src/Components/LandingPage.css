@@ -14,21 +14,21 @@
 	/* border: 2px solid yellow; */
 }
 
-.welcome-to {
-	color:#FD7D11;
-}
-
 .welcome-message {
-	/* color:#FD7D11; */
+	/* border: 2px solid red; */
+	color: white;
 	font-weight: bold;
-	padding-top: 10px;
+	/* padding-top: 10px; */
+	margin-top: 15px;
+	width: 50%;
 }
 
 .welcome-header {
+	margin-top: 50px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-family: 'Ranchers', cursive;
-	font-size: 3rem;
+	font-size: 4rem;
 	letter-spacing: .50rem;
 	color: #fff;
 	text-shadow: 1px 0px 4px #FFE9D7, 2px 0px 4px #FEC79A, 3px 0px 4px #FEB172, 2px 0px 3px #FDA55D, 2px 3px 15px #FD9A49, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #FD8F35,40px 0vw 200px #FD7D11;
@@ -57,12 +57,18 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	margin-right: 10px;
 	padding-left: 10px;
 }
 
 .landing-page-buttons-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	/* border: 2px solid orange; */
+	width: 100%;
 }
 
 .landing-image {
@@ -70,15 +76,19 @@
 }
 
 .landing-button {
-	padding: 50px;
-	margin-top: 50px;
-	border-radius: 10px;
+	padding: 40px;
+	margin-top: 40px;
+	border-radius: 7px;
 	font-family: 'Ranchers', cursive;
 	letter-spacing: .25rem;
 	font-size: 1.25rem;
-	width: 45%;
+	color: white;
 	cursor: pointer;
-	background-color: #FD7D11;
+	width: 300px;
+	border-radius: 50px;
+	/* background-color: #FD7D11; */
+	background-color: #F36518;
+	border: none;
 }
 
 .landing-button:hover {
