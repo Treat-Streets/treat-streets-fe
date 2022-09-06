@@ -1,7 +1,7 @@
 .form-wrapper {
 	display: flex;
 	justify-content: center;
-	padding-top: 3%;
+	padding-top: 1%;
 }
 
 .register-form-container {
@@ -110,17 +110,6 @@ input, label {
 	width: 100%;
 }
 
-.register-button {
-	background-color: #FD7D11;
-	height: 40px;
-	width: 110px;
-	padding: 0px;
-}
-
-option:disabled {
-	color: grey;
-}
-
 .halloween-image {
 	border-radius: 100px;
 	width: 25%;
@@ -141,9 +130,10 @@ option:disabled {
 
 .slidecontainer {
 	/* border: 2px solid blue; */
-  width: 97%; /* Width of the outside container */
+  width: 98%; /* Width of the outside container */
 	margin: 0px;
 	padding: 0px;
+	padding-left: 3px;
 }
 
 /* The slider itself */
@@ -193,7 +183,7 @@ option:disabled {
 }
 
 .img-upload-container {
-	/* border: 2px solid green; */
+	/* border: 2px solid black; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -203,10 +193,34 @@ option:disabled {
 	font-weight: bold;
 }
 
+.img-upload-message {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .upload {
 	padding: 0px;
 }
 
 .upload-complete {
 	font-size: smaller;
+}
+
+.register-button {
+	background-color: #FD7D11;
+	height: 40px;
+	width: 140px;
+	padding: 0px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.register-button:hover {
+	transform: scale(1.1);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+      16 0, auto;
+}
+
+option:disabled {
+	color: grey;
 }

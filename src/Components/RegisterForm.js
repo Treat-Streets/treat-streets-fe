@@ -89,9 +89,9 @@ const RegisterForm = () => {
 
 	const RegisterButton = () => {
 		if(email && streetAddress && city && state && zipcode && locationType && startTime && endTime && scarinessLevel && description && url) {
-			return <button className="register" onClick={event => handleClick(event)}> Register House! </button>
+			return <button className="register-button" onClick={event => handleClick(event)}> Register House! </button>
 		} else {
-			return <button className="register" onClick={event => handleClick(event)} disabled> Register House! </button>
+			return <button className="register-button" onClick={event => handleClick(event)} disabled> Register House! </button>
 		}
 	}
 
@@ -289,6 +289,7 @@ const RegisterForm = () => {
 
 						<p className="scarylevel">Scariness Level: {scarinessLevel}</p>
 
+						<p className="img-upload-message">Upload an image of your decorations:</p>
 						<div className="img-upload-container">
 							<input 
 								className="upload"
@@ -299,10 +300,11 @@ const RegisterForm = () => {
 								value={image}
 								onChange={event => uploadImage(event)}
 							/>
-							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete"> ...Waiting 👻 </p>}
-						</div>
+							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete"> No file chosen 👻 </p>}
+							{/* {url && <p className="upload-complete"> 👻 Upload Complete 👻</p>} */}
 
-						<RegisterButton className="register-button"/>
+						</div>
+							<RegisterButton />
 
 					</form>
 				</section>
