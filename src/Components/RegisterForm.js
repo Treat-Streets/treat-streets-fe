@@ -300,7 +300,7 @@ const RegisterForm = () => {
 								value={image}
 								onChange={event => uploadImage(event)}
 							/>
-							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete"> No file chosen 👻 </p>}
+							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete">No file chosen 👻</p>}
 							{/* {url && <p className="upload-complete"> 👻 Upload Complete 👻</p>} */}
 
 						</div>
@@ -308,7 +308,7 @@ const RegisterForm = () => {
 
 					</form>
 				</section>
-				<section>
+				<section className="halloween-image-container">
 					<img className="halloween-image" src={halloweenGif} alt="halloween image" />
 				</section>
 			</div>			
