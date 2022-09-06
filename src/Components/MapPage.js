@@ -65,7 +65,7 @@ const MapPage = ({ locationData }) => {
 
 	return (
 		<div className="view-full-map">
-			<form className='zip-form'>
+			<div className='zip-form'>
 				<input
 					className="zipcode" 
 					name="zipcode"
@@ -76,7 +76,7 @@ const MapPage = ({ locationData }) => {
 					}}
 					/>
 				<button className="search" disabled={!zipcode} onClick={event => handleClick(event)}>Search</button>
-			</form>
+			</div>
 			<div className="map-container">
 				<ReactMapGL className="map"
 					{...viewport}

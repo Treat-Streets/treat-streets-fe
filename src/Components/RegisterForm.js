@@ -195,7 +195,7 @@ const RegisterForm = () => {
 				</section>
 
 				<section className="house-form-section">
-					<form>
+					<form className="house-form">
 						<input 
 							name="email"
 							placeholder="E-mail"
