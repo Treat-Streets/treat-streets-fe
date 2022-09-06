@@ -26,9 +26,11 @@
 		font-family: 'Ranchers', cursive;
 		letter-spacing: .25rem;
 		font-size: 3rem;
+		color: #F36518;
 	}
 
 	.form-description {
+		color: white;
 		margin-top: 10px;
 		font-size: 18px;
 	}

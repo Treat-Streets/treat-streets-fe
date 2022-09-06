@@ -129,8 +129,8 @@
 
 	.map-container {
 		height: 80%;
-		/* padding-left: 80px;
-		padding-right: 80px; */
+		padding-left: 10px;
+		padding-right: 10px;
 		/* border: 2px solid white; */
 	}
 

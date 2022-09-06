@@ -1,63 +1,168 @@
-.popup-page-wrapper {
-	/* border: 2px solid green; */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+@media screen and (min-width: 1341px) {
+	.popup-page-wrapper {
+		/* border: 2px solid green; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.popup-page-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		margin-top: 20px;
+		height: 84vh;
+		width: 70vw;
+		padding-left: 80px;
+		padding-right: 80px;
+		background-color: #6652BD;
+		border-radius: 15px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+	
+	.popup-page-address {
+		color: #F36518;
+		font-family: 'Ranchers', cursive;
+		letter-spacing: .25rem;
+		font-size: 2.5rem;
+		margin-top: 35px;
+	}
+	
+	.popup-page-times {
+		font-size: 20px;
+		color: white;
+	}
+	
+	.popup-page-description {
+		font-weight: bold;
+		color: white;
+	}
+	
+	.popup-page-scariness-level {
+		font-weight: bold;
+		color: white;
+	}
+	
+	.popup-page-image {
+		height: 400px;
+		width: 500px;
+		object-fit: contain;
+	}
+	
+	.back-button {
+		padding: 0px;
+		margin-top: 40px;
+		border-radius: 7px;
+		font-family: 'Ranchers', cursive;
+		letter-spacing: .25rem;
+		font-size: 1.25rem;
+		color: white;
+		cursor: pointer;
+		width: 300px;
+		height: 100px;
+		border-radius: 50px;
+		background-color: #F36518;
+		border: none;
+	}
+	
+	.back-button:hover {
+		transform: scale(1.1);
+		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+				16 0, auto;
+	}
 }
 
-.popup-page-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	margin-top: 20px;
-	height: 84vh;
-	width: 70vw;
-	padding-left: 80px;
-	padding-right: 80px;
-	background-color: #6652BD;
-	border-radius: 15px;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+@media screen and (max-width: 1340px) {
+	.popup-page-wrapper {
+		/* border: 2px solid green; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.popup-page-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+		height: 80vh;
+		width: 40vw;
+		padding-left: 90px;
+		padding-right: 90px;
+		background-color: #6652BD;
+		border-radius: 15px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+	
+	.popup-page-address {
+		color: #F36518;
+		font-family: 'Ranchers', cursive;
+		letter-spacing: .25rem;
+		font-size: 1.5rem;
+		margin-top: 35px;
+		width: 300px;
+		padding-bottom: 10px;
+	}
+	
+	.popup-page-times {
+		font-size: 12px;
+		font-weight: bold;
+		color: white;
+		width: 310px;
+		padding-bottom: 10px;
+		/* border: 1px solid blue; */
+	}
+	
+	.popup-page-description {
+		font-size: 12px;
+		font-weight: bold;
+		color: white;
+		font-style: italic;
+		width: 310px;
+		height: 30px;
+		padding-bottom: 10px;
+		/* border: 1px solid blue; */
+	}
+	
+	.popup-page-scariness-level {
+		font-weight: bold;
+		color: white;
+		font-size: 12px;
+		margin: 0px;
+		padding: 0px;
+		padding-bottom: 10px;
+		/* border: 1px solid blue; */
+	}
+	
+	.popup-page-image {
+		height: 200px;
+		width: 350px;
+		object-fit: contain;
+	}
+	
+	.back-button {
+		padding: 0px;
+		border-radius: 7px;
+		font-family: 'Ranchers', cursive;
+		letter-spacing: .25rem;
+		font-size: .75rem;
+		color: white;
+		cursor: pointer;
+		width: 200px;
+		height: 50px;
+		border-radius: 50px;
+		background-color: #F36518;
+		border: none;
+	}
+	
+	.back-button:hover {
+		transform: scale(1.1);
+		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+				16 0, auto;
+	}
 }
 
-.popup-page-address {
-	font-family: 'Ranchers', cursive;
-	letter-spacing: .25rem;
-	font-size: 2.5rem;
-	margin-top: 35px;
-}
-
-.popup-page-times {
-	font-size: 20px;
-}
-
-.popup-page-description {
-	font-weight: bold;
-}
-
-.popup-page-scariness-level {
-	font-weight: bold;
-}
-
-.popup-page-image {
-	height: 400px;
-	width: 500px;
-	object-fit: contain;
-}
-
-.back-button {
-	border-radius: 10px;
-	font-family: 'Ranchers', cursive;
-	letter-spacing: .25rem;
-	font-size: 1.25rem;
-	width: 300px;
-	height: 100px;
-	cursor: pointer;
-}
-
-.back-button:hover {
-	transform: scale(1.1);
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
-      16 0, auto;
-}
