@@ -1,6 +1,7 @@
 import './App.css'
 import React from 'react'
 import { Route } from 'react-router-dom'
+import mapboxgl from '!mapbox-gl'
 import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
 import RegisterForm from '../Components/RegisterForm.js'

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../Components/ThankYouPage.css'
 import ReactMapGL, { Marker } from 'react-map-gl'
+import mapboxgl from '!mapbox-gl'
 import { useLocation, Link } from 'react-router-dom'
 
 const ThankYouPage = ({ locationData }) => {

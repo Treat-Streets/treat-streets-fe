@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import ReactMapGL, { Popup, Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
+import mapboxgl from '!mapbox-gl'
 import '../Components/MapPage.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useQuery, gql } from '@apollo/client'
+
+// mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const GET_LATLONG = gql`
 	query Coordinates($zipcode: String!) {
@@ -13,7 +16,6 @@ const GET_LATLONG = gql`
 			errors
 	}
 }`;
-
 
 const MapPage = ({ locationData }) => {
 	
