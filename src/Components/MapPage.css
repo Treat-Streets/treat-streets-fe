@@ -106,6 +106,9 @@
 	}
 
 	.view-full-map {
+		display: flex;
+		flex-direction: column;
+		/* border: 2px solid white; */
 		background-color: #6652BD;
 		border-radius: 15px;
 		height: 89vh;
@@ -124,13 +127,20 @@
 
 	.zipcode {
 		height: 30px;
+		border-radius: 11px;
+		border: none;
 	}
 
 	.zip-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* border: 2px solid green; */
 		position: relative;
 		float: left;
 		margin: 20px;
-		margin-left: 80px;
+		width: 250px;
+		height: 50px;
 	}
 
 	.map-container {
