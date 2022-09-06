@@ -9,6 +9,12 @@ describe('Treat Streets Map user flows', () => {
                 fixture: 'locations.json'
             })
         }
+
+        if (hasOperationName(req, 'Coordinates')) {
+            req.reply({
+                fixture: 'zipcodeLocations.json'
+            })
+        }
     })
         cy.visit('http://localhost:3000/')
         cy.contains('View Treat Streets').click()
@@ -24,7 +30,15 @@ describe('Treat Streets Map user flows', () => {
             cy.get('.mapboxgl-ctrl-zoom-in > .mapboxgl-ctrl-icon').click()
             cy.get('.mapboxgl-ctrl-zoom-out > .mapboxgl-ctrl-icon').click()
     })
-        
+
+    it('should show a searchbar for the zipcode and a search button', () => {
+        cy.get('.search').should('be.disabled')
+        cy.get('input[name="zipcode"]').type('80129')
+        cy.get('.search').should('not.be.disabled')
+        cy.get('.search').click()
+        cy.get('.map-container').find('[data-cy="map-image"]').should('be.visible')
+    })
+    
     it('should be able to click Home button and return to homepage', () => {
         cy.contains('Home').click()
         cy.url().should('eq', 'http://localhost:3000/')
