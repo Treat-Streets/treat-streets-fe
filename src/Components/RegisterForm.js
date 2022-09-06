@@ -262,8 +262,8 @@ const RegisterForm = () => {
 							<option value="6:00 pm">6:00 pm</option>
 							<option value="7:00 pm">7:00 pm</option>
 							<option value="8:00 pm">8:00 pm</option>
-						</select> 
-
+						</select>
+            
 						<input
 							name="description"
 							placeholder="Tell us about your house!"
