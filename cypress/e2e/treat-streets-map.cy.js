@@ -22,7 +22,7 @@ describe('Treat Streets Map user flows', () => {
 
     it('should show map with all current locations', () => {
         cy.url().should('eq', 'http://localhost:3000/Map')
-        cy.get('.map-container').find('[data-cy="map-image"]').should('have.length', 4)
+        cy.get('.map-container').find('[data-cy="location-pin"]').should('have.length', 4)
     })
 
     it('should be able to view the map and zoom in and out', () => {
@@ -36,7 +36,7 @@ describe('Treat Streets Map user flows', () => {
         cy.get('input[name="zipcode"]').type('80129')
         cy.get('.search').should('not.be.disabled')
         cy.get('.search').click()
-        cy.get('.map-container').find('[data-cy="map-image"]').should('be.visible')
+        cy.get('.map-container').find('[data-cy="location-pin"]').should('be.visible')
     })
     
     it('should be able to click Home button and return to homepage', () => {

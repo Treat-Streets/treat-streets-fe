@@ -68,7 +68,7 @@ const MapPage = ({ locationData }) => {
 						longitude: location.longitude,
 					})
 				}}>
-				<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+				<img data-cy="location-pin" className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 			</button>
 			</Marker>
 		) 
