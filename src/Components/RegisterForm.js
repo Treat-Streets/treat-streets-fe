@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../Components/RegisterForm.css'
+import halloweenGif from '../assets/halloween.gif'
 import { gql, useMutation } from '@apollo/client'
 import { useHistory } from 'react-router-dom'
 import {GET_LOCATION} from './App.js'
@@ -88,9 +89,9 @@ const RegisterForm = () => {
 
 	const RegisterButton = () => {
 		if(email && streetAddress && city && state && zipcode && locationType && startTime && endTime && scarinessLevel && description && url) {
-			return <button className="register" onClick={event => handleClick(event)}> Register House! </button>
+			return <button className="register-button" onClick={event => handleClick(event)}> Register House! </button>
 		} else {
-			return <button className="register" onClick={event => handleClick(event)} disabled> Register House! </button>
+			return <button className="register-button" onClick={event => handleClick(event)} disabled> Register House! </button>
 		}
 	}
 
@@ -194,69 +195,86 @@ const RegisterForm = () => {
 				</section>
 
 				<section className="house-form-section">
-					<form className='house-form'>
+					<form className="house-form">
 						<input 
 							name="email"
-							placeholder="Enter email here"
+							placeholder="E-mail"
 							type="text"
 							value={email}
 							onChange={event => setEmail(event.target.value)}
+							id="inputEmail"
 						/>
+
 						<input
 							name="streetAddress"
-							placeholder="Enter address"
+							placeholder="Address"
 							value={streetAddress}
 							type="text"
 							onChange={event => setStreetAddress(event.target.value)}
+							id="inputStreet"
 						/>
+
 						<input
 							name="city"
-							placeholder="Enter city"
+							placeholder="City"
 							value={city}
 							type="text"
 							onChange={event => setCity(event.target.value)}
+							id="inputCity"
 						/>
+
 						<input
 							name="state"
-							placeholder="Enter state"
+							placeholder="State"
 							value={state}
 							type="text"
 							onChange={event => setState(event.target.value)}
+							id="inputState"
 						/>
+
 						<input
 							name="zipcode"
-							placeholder="Enter zipcode"
+							placeholder="Zipcode"
 							value={zipcode}
 							type="text"
 							onChange={event => setZipcode(event.target.value)}
+							id="inputZip"
 						/>
-						<select name="locationType" id="locationType" onChange={event => setLocationType(event.target.value)} value={locationType}>
-							<option value="" disabled selected> Select Property Type </option>
+
+						<select name="locationType" id="locationType" className="form-control" onChange={event => setLocationType(event.target.value)} value={locationType}>
+							<option value="" disabled selected> Property Type </option>
 							<option value="house">House</option>
 							<option value="condo">Condo</option>
 							<option value="townhome">Townhome</option>
 							<option value="apartment">Apartment</option>
 							<option value="business">Business</option>
 						</select>
-						<select name="startTime" id="startTime" onChange={event => setStartTime(event.target.value)} value={startTime}>
-							<option value="" disabled selected>Choose a Start Time</option>
-							<option value="4:00 pm">4:00</option>
-							<option value="5:00 pm">5:00</option>
-							<option value="6:00 pm">6:00</option>
+
+						<select name="startTime" id="startTime" className="form-control" onChange={event => setStartTime(event.target.value)} value={startTime}>
+							<option value="" disabled selected>Start Time</option>
+							<option value="4:00 pm">4:00 pm</option>
+							<option value="5:00 pm">5:00 pm</option>
+							<option value="6:00 pm">6:00 pm</option>
+						</select> 
+						
+						<select name="endTime" id="endTime" className="form-control" onChange={event => setEndTime(event.target.value)} value={endTime}>
+							<option value="" disabled selected>End Time</option>
+							<option value="6:00 pm">6:00 pm</option>
+							<option value="7:00 pm">7:00 pm</option>
+							<option value="8:00 pm">8:00 pm</option>
 						</select>
-						<select name="endTime" id="endTime" onChange={event => setEndTime(event.target.value)} value={endTime}>
-							<option value="" disabled selected>Choose an End Time</option>
-							<option value="6:00 pm">6:00</option>
-							<option value="7:00 pm">7:00</option>
-							<option value="8:00 pm">8:00</option>
-						</select>
+            
 						<input
 							name="description"
 							placeholder="Tell us about your house!"
 							type="text"
 							value={description}
 							onChange={event => setDescription(event.target.value)}
+							id="inputDescription"
 						/>
+
+						<p className="slider-header">Tell us how scary your house decor is!</p>
+
 						<div className="slidecontainer">
   						<input 
 							type="range"
@@ -268,7 +286,10 @@ const RegisterForm = () => {
 							onChange={event => setScarinessLevel(event.target.valueAsNumber)}
 							/>
 						</div>
+
 						<p className="scarylevel">Scariness Level: {scarinessLevel}</p>
+
+						<p className="img-upload-message">Upload an image of your decorations:</p>
 						<div className="img-upload-container">
 							<input 
 								className="upload"
@@ -279,10 +300,16 @@ const RegisterForm = () => {
 								value={image}
 								onChange={event => uploadImage(event)}
 							/>
-							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete"> ...Waiting 👻 </p>}
+							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete"> No file chosen 👻 </p>}
+							{/* {url && <p className="upload-complete"> 👻 Upload Complete 👻</p>} */}
+
 						</div>
-						<RegisterButton/>
+							<RegisterButton />
+
 					</form>
+				</section>
+				<section>
+					<img className="halloween-image" src={halloweenGif} alt="halloween image" />
 				</section>
 			</div>			
 			<Snackbar

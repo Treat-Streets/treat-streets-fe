@@ -71,10 +71,8 @@ const MapPage = ({ locationData }) => {
 	})
 
 	return (
-
-<div className="view-full-map">
-
-			<form className='zip-form'>
+		<div className="view-full-map">
+			<div className='zip-form'>
 				<input
 					className="zipcode" 
 					name="zipcode"
@@ -85,17 +83,17 @@ const MapPage = ({ locationData }) => {
 					}}
 					/>
 				<button className="search" disabled={!zipcode} onClick={event => handleClick(event)}>Search</button>
-			</form>
-		<div className="map-container">
-			<ReactMapGL className="map"
-				{...viewport}
-				mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-				mapStyle="mapbox://styles/mapbox/dark-v10"
-				onMove={evt => setViewport(evt.viewport)}
-			>
-			<GeolocateControl/>
-			<FullscreenControl />
-			<NavigationControl showCompass={false}/>
+			</div>
+			<div className="map-container">
+				<ReactMapGL className="map"
+					{...viewport}
+					mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+					mapStyle="mapbox://styles/mapbox/dark-v10"
+					onMove={evt => setViewport(evt.viewport)}
+			  >
+			  <GeolocateControl/>
+			  <FullscreenControl />
+			  <NavigationControl showCompass={false}/>
 
 			{selectedHouse.id ? (
 				<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}

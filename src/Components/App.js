@@ -5,7 +5,6 @@ import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
 import RegisterForm from '../Components/RegisterForm.js'
 import ThankYouPage from '../Components/ThankYouPage.js'
-import ZipCodeForm from '../Components/ZipCodeForm.js'
 import LandingPage from '../Components/LandingPage.js'
 import Loading from '../Components/Loading.js'
 import { useQuery, gql } from '@apollo/client'
@@ -53,7 +52,6 @@ const App = () => {
 			
 			<Route exact path="/Map">
 				<Nav />
-				<ZipCodeForm />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
 			</Route>

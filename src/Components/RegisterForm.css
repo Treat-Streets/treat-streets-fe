@@ -1,7 +1,24 @@
 .form-wrapper {
 	display: flex;
 	justify-content: center;
-	padding-top: 7%;
+	padding-top: 1%;
+}
+
+.register-form-container {
+	/* border: 2px solid orange; */
+	background-color: #6652BD;
+	border-radius: 15px;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 60%;
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
+.message-section {
+ /* border: 2px solid pink; */
+ font-weight: bold;
 }
 
 .form-title {
@@ -15,31 +32,19 @@
 	font-size: 18px;
 }
 
-.register-form-container {
-	background-color: #6652BD;
-	border-radius: 15px;
-  display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 70vh;
-	width: 75vw;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 .house-form-section {
-	width: 50%;
+	/* border: 2px solid black; */
+	display: flex;
+	flex-direction: column;
+	width: 70%;
 	height: auto;
-	padding-top: 20px;
 }
 
-.house-form {
-	display: flex;
-  flex-direction: column;
-	justify-content: center;
-	align-items: space-evenly;
-	height: 400px;
-}
+form {
+	margin: 30px auto;
+	width: 80%;
+	height: 80%;
+} 
 
 form * {
 	margin-top: 10px;
@@ -47,49 +52,116 @@ form * {
 	border-radius: 5px;
 	border: none;
 	padding-left: 12px;
+} 
+
+input, label {
+	margin: 5px 5px;
 }
 
-option:disabled {
-  color: grey;
+.form-control {
+	float: left;
 }
 
-.register {
-	background-color: #FD7D11;
-	height: 40px;
+#inputEmail {
+	width: 96%;
+}
+
+#inputStreet {
+  width: 96%;
+}
+
+#inputCity {
+  width: 55%;
+}
+
+#inputState {
+  width: 13%;
+}
+
+#inputZip {
+  width: 22%;
+}
+
+#locationType {
+	width: 45%;
+	margin-left: 6px;
+}
+
+#startTime {
+	width: 26%;
+	margin-right: 5px;
+	margin-left: 3px;
+}
+
+#endTime {
+	width: 26%;
+}
+
+#inputDescription {
+	margin-top: 10px;
+	width: 96%;
+	height: 50px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+#inputImage {
+	width: 100%;
+}
+
+.halloween-image {
+	border-radius: 100px;
+	width: 25%;
 }
 
 .scarylevel {
+	/* border: 2px solid red; */
 	align-self: flex-start;
 	font-size: smaller;
+	font-weight: bold;
+}
+
+.slider-header {
+	font-family: 'Ranchers', cursive;
+	letter-spacing: .25rem;
+	font-weight: bold;
 }
 
 .slidecontainer {
-  width: 97%;
+	/* border: 2px solid blue; */
+  width: 98%; /* Width of the outside container */
 	margin: 0px;
-	margin-top: 10px;
 	padding: 0px;
+	padding-left: 3px;
 }
 
+/* The slider itself */
 .slider {
+	/* border: 2px solid red; */
   -webkit-appearance: none;
-  width: 100%;
+  width: 98%;
   height: 13px;
-  border-radius: 5px;  
+  border-radius: 5px;
+	margin-top: 10px;  
   background: white;
   outline: none;
+  /* opacity: 0.8; */
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
 
+/* Mouse-over effects */
 .slider:hover {
-  opacity: 1;
+  opacity: 1; /* Fully shown on mouse-over */
 }
 
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 35px;
   height: 35px;
+	/* border: 2px solid yellow; */
   border-radius: 50%; 
   background-image:url('https://cdn-icons-png.flaticon.com/512/1234/1234843.png');
 	background-size: contain;
@@ -110,12 +182,19 @@ option:disabled {
 }
 
 .img-upload-container {
+	/* border: 2px solid black; */
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	padding: 0px;
 	margin: 0px;
 	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.img-upload-message {
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 .upload {
@@ -126,3 +205,21 @@ option:disabled {
 	font-size: smaller;
 }
 
+.register-button {
+	background-color: #FD7D11;
+	height: 40px;
+	width: 140px;
+	padding: 0px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.register-button:hover {
+	transform: scale(1.1);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎃</text></svg>")
+      16 0, auto;
+}
+
+option:disabled {
+	color: grey;
+}

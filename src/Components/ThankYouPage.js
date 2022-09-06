@@ -40,7 +40,7 @@ const ThankYouPage = ({ locationData }) => {
 							</button>
 						</Marker>
 					</ReactMapGL>
-					<Link to="/Map"><button className="view-map">View Full Map</button></Link>
+					<Link to="/Map"><button className="view-map-button">View Full Map</button></Link>
 				</div>
 			</div>
 		</div>

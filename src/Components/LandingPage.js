@@ -13,13 +13,14 @@ const LandingPage = () => {
 				</section>
 
 				<section className="landing-page-right">
+					{/* <h4 className="welcome-to">WELCOME TO</h4> */}
 					<h2 className="welcome-header">TR
 						<span className='flicker-slow'>E</span>A
 						<span className='flicker-fast'>T</span> ST
 						<span className='flicker-slow'>R</span>EE
 						<span className='flicker-fast'>T</span>S
 					</h2>
-					<p>You can find houses passing out candy for Halloween in your area or add your home to the treat streets map.</p>
+					<p className="welcome-message">Find houses passing out candy for Halloween in your area or add your home to the treat streets map!</p>
 					<section className="landing-page-buttons-container">
 						<Link to='/Register'>
 							<button className="landing-button">Register<br></br> Your House</button>

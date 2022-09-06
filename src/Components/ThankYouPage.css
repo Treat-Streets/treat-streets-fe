@@ -37,9 +37,11 @@
 	cursor: pointer;
 }
 
-.view-map {
-	margin-top: 22px;
+.view-map-button {
+	margin-top: 10px;
+	margin-bottom: 10px;
 	background-color: #FD7D11;
+	font-weight: bold;
 	border: none;
 	height: 40px;
 	width: 200px;
