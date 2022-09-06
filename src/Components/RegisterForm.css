@@ -15,7 +15,6 @@
 	font-size: 18px;
 }
 
-
 .register-form-container {
 	background-color: #6652BD;
 	border-radius: 15px;
@@ -24,17 +23,17 @@
 	align-items: center;
 	justify-content: center;
 	height: 70vh;
-	width: 70%;
+	width: 75vw;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.form-section {
+.house-form-section {
 	width: 50%;
 	height: auto;
 	padding-top: 20px;
 }
 
-form {
+.house-form {
 	display: flex;
   flex-direction: column;
 	justify-content: center;
@@ -65,13 +64,12 @@ option:disabled {
 }
 
 .slidecontainer {
-  width: 97%; /* Width of the outside container */
+  width: 97%;
 	margin: 0px;
 	margin-top: 10px;
 	padding: 0px;
 }
 
-/* The slider itself */
 .slider {
   -webkit-appearance: none;
   width: 100%;
@@ -79,17 +77,14 @@ option:disabled {
   border-radius: 5px;  
   background: white;
   outline: none;
-  /* opacity: 0.8; */
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
 
-/* Mouse-over effects */
 .slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  opacity: 1;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -112,5 +107,22 @@ option:disabled {
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.img-upload-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+.upload {
+	padding: 0px;
+}
+
+.upload-complete {
+	font-size: smaller;
 }
 
