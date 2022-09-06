@@ -24,7 +24,7 @@ const MapPage = ({ locationData }) => {
 			>
 			<Link to={`/PopUp/${location.id}`}>
 				<button className="haunted-house-icon">
-					<img className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
+					<img data-cy="map-image" className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
 				</button>
 			</Link>
 			</Marker>
@@ -32,7 +32,7 @@ const MapPage = ({ locationData }) => {
 	})
 
 	return (
-		<div className="map-container">
+		<div className="map-container" >
 			<ReactMapGL className="map"
 				{...viewport}
 				mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
@@ -41,7 +41,7 @@ const MapPage = ({ locationData }) => {
 			>
 			<GeolocateControl/>
 			<FullscreenControl />
-			<NavigationControl showCompass={false}/>
+			<NavigationControl className="markers" showCompass={false}/>
 				{properties}
 			</ReactMapGL>
 		</div>
