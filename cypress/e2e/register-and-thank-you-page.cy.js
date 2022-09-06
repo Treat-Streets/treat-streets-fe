@@ -51,6 +51,8 @@ describe('Register Page user flows', () => {
         cy.url().should('include', '/ThankYou')
         cy.get('.small-map').should('be.visible').find('[data-cy="single-house"]').should('have.length', 1)
         cy.get('.thank-you-msg').should('be.visible').and('contain', 'Thank you for registering your house!')
+        cy.get('[data-cy="view-map"]').should('be.visible').click()
+        cy.get('.map-container').should('be.visible').and('have.length', 1)
     })
 
     it('should be able to see updated Treat Streets map with new location added', () => {
@@ -58,4 +60,5 @@ describe('Register Page user flows', () => {
         cy.url().should('include', '/Map')
         cy.get('.map-container').find('[data-cy="location-pin"]').should('have.length', 5)
     })
+
 })
