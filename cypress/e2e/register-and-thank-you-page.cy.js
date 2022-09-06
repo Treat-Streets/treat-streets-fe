@@ -56,6 +56,6 @@ describe('Register Page user flows', () => {
     it('should be able to see updated Treat Streets map with new location added', () => {
         cy.contains('Map').click()
         cy.url().should('include', '/Map')
-        cy.get('.map-container').find('[data-cy="map-image"]').should('have.length', 5)
+        cy.get('.map-container').find('[data-cy="location-pin"]').should('have.length', 5)
     })
 })

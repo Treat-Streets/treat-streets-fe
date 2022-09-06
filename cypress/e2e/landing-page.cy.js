@@ -17,7 +17,7 @@ describe('Treat Streets Landing Page user flows', () => {
         cy.url().should('eq', 'http://localhost:3000/')
 
         cy.get('.welcome-header').contains('h2', 'TREAT STREETS')
-        cy.get('p').should('have.text', 'You can find houses passing out candy for Halloween in your area or add your home to the treat streets map.')
+        cy.get('p').should('have.text', 'Find houses passing out candy for Halloween in your area or add your home to the treat streets map!')
 
         cy.get('.landing-image').should('have.attr', 'src').should('include', '/static/media/loadingGif.e9e6f9ad2d180d0a8430.gif')
 
