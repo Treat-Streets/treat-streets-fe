@@ -7,13 +7,10 @@ const LandingPage = () => {
 	return (
 		<div className="landing-page-wrapper">
 			<div className="landing-page-container">
-
 				<section className="landing-page-left">
 					<img className="landing-image" src={landingImage} alt="landing image"/>
 				</section>
-
 				<section className="landing-page-right">
-					{/* <h4 className="welcome-to">WELCOME TO</h4> */}
 					<h2 className="welcome-header">TR
 						<span className='flicker-slow'>E</span>A
 						<span className='flicker-fast'>T</span> ST

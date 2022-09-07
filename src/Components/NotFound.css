@@ -1,19 +1,19 @@
 h1 {
-    color: #F36518;
-    padding-top: 25px;
-    font-size: 75px;
-    font-family: 'Creepster', cursive;
-    letter-spacing: 3px;
+  color: #F36518;
+  padding-top: 25px;
+  font-size: 75px;
+  font-family: 'Creepster', cursive;
+  letter-spacing: 3px;
 }
 
 h3 {
-    color: #ffffff;
-    font-size: 30px;
-    padding-top: 25px;
-    padding-bottom: 50px;
+  color: #ffffff;
+  font-size: 30px;
+  padding-top: 25px;
+  padding-bottom: 50px;
 }
 
 .ghost-gif {
-    height: 425px;
-    width: 425px;
+  height: 425px;
+  width: 425px;
 }

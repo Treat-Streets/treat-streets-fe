@@ -1,6 +1,5 @@
 @media screen and (min-width: 1341px) {
 	.popup-page-wrapper {
-		/* border: 2px solid green; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -53,7 +52,7 @@
 	
 	.back-button {
 		padding: 0px;
-		margin-top: 40px;
+		margin-bottom: 30px;
 		border-radius: 7px;
 		font-family: 'Ranchers', cursive;
 		letter-spacing: .25rem;
@@ -111,9 +110,8 @@
 		font-size: 12px;
 		font-weight: bold;
 		color: white;
-		width: 310px;
+		width: 320px;
 		padding-bottom: 10px;
-		/* border: 1px solid blue; */
 	}
 	
 	.popup-page-description {
@@ -124,7 +122,6 @@
 		width: 310px;
 		height: 30px;
 		padding-bottom: 10px;
-		/* border: 1px solid blue; */
 	}
 	
 	.popup-page-scariness-level {
@@ -134,12 +131,11 @@
 		margin: 0px;
 		padding: 0px;
 		padding-bottom: 10px;
-		/* border: 1px solid blue; */
 	}
 	
 	.popup-page-image {
 		height: 200px;
-		width: 350px;
+		width: 320px;
 		object-fit: contain;
 	}
 	
