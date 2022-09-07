@@ -37,5 +37,11 @@ describe('Treat Streets Landing Page user flows', () => {
         cy.url().should('include', '/Map')
     })
 
+    it('should be able to give the user an error message if the URL does not exist.', () => {
+        cy.visit('http://localhost:3000/fakepage')
+        cy.get('.no-info').should('be.visible').and('contain', "Uh oh... 404 Error!")
+        .and('contain', "Looks like this page ghosted you. Please go back home, or check out our Treat Streets Map!")
+    })
+
 })
 

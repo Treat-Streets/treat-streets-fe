@@ -21,7 +21,7 @@ const PopupPage = ({ id, streetAddress, city, state, zipcode, description, start
 	
 	return (
     <div className="popup-page-wrapper">
-			<div className="popup-page-container">
+			<div data-cy="popup-page-container" className="popup-page-container">
 			<p className="popup-page-address" >{streetAddress} {city} {state} {zipcode}</p>
 			<p className="popup-page-times">🍬 Passing out candy from {startTime} to {endTime} 🍬</p>
 			<p className="popup-page-description" >{description}</p>

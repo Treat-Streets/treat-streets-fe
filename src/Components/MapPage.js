@@ -100,17 +100,17 @@ const MapPage = ({ locationData }) => {
 			  <NavigationControl showCompass={false}/>
 
 			{selectedHouse.id ? (
-				<Popup latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
+				<Popup data-cy="popup" latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
 					className="popup-wrapper"
 					anchor='bottom'
 					onClose={() => setSelectedHouse(false) }
 				>
-					<div className="popup-container">
-						<h2 className="popup-address">{selectedHouse.streetAddress}</h2>
-						<p className="popup-times">🍬{selectedHouse.startTime} - {selectedHouse.endTime}🍬</p>
-						<img className="popup-image" src={selectedHouse.image} alt='house image'/>
+					<div className="popup-container" >
+						<h2 data-cy="popup-address" className="popup-address">{selectedHouse.streetAddress}</h2>
+						<p  data-cy="popup-times" className="popup-times">🍬{selectedHouse.startTime} - {selectedHouse.endTime}🍬</p>
+						<img data-cy="popup-image" className="popup-image" src={selectedHouse.image} alt='house image'/>
 						<Link to={`/PopUp/${selectedHouse.id}`}>
-							<button className="location-profile">View Full Profile</button>
+							<button data-cy="location-profile-btn" className="location-profile">View Full Profile</button>
 						</Link>
 					</div>
 				</Popup>

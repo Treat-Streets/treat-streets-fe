@@ -12,7 +12,7 @@
                 "description": "IT'S THE COOLEST EVER. ",
                 "startTime": "4:00 pm",
                 "endTime": "8:00 pm",
-                "image": "n/a",
+                "image": "http://res.cloudinary.com/drexo2l5j/image/upload/v1662506196/a8wsyg9klnotu3q23iir.jpg",
                 "latitude": 39.670988,
                 "longitude": -105.016814
             },
@@ -27,7 +27,7 @@
                 "description": "We don't like to scare kids!",
                 "startTime": "4:00 pm",
                 "endTime": "7:00 pm",
-                "image": "n/a",
+                "image": "http://res.cloudinary.com/drexo2l5j/image/upload/v1662504100/bo0hbafkrpo5xvgppsuq.jpg",
                 "latitude": 39.684066,
                 "longitude": -105.038085
             },
@@ -42,7 +42,7 @@
                 "description": "Megs Spoooky House!!",
                 "startTime": "4:00 pm",
                 "endTime": "8:00 pm",
-                "image": "Nope",
+                "image": "https://www.twincities.com/wp-content/uploads/2021/10/Halloweendecor2.jpeg?w=620",
                 "latitude": 39.752514,
                 "longitude": -105.150996
             },
@@ -57,7 +57,7 @@
                 "description": "I love Halloween!!",
                 "startTime": "4:00 pm",
                 "endTime": "8:00 pm",
-                "image": "n/a",
+                "image": "https://www.readingeagle.com/wp-content/uploads/2021/10/617-N-Temple-Blvd-2021-Jason-Haughey.jpg?w=620",
                 "latitude": 39.83643,
                 "longitude": -105.093894
             }

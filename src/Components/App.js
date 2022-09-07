@@ -1,6 +1,6 @@
 import './App.css'
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import MapPage from '../Components/MapPage.js'
 import Nav from '../Components/Nav.js'
 import RegisterForm from '../Components/RegisterForm.js'
@@ -9,6 +9,7 @@ import LandingPage from '../Components/LandingPage.js'
 import Loading from '../Components/Loading.js'
 import { useQuery, gql } from '@apollo/client'
 import PopupPage from './PopupPage'
+import NotFound from '../Components/NotFound.js'
 
 export const GET_LOCATION = gql`
 query Locations {
@@ -36,6 +37,7 @@ const App = () => {
 
   return (
     <div className="App">
+		<Switch>
 			<Route exact path="/">
 				<LandingPage />
 			</Route>
@@ -69,6 +71,11 @@ const App = () => {
 				</div>
 			}}
 			/>
+
+				<Route path="*" element={<NotFound />} > 
+					<NotFound />
+				</Route>
+			</Switch>
     </div>
   )
 }
