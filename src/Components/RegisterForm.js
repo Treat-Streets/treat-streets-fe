@@ -58,7 +58,7 @@ const RegisterForm = () => {
 	const [image, setImage] = useState('')
 	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
-	const [url, setUrl ] = useState("");
+	const [url, setUrl ] = useState("https://res.cloudinary.com/drexo2l5j/image/upload/v1662338245/j44lo7idesuaxuta0iwz.jpg");
   
 	const history = useHistory()
 	const [snackbar, setSnackBar] = useState({
@@ -300,7 +300,7 @@ const RegisterForm = () => {
 								value={image}
 								onChange={event => uploadImage(event)}
 							/>
-							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete">No file chosen 👻</p>}
+							{url === "https://res.cloudinary.com/drexo2l5j/image/upload/v1662338245/j44lo7idesuaxuta0iwz.jpg" ? <p className="upload-complete">No file chosen 👻</p> : <p className="upload-complete"> 👻 Upload Complete 👻</p>}
 							{/* {url && <p className="upload-complete"> 👻 Upload Complete 👻</p>} */}
 
 						</div>
