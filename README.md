@@ -22,11 +22,12 @@
 ## Deployed Link
 
 - Check out our site [here.](https://treat-streets-fe.herokuapp.com/)
+
 ## Illustrations
 
-Registering a house:
+Quick Preview:
 
-![Treat Streets ](https://user-images.githubusercontent.com/98415017/188999050-b1f70b79-59f6-4cd8-821d-efbf14870cdc.gif)
+https://user-images.githubusercontent.com/98415017/189000367-1c2aa8ec-dfd3-43d6-87e2-6620e87f42d3.mp4
 
 
 ## Application Wireframe 
