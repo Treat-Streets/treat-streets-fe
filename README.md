@@ -21,7 +21,7 @@
 
 ## Deployed Link
 
-- TBD
+
 
 ## Illustrations
 
@@ -62,7 +62,7 @@
 
 ### Challenges 
 - Using CircleCI and Cypress testing with GraphQL (stubbing and intercepting became more difficult)
-- Deploying our app (unfortunately not getting the background of ReactMapGL to render when deployed)
+- Deploying our app (struggled to get MapBox to show at first)
 - Event bubbling issue with popups on houses (solved with the help of a seasoned dev experienced in MapBox)
 
 ## Future Features
