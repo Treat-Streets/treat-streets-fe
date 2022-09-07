@@ -4,16 +4,15 @@
 ## Table of Contents
 
 - [Abstract](#abstract)
-- [Deployed Link](#deployed-link])
+- [Deployed Link](#deployed-link)
 - [Illustrations](#illustrations)
-- [Technologies Used](#technologies-used)
-- [Application](#application)
-- [Context and Features](#context-and-features)
+- [Technology Stack](#technology-stack)
+- [Application](#application-wireframe)
 - [User Stories](#user-stories)
-- [Lessons Learned](#lessons-learned)
+- [Reflections](#reflections)
 - [Future Features](#future-features)
 - [Application Set-Up](#application-set-up)
-- [Contributor LinkedIns and GitHubs](#contributor-linkedin-and-github)
+- [Contributor LinkedIns and GitHubs](#contributor-linkedins)
 - [Project Specs](#project-specs)
 
 ## Abstract
@@ -22,7 +21,7 @@
 
 ## Deployed Link
 
-- Check out our application [here!]() 
+- TBD
 
 ## Illustrations
 
@@ -37,8 +36,8 @@
 - Javascript
 - HTML
 - CSS
-- Cypress.io
 - GraphQL
+- Cypress.io
 - Postman
 - React.js
 - React Router
@@ -52,15 +51,18 @@
 
 - As a user I should be able to click houses on the map and see more details. 
 
-## Context and Features
+## Reflections
 
-- 
+### Wins
+- Working with ReactMapBox to display and use the map
+- Self-teaching and learning GraphQL as a team
+- Making CSS responsive
+- Working on a full stack team with our cohortmates from the BE program
 
-- 
-
-## Lessons Learned
-
-- 
+### Challenges 
+- Using CircleCI and Cypress testing with GraphQL (stubbing and intercepting became more difficult)
+- Deploying our app (unfortunately not getting the background of ReactMapGL to render when deployed)
+- Event bubbling issue with popups on houses (solved with the help of a seasoned dev experienced in MapBox)
 
 ## Future Features
 
