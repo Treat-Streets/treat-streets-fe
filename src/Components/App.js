@@ -33,7 +33,7 @@ query Locations {
 
 const App = () => {
 
-	const {error, data, loading} = useQuery(GET_LOCATION)
+	const {data, loading} = useQuery(GET_LOCATION)
 
   return (
     <div className="App">
@@ -51,7 +51,7 @@ const App = () => {
 			<Route exact path="/ThankYou">
 				<Nav />
 				{loading && <Loading />}
-				{data && <ThankYouPage locationData={data.locations}/>}
+				{data && <ThankYouPage />}
 			</Route>
 			
 			<Route exact path="/Map">

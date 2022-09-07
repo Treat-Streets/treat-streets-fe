@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ReactMapGL, { Popup, Marker, GeolocateControl, FullscreenControl, NavigationControl } from 'react-map-gl'
 import '../Components/MapPage.css'
@@ -26,15 +26,13 @@ const MapPage = ({ locationData }) => {
 		zoom: 10
 	})
 
-
 	const [selectedHouse, setSelectedHouse] = useState({})
 
-	const {data} = useQuery(GET_LATLONG, {
+	const { data } = useQuery(GET_LATLONG, {
 		variables: {
 			zipcode: zipcode,
 		}
 	})
-
 
 	const handleClick = (event) => {
 		event.preventDefault();
@@ -98,7 +96,6 @@ const MapPage = ({ locationData }) => {
 			  <GeolocateControl/>
 			  <FullscreenControl />
 			  <NavigationControl showCompass={false}/>
-
 			{selectedHouse.id ? (
 				<Popup data-cy="popup" latitude={selectedHouse.latitude} longitude={selectedHouse.longitude}
 					className="popup-wrapper"
@@ -115,7 +112,6 @@ const MapPage = ({ locationData }) => {
 					</div>
 				</Popup>
 				) : null}
-
 				{properties}
 			</ReactMapGL>
 			</div>

@@ -1,6 +1,5 @@
 @media screen and (min-width: 1341px) {
 	.popup-page-wrapper {
-		/* border: 2px solid green; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -113,7 +112,6 @@
 		color: white;
 		width: 310px;
 		padding-bottom: 10px;
-		/* border: 1px solid blue; */
 	}
 	
 	.popup-page-description {
@@ -124,7 +122,6 @@
 		width: 310px;
 		height: 30px;
 		padding-bottom: 10px;
-		/* border: 1px solid blue; */
 	}
 	
 	.popup-page-scariness-level {
@@ -134,7 +131,6 @@
 		margin: 0px;
 		padding: 0px;
 		padding-bottom: 10px;
-		/* border: 1px solid blue; */
 	}
 	
 	.popup-page-image {

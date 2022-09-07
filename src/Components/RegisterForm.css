@@ -6,7 +6,6 @@
 	}
 
 	.register-form-container {
-		/* border: 2px solid orange; */
 		background-color: #6652BD;
 		border-radius: 15px;
 		display: flex;
@@ -18,7 +17,6 @@
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	} 
 	.message-section {
-	/* border: 2px solid pink; */
 	font-weight: bold;
 	}
 
@@ -36,7 +34,6 @@
 	}
 
 	.house-form-section {
-		/* border: 2px solid black; */
 		display: flex;
 		flex-direction: column;
 		width: 70%;
@@ -118,7 +115,6 @@
 	}
 
 	.scarylevel {
-		/* border: 2px solid red; */
 		align-self: flex-start;
 		font-size: smaller;
 		font-weight: bold;
@@ -132,16 +128,13 @@
 	}
 
 	.slidecontainer {
-		/* border: 2px solid blue; */
-		width: 98%; /* Width of the outside container */
+		width: 98%; 
 		margin: 0px;
 		padding: 0px;
 		padding-left: 3px;
 	}
 
-	/* The slider itself */
 	.slider {
-		/* border: 2px solid red; */
 		-webkit-appearance: none;
 		width: 98%;
 		height: 13px;
@@ -149,23 +142,19 @@
 		margin-top: 10px;  
 		background: white;
 		outline: none;
-		/* opacity: 0.8; */
 		-webkit-transition: .2s;
 		transition: opacity .2s;
 	}
 
-	/* Mouse-over effects */
 	.slider:hover {
-		opacity: 1; /* Fully shown on mouse-over */
+		opacity: 1; 
 	}
 
-	/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 	.slider::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		appearance: none;
 		width: 35px;
 		height: 35px;
-		/* border: 2px solid yellow; */
 		border-radius: 50%; 
 		background-image:url('https://cdn-icons-png.flaticon.com/512/1234/1234843.png');
 		background-size: contain;
@@ -186,7 +175,6 @@
 	}
 
 	.img-upload-container {
-		/* border: 2px solid black; */
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -237,7 +225,6 @@
 	}
 
 	.register-form-container {
-		/* border: 2px solid orange; */
 		background-color: #6652BD;
 		border-radius: 15px;
 		display: flex;
@@ -250,7 +237,6 @@
 	} 
 
 	.message-section {
-	/* border: 2px solid pink; */
 	font-weight: bold;
 	}
 
@@ -270,7 +256,6 @@
 	}
 
 	.house-form-section {
-		/* border: 2px solid black; */
 		display: flex;
 		flex-direction: column;
 		width: 95%;
@@ -347,7 +332,6 @@
 	}
 
 	.scarylevel {
-		/* border: 2px solid red; */
 		align-self: flex-start;
 		font-size: smaller;
 		font-weight: bold;
@@ -363,16 +347,13 @@
 	}
 
 	.slidecontainer {
-		/* border: 2px solid blue; */
-		width: 98%; /* Width of the outside container */
+		width: 98%; 
 		margin: 0px;
 		padding: 0px;
 		padding-left: 3px;
 	}
 
-	/* The slider itself */
 	.slider {
-		/* border: 2px solid red; */
 		-webkit-appearance: none;
 		width: 98%;
 		height: 13px;
@@ -380,23 +361,19 @@
 		margin-top: 10px;  
 		background: white;
 		outline: none;
-		/* opacity: 0.8; */
 		-webkit-transition: .2s;
 		transition: opacity .2s;
 	}
 
-	/* Mouse-over effects */
 	.slider:hover {
-		opacity: 1; /* Fully shown on mouse-over */
+		opacity: 1; 
 	}
 
-	/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 	.slider::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		appearance: none;
 		width: 35px;
 		height: 35px;
-		/* border: 2px solid yellow; */
 		border-radius: 50%; 
 		background-image:url('https://cdn-icons-png.flaticon.com/512/1234/1234843.png');
 		background-size: contain;
@@ -417,7 +394,6 @@
 	}
 
 	.img-upload-container {
-		/* border: 2px solid black; */
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -444,7 +420,6 @@
 	}
 
 	.halloween-image-container {
-		/* border: 2px solid white; */
 		margin: 0px;
 		padding: 0px;
 	}
@@ -472,5 +447,4 @@
 	option:disabled {
 		color: grey;
 	}
-
 }

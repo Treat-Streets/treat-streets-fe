@@ -4,11 +4,9 @@ import halloweenGif from '../assets/halloween.gif'
 import { gql, useMutation } from '@apollo/client'
 import { useHistory } from 'react-router-dom'
 import {GET_LOCATION} from './App.js'
-
-//SnackBar imports
-import Snackbar from '@mui/material/Snackbar';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
+import Snackbar from '@mui/material/Snackbar'
+import IconButton from '@mui/material/IconButton'
+import CloseIcon from '@mui/icons-material/Close'
 import Alert  from '@mui/material/Alert'
 
 
@@ -65,10 +63,11 @@ const RegisterForm = () => {
 		open: false,
 		vertical: 'bottom',
 		horizontal: 'center',
-	});
+	})
+
 	const [errorMessage, setErrorMessage] = useState('')
 
-	const [createLocation, {data, loading, error}] = useMutation(CREATE_LOCATION, {
+	const [createLocation, { error }] = useMutation(CREATE_LOCATION, {
 		variables: {
 			email: email,
 			streetAddress: streetAddress,
@@ -301,11 +300,8 @@ const RegisterForm = () => {
 								onChange={event => uploadImage(event)}
 							/>
 							{url === "https://res.cloudinary.com/drexo2l5j/image/upload/v1662338245/j44lo7idesuaxuta0iwz.jpg" ? <p className="upload-complete">No file chosen 👻</p> : <p className="upload-complete"> 👻 Upload Complete 👻</p>}
-							{/* {url && <p className="upload-complete"> 👻 Upload Complete 👻</p>} */}
-
 						</div>
-							<RegisterButton />
-
+						<RegisterButton />
 					</form>
 				</section>
 				<section className="halloween-image-container">
@@ -322,12 +318,10 @@ const RegisterForm = () => {
 				>
 				<Alert style={{color: 'black', backgroundColor: 'red'}} onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
 					Your address is invalid. Please double check it and try again!
-        		</Alert>
+        </Alert>
 			</Snackbar>
 		</div>
-		
 	)
 }
-
 
 export default RegisterForm;
