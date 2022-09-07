@@ -44,11 +44,13 @@ const App = () => {
 
 			<Route exact path="/Register">
 				<Nav />
+				{loading && <Loading />}
 				<RegisterForm />
 			</Route>
 
 			<Route exact path="/ThankYou">
 				<Nav />
+				{loading && <Loading />}
 				{data && <ThankYouPage locationData={data.locations}/>}
 			</Route>
 			

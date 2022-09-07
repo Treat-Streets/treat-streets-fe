@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+![Header](https://user-images.githubusercontent.com/98415017/188760792-2b0a5ae9-1934-4d98-ba0e-0d0bd7e84b6a.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Abstract](#abstract)
+- [Deployed Link](#deployed-link])
+- [Illustrations](#illustrations)
+- [Technologies Used](#technologies-used)
+- [Application](#application)
+- [Context and Features](#context-and-features)
+- [User Stories](#user-stories)
+- [Lessons Learned](#lessons-learned)
+- [Future Features](#future-features)
+- [Application Set-Up](#application-set-up)
+- [Contributor LinkedIns and GitHubs](#contributor-linkedin-and-github)
+- [Project Specs](#project-specs)
 
-### `npm start`
+## Abstract
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Treat Streets was created using GraphQL in the React.js framework. This Halloween themed application is meant to give trick-or-treaters and parents more information about participating homes in their area. The application allows users to view a map of houses in their area who are registered to be giving out candy for Halloween and to register their own house to be added to the map.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployed Link
 
-### `npm test`
+- Check out our application [here!]() 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Illustrations
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Application Wireframe 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Wireframe](https://user-images.githubusercontent.com/98415017/188725106-d7782d01-4041-4006-8dc7-846b190c41de.png)
 
-### `npm run eject`
+## Technology Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Javascript
+- HTML
+- CSS
+- Cypress.io
+- GraphQL
+- Postman
+- React.js
+- React Router
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## User Stories
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- As a user I should be able to browse houses in my area to see who is giving out candy. 
 
-## Learn More
+- As a user I should be able to add a home to a treat street to let other users know my house will give out candy. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- As a user I should be able to click houses on the map and see more details. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Context and Features
 
-### Code Splitting
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 
 
-### Analyzing the Bundle Size
+## Lessons Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 
 
-### Making a Progressive Web App
+## Future Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Some future features we’d like to add to this application are:
 
-### Advanced Configuration
+- Add the ability to make a route.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Add candy rating and hearting/liking to houses.
 
-### Deployment
+- Add login functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Application Set-Up
 
-### `npm run build` fails to minify
+1. Fork repository on GitHub.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. `Git clone` the repository to your local machine.
+
+4. `Cd` into the directory.
+
+5. Run `npm install` in your terminal to install project dependencies.
+
+6. Run `npm start` in the terminal to see the application. 
+
+7. Run `npm run cypress` in the terminal  to run cypress tests. 
+
+8. When finished with the application, type `Control + C` in the terminal to stop running the application. 
+
+## Contributor LinkedIn’s
+
+- [Amanda Sands: LinkedIn](https://www.linkedin.com/in/amanda-sands1/)      
+- [Megan Schuetz: LinkedIn](https://www.linkedin.com/in/megan-schuetz/)     
+- [Victoria Fox-Collis: LinkedIn](https://www.linkedin.com/in/victoria-fox-collis/)    
+- [Corinne Canavan: LinkedIn](https://www.linkedin.com/in/corinnecanavan/)     
+
+## Contributor GitHubs’s
+
+- [Amanda Sands: GitHub](https://github.com/ASands17)       
+- [Megan Schuetz: GitHub](https://github.com/megschuetz)       
+- [Victoria Fox-Collis: GitHub](https://github.com/VictoriaFC)     
+- [Corinne Canavan: GitHub](https://github.com/CorCanavan)      
+
+## Project Specs
+
+- The specs for this application can be found 
+[here](https://mod4.turing.edu/projects/capstone/expectations.html)
