@@ -224,7 +224,7 @@ const RegisterForm = () => {
 
 						<input
 							name="state"
-							placeholder="State"
+							placeholder="State (CO)"
 							value={state}
 							type="text"
 							onChange={event => setState(event.target.value)}

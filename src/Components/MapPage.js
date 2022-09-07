@@ -39,7 +39,7 @@ const MapPage = ({ locationData }) => {
 		setViewport({
 			latitude: data.coordinates.latitude,
 			longitude: data.coordinates.longitude,
-			zoom: 11
+			zoom: 12
 		})
 		clearForm()
 	}
@@ -63,7 +63,7 @@ const MapPage = ({ locationData }) => {
 					setSelectedHouse(location)
 					setViewport({
 						latitude: location.latitude,
-						longitude: location.longitude,
+						longitude: location.longitude
 					})
 				}}>
 				<img data-cy="location-pin" className="haunted-house-icon" src="/hauntedhouse.svg" alt="Haunted House Icon"/>
