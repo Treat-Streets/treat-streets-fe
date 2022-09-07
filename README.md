@@ -41,6 +41,7 @@
 - Postman
 - React.js
 - React Router
+- Cloudinary
 
 
 ## User Stories
