@@ -24,6 +24,9 @@
 - Check out our site [here.](https://treat-streets-fe.herokuapp.com/)
 ## Illustrations
 
+Registering a house:
+
+![Treat Streets ](https://user-images.githubusercontent.com/98415017/188999050-b1f70b79-59f6-4cd8-821d-efbf14870cdc.gif)
 
 
 ## Application Wireframe 
