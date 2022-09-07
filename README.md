@@ -38,6 +38,7 @@
 - CSS
 - GraphQL
 - Cypress.io
+- CircleCI
 - Postman
 - React.js
 - React Router
