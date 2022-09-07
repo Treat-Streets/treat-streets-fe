@@ -27,7 +27,9 @@
 
 Quick Preview:
 
-https://user-images.githubusercontent.com/98415017/189000367-1c2aa8ec-dfd3-43d6-87e2-6620e87f42d3.mp4
+
+https://user-images.githubusercontent.com/98415017/189001534-8f76950a-3f37-416e-99f3-b1c13fb5d225.mp4
+
 
 
 ## Application Wireframe 
