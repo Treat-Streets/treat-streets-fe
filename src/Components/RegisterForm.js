@@ -58,7 +58,7 @@ const RegisterForm = () => {
 	const [image, setImage] = useState('')
 	const [scarinessLevel, setScarinessLevel] = useState(1)
 	const [description, setDescription] = useState('')
-	const [url, setUrl ] = useState("");
+	const [url, setUrl ] = useState("https://res.cloudinary.com/drexo2l5j/image/upload/v1662338245/j44lo7idesuaxuta0iwz.jpg");
   
 	const history = useHistory()
 	const [snackbar, setSnackBar] = useState({
