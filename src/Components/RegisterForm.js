@@ -300,7 +300,7 @@ const RegisterForm = () => {
 								value={image}
 								onChange={event => uploadImage(event)}
 							/>
-							{url ? <p className="upload-complete"> 👻 Upload Complete 👻</p> : <p className="upload-complete">No file chosen 👻</p>}
+							{url === "https://res.cloudinary.com/drexo2l5j/image/upload/v1662338245/j44lo7idesuaxuta0iwz.jpg" ? <p className="upload-complete">No file chosen 👻</p> : <p className="upload-complete"> 👻 Upload Complete 👻</p>}
 							{/* {url && <p className="upload-complete"> 👻 Upload Complete 👻</p>} */}
 
 						</div>
