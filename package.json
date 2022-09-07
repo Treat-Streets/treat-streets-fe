@@ -20,14 +20,12 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-	"scripts": {
-    "start": "serve -s build",
-    "start-dev": "react-scripts start",
+  "scripts": {
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress": "cypress open",
-    "heroku-postbuild": "npm run build"
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -37,9 +35,8 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%, not dead, not ie 11, not chrome < 51, not safari < 10",
-      "not dead",
-      "not op_mini all"
+      "defaults",
+      "not ie 11"
     ],
     "development": [
       "last 1 chrome version",
