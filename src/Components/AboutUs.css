@@ -3,6 +3,7 @@
 	border-radius: 15px;
   width: 80vw;
   height: auto;
+  padding-bottom: 50px;
 }
 
 
@@ -32,5 +33,26 @@
   font-size: 19px;
   width: 50%;
   margin: 4%;
+}
+
+.team-mems {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 50px;
+  margin: 20px, 0px;
+}
+
+.headshot {
+  height: 10rem;
+  border-radius: 200px;
+}
+
+.name{
+  font-size: 1.5rem;
+}
+
+.team {
+  font-style: italic;
 }
 
