@@ -11,6 +11,7 @@ import AboutUs from '../Components/AboutUs.js'
 import { useQuery, gql } from '@apollo/client'
 import PopupPage from './PopupPage'
 import NotFound from '../Components/NotFound.js'
+import Safetytips from '../Components/SafetyTips.js'
 
 export const GET_LOCATION = gql`
 query Locations {
@@ -59,6 +60,11 @@ const App = () => {
 				<Nav />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
+			</Route>
+
+			<Route exact path="/SafetyTips">
+				<Nav />
+				<Safetytips />
 			</Route>
 
 			<Route exact path="/AboutUs">
