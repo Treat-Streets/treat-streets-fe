@@ -2,19 +2,21 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 3.5rem;
+  height: 4.3rem;
+  font-family: 'PT Sans Narrow';
+  font-size: larger;
 }
 
 a {
   text-decoration: none;
   color: black;
-  padding-right: .5em;
-  padding-top: .25em;
-  padding-bottom: .25em;
+  padding-right: .6em;
+  padding-top: .4em;
+  padding-bottom: .4em;
 }
 
 .active {
-  color: #FD7D11;
+  color: #F36518;
 }
 
 
