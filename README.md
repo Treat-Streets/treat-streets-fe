@@ -1,6 +1,6 @@
 ![Header](https://user-images.githubusercontent.com/98415017/188760792-2b0a5ae9-1934-4d98-ba0e-0d0bd7e84b6a.png)
 
-
+Back End [Repo](https://github.com/Treat-Streets/treat-streets-be) thanks to fellow BE team!
 ## Table of Contents
 
 - [Abstract](#abstract)
@@ -21,9 +21,14 @@
 
 ## Deployed Link
 
-- TBD
+- Check out our site [here.](https://treat-streets-fe.herokuapp.com/)
 
 ## Illustrations
+
+Quick Preview:
+
+
+https://user-images.githubusercontent.com/98415017/189001534-8f76950a-3f37-416e-99f3-b1c13fb5d225.mp4
 
 
 
@@ -42,6 +47,7 @@
 - Postman
 - React.js
 - React Router
+- Cloudinary
 
 
 ## User Stories
@@ -62,7 +68,7 @@
 
 ### Challenges 
 - Using CircleCI and Cypress testing with GraphQL (stubbing and intercepting became more difficult)
-- Deploying our app (unfortunately not getting the background of ReactMapGL to render when deployed)
+- Deploying our app (struggled to get MapBox to show at first)
 - Event bubbling issue with popups on houses (solved with the help of a seasoned dev experienced in MapBox)
 
 ## Future Features

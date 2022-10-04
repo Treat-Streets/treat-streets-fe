@@ -12,14 +12,13 @@
 		width: 80vw;
 	}
 	.search {
-		background-color: #FD7D11;
+		background-color: #F36518;
 		width: 85px;
 		height: 30px;
 		padding-left: 0px;
 		margin-left: 5px;
 		border: none;
 		border-radius: 11px;
-		/* font-weight: bold; */
 		cursor: pointer;
 	}
 
@@ -49,8 +48,6 @@
 	}
 
 	.popup-container {
-		/* background: #FD7D11;
-		border-radius: 20px; */
 		margin: 5px;
 		padding: 10px;
 		display: flex;
@@ -86,7 +83,7 @@
 		width: 120px;
 		height: 40px;
 		padding: 3px;
-		background-color: #F36518;
+		background-color: #FD7D11;
 		border: none;
 	}
 
@@ -107,7 +104,6 @@
 	.view-full-map {
 		display: flex;
 		flex-direction: column;
-		/* border: 2px solid white; */
 		background-color: #6652BD;
 		border-radius: 15px;
 		height: 89vh;
@@ -134,7 +130,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/* border: 2px solid green; */
 		position: relative;
 		float: left;
 		margin: 20px;
@@ -146,13 +141,10 @@
 		height: 80%;
 		padding-left: 10px;
 		padding-right: 10px;
-		/* border: 2px solid white; */
 	}
 
 	.popup-wrapper {
 		height: 100px;
-		/* width: 200px; */
-		/* border: 2px solid green; */
 	}
 
 	.popup-container {

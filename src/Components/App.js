@@ -7,6 +7,7 @@ import RegisterForm from '../Components/RegisterForm.js'
 import ThankYouPage from '../Components/ThankYouPage.js'
 import LandingPage from '../Components/LandingPage.js'
 import Loading from '../Components/Loading.js'
+import AboutUs from '../Components/AboutUs.js'
 import { useQuery, gql } from '@apollo/client'
 import PopupPage from './PopupPage'
 import NotFound from '../Components/NotFound.js'
@@ -33,7 +34,7 @@ query Locations {
 
 const App = () => {
 
-	const {error, data, loading} = useQuery(GET_LOCATION)
+	const {data, loading} = useQuery(GET_LOCATION)
 
   return (
     <div className="App">
@@ -51,13 +52,18 @@ const App = () => {
 			<Route exact path="/ThankYou">
 				<Nav />
 				{loading && <Loading />}
-				{data && <ThankYouPage locationData={data.locations}/>}
+				{data && <ThankYouPage />}
 			</Route>
 			
 			<Route exact path="/Map">
 				<Nav />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
+			</Route>
+
+			<Route exact path="/AboutUs">
+				<Nav />
+				<AboutUs />
 			</Route>
 
 			<Route exact path='/PopUp/:id'

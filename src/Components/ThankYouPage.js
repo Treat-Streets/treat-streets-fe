@@ -3,12 +3,9 @@ import '../Components/ThankYouPage.css'
 import ReactMapGL, { Marker } from 'react-map-gl'
 import { useLocation, Link } from 'react-router-dom'
 
-const ThankYouPage = ({ locationData }) => {
+const ThankYouPage = () => {
 
 	const location = useLocation();
-	console.log(useLocation())
-
-	//returns object from the current URL so we can access its state
 
 	const lat = location.state.latitude;
 	const long = location.state.longitude;
