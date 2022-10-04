@@ -2,7 +2,6 @@
 	.form-wrapper {
 		display: flex;
 		justify-content: center;
-		padding-top: 1%;
 	}
 
 	.register-form-container {
@@ -13,9 +12,12 @@
 		align-items: center;
 		justify-content: center;
 		height: 60%;
-		width: 100%;
+		width: 80vw;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		padding-top: 29px;
+		padding-bottom: 15px;
 	} 
+	
 	.message-section {
 	font-weight: bold;
 	}
@@ -197,7 +199,7 @@
 	}
 
 	.register-button {
-		background-color: #FD7D11;
+		background-color: #F36518;
 		height: 40px;
 		width: 140px;
 		padding: 0px;
@@ -231,12 +233,14 @@
 		align-items: center;
 		justify-content: space-evenly;
 		height: 800px;
-		width: 380px;
+		width: 80vw;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	} 
 
 	.message-section {
-	font-weight: bold;
+		font-weight: bold;
+		margin: 10px;
+		margin-bottom: 0px;
 	}
 
 	.form-title {
@@ -428,7 +432,7 @@
 	}
 
 	.register-button {
-		background-color: #FD7D11;
+		background-color: #F36518;
 		height: 40px;
 		width: 140px;
 		padding: 0px;

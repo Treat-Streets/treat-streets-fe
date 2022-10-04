@@ -7,6 +7,7 @@ import Corinne from '../assets/Corinne.jpeg'
 import Andrew from '../assets/Andrew.jpeg'
 import Amanda from '../assets/Amanda.jpeg'
 import Victoria from '../assets/Victoria.jpeg'
+import Tyler from '../assets/Tyler.png'
 
 const AboutUs = () => {
   return (
@@ -47,6 +48,11 @@ const AboutUs = () => {
           <img className="headshot" src={Victoria} alt="Thomas"/>
           <p className='name'>Victoria Fox-Collins</p>
           <p className='team'>Front End Team</p>
+        </div>
+        <div>
+          <img className="headshot" src={Tyler} alt="Thomas"/>
+          <p className='name'>Tyler Ross</p>
+          <p className='team'>Back End Team</p>
         </div>
         
       </section>
