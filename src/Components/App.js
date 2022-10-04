@@ -7,6 +7,7 @@ import RegisterForm from '../Components/RegisterForm.js'
 import ThankYouPage from '../Components/ThankYouPage.js'
 import LandingPage from '../Components/LandingPage.js'
 import Loading from '../Components/Loading.js'
+import AboutUs from '../Components/AboutUs.js'
 import { useQuery, gql } from '@apollo/client'
 import PopupPage from './PopupPage'
 import NotFound from '../Components/NotFound.js'
@@ -58,6 +59,11 @@ const App = () => {
 				<Nav />
 				{loading && <Loading />}
 				{data && <MapPage locationData={data.locations} />}
+			</Route>
+
+			<Route exact path="/AboutUs">
+				<Nav />
+				<AboutUs />
 			</Route>
 
 			<Route exact path='/PopUp/:id'

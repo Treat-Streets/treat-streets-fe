@@ -1,0 +1,36 @@
+.about {
+  background-color: #6652BD;
+	border-radius: 15px;
+  width: 80vw;
+  height: auto;
+}
+
+
+.title {
+  font-family: 'Ranchers', cursive;
+	letter-spacing: .25rem;
+	font-size: 3.25rem;
+  color: #F36518;
+  padding: 2%;
+}
+
+.pumpkin {
+  height: 20rem;
+  border-radius: 180px;
+}
+
+.app-description {
+  margin: 2%;
+  margin-left: 3%;
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  font-size: 19px;
+  width: 50%;
+  margin: 4%;
+}
+
