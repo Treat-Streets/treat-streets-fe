@@ -4,8 +4,10 @@
   width: 80vw;
   height: auto;
   padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-
 
 .title {
   font-family: 'Ranchers', cursive;
@@ -39,11 +41,22 @@
 }
 
 .team-mems {
-  display: grid;
-  grid-gap: .5rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	/* border: 2px solid black; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
   padding: 50px;
-  margin: 20px, 0px;
+	width: 80%;
+}
+
+.mem-container {
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 45px;
+	margin-bottom: 20px;
 }
 
 .headshot {
@@ -51,13 +64,20 @@
   border-radius: 200px;
 }
 
-.name{
+.name {
+	margin-left: 15px;
   font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.name:hover {
+	text-decoration: underline;
 }
 
 .team {
   font-style: italic;
 }
+
 
 @media screen and (max-width: 1340px) {
   .app-description {

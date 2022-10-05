@@ -19,39 +19,39 @@ const AboutUs = () => {
       </section>
       <p className='title'>Meet The Team</p>
       <section className='team-mems'>
-        <div>
+        <div className="mem-container">
           <img className="headshot" src={Megan} alt="Headshot picture of Megan"/>
-          <a href="https://www.linkedin.com/in/megan-schuetz/" target="_blank" className='name'>Megan Schuetz</a>
+					<p><a href="https://www.linkedin.com/in/megan-schuetz/" target="_blank" className='name'>Megan Schuetz</a></p>
           <p className='team'>Front End Team</p>
         </div>
-        <div>
+        <div className="mem-container">
           <img className="headshot" src={Corinne} alt="Headshot picture of Corinne"/>
-          <a href="https://www.linkedin.com/in/corinnecanavan/" target="_blank" className='name'>Corinne Canavan</a>
+          <p><a href="https://www.linkedin.com/in/corinnecanavan/" target="_blank" className='name'>Corinne Canavan</a></p>
           <p className='team'>Front End Team</p>
         </div>
-        <div>
+        <div className="mem-container">
           <img className="headshot" src={Amanda} alt="Headshot picture of Amanda"/>
-          <a href="https://www.linkedin.com/in/amanda-sands1/" target="_blank" className='name'>Amanda Sands</a>
+          <p><a href="https://www.linkedin.com/in/amanda-sands1/" target="_blank" className='name'>Amanda Sands</a></p>
           <p className='team'>Front End Team</p>
         </div>
-        <div>
+        <div className="mem-container">
           <img className="headshot" src={Victoria} alt="Headshot picture of Victoria"/>
-          <a href="https://www.linkedin.com/in/victoria-fox-collis/" target="_blank" className='name'>Victoria Fox-Collis</a>
+          <p><a href="https://www.linkedin.com/in/victoria-fox-collis/" target="_blank" className='name'>Victoria Fox-Collis</a></p>
           <p className='team'>Front End Team</p>
         </div>
-				<div>
+				<div className="mem-container">
           <img className="headshot" src={Thomas} alt="Headshot picture of Thomas"/>
-          <a href="https://www.linkedin.com/in/thomas-haines-9b93451a0/" target="_blank" className='name'>Thomas Haines</a>
+          <p><a href="https://www.linkedin.com/in/thomas-haines-9b93451a0/" target="_blank" className='name'>Thomas Haines</a></p>
           <p className='team'>Back End Team</p>
         </div>
-				<div>
+				<div className="mem-container">
           <img className="headshot" src={Andrew} alt="Headshot picture of Andrew"/>
-          <a href="https://www.linkedin.com/in/andrewkingdev/" target="_blank" className='name'>Andrew King</a>
+          <p><a href="https://www.linkedin.com/in/andrewkingdev/" target="_blank" className='name'>Andrew King</a></p>
           <p className='team'>Back End Team</p>
         </div>
-        <div>
+        <div className="mem-container">
           <img className="headshot" src={Tyler} alt="Headshot picture of Tyler"/>
-          <a href="https://www.linkedin.com/in/tyler-ross-0b206122b/" target="_blank" className='name'>Tyler Ross</a>
+          <p><a href="https://www.linkedin.com/in/tyler-ross-0b206122b/" target="_blank" className='name'>Tyler Ross</a></p>
           <p className='team'>Back End Team</p>
         </div>
         
