@@ -46,7 +46,7 @@ const AboutUs = () => {
         </div>
         <div>
           <img className="headshot" src={Victoria} alt="Thomas"/>
-          <p className='name'>Victoria Fox-Collins</p>
+          <p className='name'>Victoria Fox-Collis</p>
           <p className='team'>Front End Team</p>
         </div>
         <div>
