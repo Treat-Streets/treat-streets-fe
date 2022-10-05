@@ -19,4 +19,14 @@ a {
   color: #F36518;
 }
 
+@media screen and (max-width: 1340px){
+	.nav-bar {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 4.3rem;
+		font-family: 'PT Sans Narrow';
+		font-size: small;
+	}
+}
 
