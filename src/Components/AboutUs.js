@@ -20,11 +20,6 @@ const AboutUs = () => {
       <p className='title'>Meet The Team</p>
       <section className='team-mems'>
         <div>
-          <img className="headshot" src={Thomas} alt="Thomas"/>
-          <p className='name'>Thomas Haines</p>
-          <p className='team'>Back End Team</p>
-        </div>
-        <div>
           <img className="headshot" src={Megan} alt="Thomas"/>
           <p className='name'>Megan Schuetz</p>
           <p className='team'>Front End Team</p>
@@ -35,11 +30,6 @@ const AboutUs = () => {
           <p className='team'>Front End Team</p>
         </div>
         <div>
-          <img className="headshot" src={Andrew} alt="Thomas"/>
-          <p className='name'>Andrew King</p>
-          <p className='team'>Back End Team</p>
-        </div>
-        <div>
           <img className="headshot" src={Amanda} alt="Thomas"/>
           <p className='name'>Amanda Sands</p>
           <p className='team'>Front End Team</p>
@@ -48,6 +38,16 @@ const AboutUs = () => {
           <img className="headshot" src={Victoria} alt="Thomas"/>
           <p className='name'>Victoria Fox-Collis</p>
           <p className='team'>Front End Team</p>
+        </div>
+				<div>
+          <img className="headshot" src={Thomas} alt="Thomas"/>
+          <p className='name'>Thomas Haines</p>
+          <p className='team'>Back End Team</p>
+        </div>
+				<div>
+          <img className="headshot" src={Andrew} alt="Thomas"/>
+          <p className='name'>Andrew King</p>
+          <p className='team'>Back End Team</p>
         </div>
         <div>
           <img className="headshot" src={Tyler} alt="Thomas"/>
