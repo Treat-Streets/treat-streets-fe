@@ -20,37 +20,37 @@ const AboutUs = () => {
       <p className='title'>Meet The Team</p>
       <section className='team-mems'>
         <div>
-          <img className="headshot" src={Megan} alt="Thomas"/>
+          <img className="headshot" src={Megan} alt="Headshot picture of Megan"/>
           <a href="https://www.linkedin.com/in/megan-schuetz/" target="_blank" className='name'>Megan Schuetz</a>
           <p className='team'>Front End Team</p>
         </div>
         <div>
-          <img className="headshot" src={Corinne} alt="Thomas"/>
+          <img className="headshot" src={Corinne} alt="Headshot picture of Corinne"/>
           <a href="https://www.linkedin.com/in/corinnecanavan/" target="_blank" className='name'>Corinne Canavan</a>
           <p className='team'>Front End Team</p>
         </div>
         <div>
-          <img className="headshot" src={Amanda} alt="Thomas"/>
+          <img className="headshot" src={Amanda} alt="Headshot picture of Amanda"/>
           <a href="https://www.linkedin.com/in/amanda-sands1/" target="_blank" className='name'>Amanda Sands</a>
           <p className='team'>Front End Team</p>
         </div>
         <div>
-          <img className="headshot" src={Victoria} alt="Thomas"/>
+          <img className="headshot" src={Victoria} alt="Headshot picture of Victoria"/>
           <a href="https://www.linkedin.com/in/victoria-fox-collis/" target="_blank" className='name'>Victoria Fox-Collis</a>
           <p className='team'>Front End Team</p>
         </div>
 				<div>
-          <img className="headshot" src={Thomas} alt="Thomas"/>
+          <img className="headshot" src={Thomas} alt="Headshot picture of Thomas"/>
           <a href="https://www.linkedin.com/in/thomas-haines-9b93451a0/" target="_blank" className='name'>Thomas Haines</a>
           <p className='team'>Back End Team</p>
         </div>
 				<div>
-          <img className="headshot" src={Andrew} alt="Thomas"/>
+          <img className="headshot" src={Andrew} alt="Headshot picture of Andrew"/>
           <a href="https://www.linkedin.com/in/andrewkingdev/" target="_blank" className='name'>Andrew King</a>
           <p className='team'>Back End Team</p>
         </div>
         <div>
-          <img className="headshot" src={Tyler} alt="Thomas"/>
+          <img className="headshot" src={Tyler} alt="Headshot picture of Tyler"/>
           <a href="https://www.linkedin.com/in/tyler-ross-0b206122b/" target="_blank" className='name'>Tyler Ross</a>
           <p className='team'>Back End Team</p>
         </div>
