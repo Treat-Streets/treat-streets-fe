@@ -1,0 +1,65 @@
+.safety-tips-wrapper {
+	background-color: #6652BD;
+	border-radius: 15px;
+	width: 80vw;
+	height: auto;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.safety-tips-container {
+	border-radius: 30px;
+	width: 70%;
+	background-color:  rgba(243, 101, 24, 0.70);
+	padding-bottom: 50px;
+}
+
+.safety-tips-title {
+	font-family: 'Ranchers', cursive;
+	letter-spacing: .25rem;
+	font-size: 3.25rem;
+  color: rgba(243, 101, 24, 1);
+  padding: 2%;
+  padding-top: 55px;
+}
+
+.safety-tip-intro {
+	font-size: 1.5rem;
+	padding-bottom: 20px;
+	width: 70%;
+}
+
+.safety-tip-icon {
+	width: 6%;
+}
+
+.safety-tip-paragraph {
+	font-family: 'PT Sans Narrow';
+  font-size: 1.15rem;
+  font-weight: 500;
+  width: 60%;
+  margin: 4%;
+	text-align: start;
+}
+
+.safety-tip-1, 
+.safety-tip-2,
+.safety-tip-3,
+.safety-tip-4,
+.safety-tip-5,
+.safety-tip-6,     
+.safety-tip-7 {
+	/* margin: 2%; */
+  margin-left: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trick-or-treat-gif {
+	border-radius: 150px;
+	height: 275px;
+}
