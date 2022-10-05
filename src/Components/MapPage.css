@@ -5,6 +5,11 @@
 		justify-content: center;
 	}
 
+	.map-intro {
+		padding-top: 20px;
+		font-weight: bold;
+	}
+
 	.view-full-map {
 		background-color: #6652BD;
 		border-radius: 15px;

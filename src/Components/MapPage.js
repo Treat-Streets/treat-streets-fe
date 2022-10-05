@@ -74,11 +74,14 @@ const MapPage = ({ locationData }) => {
 
 	return (
 		<div className="view-full-map">
+			<div>
+				<p className="map-intro">Search by zip code to see which houses are participating in your area! 🎃</p>
+			</div>
 			<div className='zip-form'>
 				<input
 					className="zipcode" 
 					name="zipcode"
-					placeholder="Zipcode"
+					placeholder="ZIP Code"
 					value={zipcode}
 					onChange={event => {
 						setZipcode(event.target.value)
