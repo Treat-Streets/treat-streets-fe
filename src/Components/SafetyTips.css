@@ -63,3 +63,31 @@
 	border-radius: 150px;
 	height: 275px;
 }
+
+@media screen and (max-width: 1340px) {
+	.safety-tips-container {
+		border-radius: 30px;
+		width: 90%;
+		background-color:  rgba(243, 101, 24, 0.70);
+		padding-bottom: 50px;
+	}
+	
+	.safety-tip-icon {
+		width: 50px;
+	}
+
+	.safety-tip-paragraph {
+		font-family: 'PT Sans Narrow';
+		font-size: 1rem;
+		font-weight: 500;
+		width: 80%;
+		margin: 4%;
+		text-align: start;
+	}
+	
+	.trick-or-treat-gif {
+		margin-top: 10px;
+		border-radius: 150px;
+		height: 100px;
+	}
+}
