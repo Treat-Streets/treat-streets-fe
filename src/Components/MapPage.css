@@ -115,6 +115,11 @@
 		width: 80vw;
 	}
 
+	.map-intro {
+		padding-top: 20px;
+		font-weight: bold;
+	}
+
 	.search {
 		border: none;
 		border-radius: 11px;
