@@ -97,7 +97,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 .landing-page-container {
@@ -161,7 +161,7 @@
 .landing-page-buttons-container {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 	width: 75%;
 }
