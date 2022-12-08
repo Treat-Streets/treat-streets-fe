@@ -21,7 +21,7 @@ Back End [Repo](https://github.com/Treat-Streets/treat-streets-be) thanks to fel
 
 ## Deployed Link
 
-- Check out our site [here.](https://treat-streets-fe.herokuapp.com/)
+- Check out our site [here.](https://treat-streets.vercel.app/)
 
 ## Illustrations
 
